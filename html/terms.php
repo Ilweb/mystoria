@@ -2,6 +2,7 @@
 $this->showView('sticky_header');
 ?>
 
+
 <div class="back_terms">
 	<div class="info_inner terms">
 		<h3>Terms and conditions</h3>
