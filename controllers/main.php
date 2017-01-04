@@ -400,5 +400,14 @@ class Main extends Controller
 		);
 	    $this->_template->render($array);
 	}
+	function faq()
+	{
+		$this->_template->setView('faq');
+		$array = array(
+			"title"=>'faq',
+			"styles"=>array('FAQ')
+		);
+	    $this->_template->render($array);
+	}
 }
 ?>
