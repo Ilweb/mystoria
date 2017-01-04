@@ -176,7 +176,6 @@ function validate1(selector)
 			if (!jQuery(inputs[i]).parents(".required").hasClass("has-error"))
 			{
 				jQuery(inputs[i]).parents(".required").addClass("has-error");
-				//addAlert(jQuery(inputs[i]).parents(".required"), '<strong>' + jQuery(inputs[i]).parents(".required").find("label:first").html() + '</strong> е задължително поле.', 'danger');
 			}
 		}
 	}
@@ -191,7 +190,6 @@ function validate1(selector)
 			if (!jQuery(inputs[i]).parents(".required").hasClass("has-error"))
 			{
 				jQuery(inputs[i]).parents(".required").addClass("has-error");
-				//addAlert(jQuery(inputs[i]).parents(".required"), '<strong>' + jQuery(inputs[i]).parents(".required").find("label:first").html() + '</strong> е задължително поле.', 'danger');
 			}
 		}
 	}
@@ -207,7 +205,21 @@ function validate1(selector)
 			if (!jQuery(inputs[i]).parent().hasClass("has-error"))
 			{
 				jQuery(inputs[i]).parent().addClass("has-error");
-				addAlert(jQuery(inputs[i]).parent(), 'Въведете <strong>цяло число</string>!', 'danger');
+			}
+		}
+	}
+	
+	// Check time
+	var inputs = jQuery(selector).find('input[type="time"]');
+	var patt1 = new RegExp(/[0123]\d\:[012345]\d\:[012345]\d/);
+	for (var i = 0; i < inputs.length; i++)
+	{
+		value = jQuery(inputs[i]).val();
+		if ((value != '') && (patt1.exec(value) != value))
+		{
+			if (!jQuery(inputs[i]).parent().hasClass("has-error"))
+			{
+				jQuery(inputs[i]).parent().addClass("has-error");
 			}
 		}
 	}

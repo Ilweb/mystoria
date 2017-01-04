@@ -33,6 +33,17 @@
 		{
 			echo '<a class="btn btn-warning btn-xs" onclick="statusConfirm('.$r->id.')"><i class="fa fa-check"></i> Confirm</a>';
 		}
+		elseif ($r->status == "completed")
+		{
+			if ($r->time)
+			{
+				echo '<a class="btn btn-link btn-xs" data-toggle="tooltip" title="'.$r->time.'"><i class="fa fa-clock-o"></i></a>';
+			}
+			if ($r->image)
+			{
+				echo '<a class="btn btn-link btn-xs" data-toggle="tooltip" title="'.$r->team.'" target="_blank" href="'.IMAGE_URL.'reservations/'.$r->id.'/'.$r->image.'"><i class="fa fa-image"></i></a>';
+			}
+		}
 		echo '</td>';
 		echo '</tr>';
 	}
@@ -69,3 +80,6 @@ if (isset($pages) && ($pages > 1))
 	<?php
 }
 ?>
+<script type="text/javascript">
+$('[data-toggle="tooltip"]').tooltip(); 
+</script>

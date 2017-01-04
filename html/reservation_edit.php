@@ -74,23 +74,45 @@
 				</div>
 			</div>
 		</div>
-		<div id="results" <?php if ($reservation->status != "completed") echo 'style="display: none;"' ?>>
-			<h3>Results</h3>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="form-group required">
-						<label for="ftime">Time</label>
-						<input type="text" class="form-control" id="ftime" name="time" value="<?php echo $reservation->time; ?>" />
+		<div class="row" id="results" <?php if ($reservation->status != "completed") echo 'style="display: none;"' ?>>
+			<div class="col-sm-8">
+				<h3>Results</h3>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label for="ftime">Time</label>
+							<input type="time" class="form-control" id="ftime" name="time" value="<?php echo $reservation->time; ?>" placeholder="HH:MM:SS" />
+						</div>
 					</div>
-				</div>
-				<div class="col-sm-4">
-					<label>Team photo</label>
-					<label class="btn btn-info btn-block btn-file">
-						Upload file <input type="file" name="image_file" style="display: none;" onchange="$('#upload-file-info').html($(this).val());">
-					</label>
-					<span class="label label-info" id="upload-file-info"></span>
+					<div class="col-sm-6">
+						<label>Team photo</label>
+						<label class="btn btn-info btn-block btn-file">
+							Upload file <input type="file" name="image_file" style="display: none;" onchange="$('#upload-file-info').html($(this).val());">
+						</label>
+						<span class="label label-info" id="upload-file-info"></span>
+					</div>
+					
 				</div>
 			</div>
+			<?php
+			if ($reservation->image)
+			{
+				?>
+				<div class="col-sm-4" style="margin-bottom: 20px;">
+					<?php 
+					$img =  $this->thumbnail(
+						'reservations/'.$reservation->id.'/'.$reservation->image, 
+						200,
+						array(
+							"crop"=>(4/3)
+						)
+					);
+					?>
+					<img src="<?php echo $img; ?>" alt="team image"/>
+				</div>
+				<?php
+			}
+			?>
 		</div>
 		<div class="row">
 			<div class="col-sm-6">
