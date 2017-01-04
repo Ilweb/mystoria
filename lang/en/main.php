@@ -60,4 +60,12 @@ $lang['Oct'] = "Oct";
 $lang['Nov'] = "Nov";
 $lang['Dec'] = "Dec";
 
+
+
+$lang['Reserve now']="Reserve now";
+$lang['Team building']="Team building";
+
+
+
+
 ?>

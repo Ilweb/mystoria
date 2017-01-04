@@ -29,7 +29,7 @@ if (SHOW_FOOTER)
 		
 		<div class="inner_set">
 			<div>Partners</div>
-			<a>First company title</a>
+			<a><?php echo $lang['First company title']; ?></a>
 			<a>Second company title</a>
 			<a>Third company title</a>
 			<a>Fourth company title</a>

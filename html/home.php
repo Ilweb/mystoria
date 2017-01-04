@@ -3,10 +3,10 @@
 	<div id="content_1" class="content">
 		<div class="logo"><div id="innerr"><img src="<?php echo ROOT_URL; ?>images/logo.png"></div>
 			<div class="buttons">
-				<div class="choose"><div onclick="goToByScroll( '#wall_4', -100 );">Reserve now</div></div>
-				<div class="choose"><div><a href="<?php echo LOCALE_URL; ?>teambuilding.php">Team building</a></div></div>
+				<div class="choose"><div onclick="goToByScroll( '#wall_4', -100 );"><?php echo $lang['Reserve now']; ?></div></div>
+				<div class="choose"><div><a href="<?php echo LOCALE_URL; ?>teambuilding.php"><?php echo $lang['Team building']; ?></a></div></div>
 			</div>
-			<div id="people_num">6 people/100 lv</div>
+			
 				<div class="language">
 				<div class="choose_lang">Change your language</div>
 				<div class="variety"><a href="<?php echo ROOT_URL.'en/'; ?>" class="var">EN</a><div>/</div><a href="<?php echo ROOT_URL.'bg/'; ?>" class="var">BG</a></div>

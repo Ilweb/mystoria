@@ -398,7 +398,7 @@ h2,h4
 }
 .prev_next
 {
-	color:#424669;
+	color:#fff;
 	font-family:Monserrat,Roboto;
 	line-height: 18px;
 	width: 90%;
@@ -412,12 +412,12 @@ h2,h4
 {
 	vertical-align:middle;
 }
-.prev_next div:hover
+/*.prev_next div:hover
 {
 	-webkit-filter: brightness(10);
 	filter: brightness(10);
 	cursor:pointer;
-}
+}*/
 .prev_next .next
 {
 	float:right;
@@ -476,9 +476,10 @@ ul li label
 	background-color:#22264a;
 }
 
-ul li.hour label:hover
+ul li.hour label:hover,
+.prev_next .noselect:hover
 {
-	-webkit-box-shadow: inset 0px 0px 2px 1px rgba(180,184,216,1);
+-webkit-box-shadow: inset 0px 0px 2px 1px rgba(180,184,216,1);
 -moz-box-shadow: inset 0px 0px 2px 1px rgba(180,184,216,1);
 box-shadow: inset 0px 0px 2px 1px rgba(180,184,216,1);
 cursor:pointer;
@@ -506,6 +507,10 @@ input[type="radio"]:checked + label
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
+}
+ .prev_next .noselect{
+ 	padding: 10px;
+	background-color: #22264a
 }
 
 .choose_people

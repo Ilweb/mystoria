@@ -1,4 +1,5 @@
 <?php
+
 $lang[SITENAME] = 'Mystoria';
 $lang['Change Password'] = "Смяна на парола";
 $lang['Log Out'] = "Изход";
@@ -57,4 +58,11 @@ $lang['fb'] = "Намерете ни във Facebook";
 $lang['Copyright'] = "Всички права запазени.";
 $lang['Developed by'] = "Сайтът е изработен от ";
 $lang['ilweb'] = "ИЛ УЕБ";
+
+
+
+$lang['Reserve now']="Резервирай сега";
+$lang['Team building']="Тийм билдинг";
+
+
 ?>
