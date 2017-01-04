@@ -19,17 +19,17 @@ if (SHOW_FOOTER)
 		</div>
 		
 		<div class="inner_set">
-			<div>Pages</div>
-			<a href="<?php echo LOCALE_URL; ?>faq.php">FAQ</a>
-			<a href="<?php echo LOCALE_URL; ?>rankings">Rankings</a>
-			<a href="<?php echo LOCALE_URL; ?>terms.php">Terms & Conditions</a>
-			<a href="<?php echo LOCALE_URL; ?>vp.php">Vouchers and Promotions</a>
+			<div><?php echo $lang['Pages']; ?></div>
+			<a href="<?php echo LOCALE_URL; ?>faq.php"><?php echo $lang['FAQ']; ?></a>
+			<a href="<?php echo LOCALE_URL; ?>rankings"><?php echo $lang['Rankings']; ?></a>
+			<a href="<?php echo LOCALE_URL; ?>terms.php"><?php echo $lang['Terms & Conditions']; ?></a>
+			<a href="<?php echo LOCALE_URL; ?>vp.php"><?php echo $lang['Vouchers and Promotions']; ?></a>
 			
 		</div>
 		
 		<div class="inner_set">
-			<div>Partners</div>
-			<a><?php echo $lang['First company title']; ?></a>
+			<div><?php echo $lang['Partners']; ?></div>
+			<a>First company title</a>
 			<a>Second company title</a>
 			<a>Third company title</a>
 			<a>Fourth company title</a>

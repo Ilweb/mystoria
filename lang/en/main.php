@@ -60,10 +60,20 @@ $lang['Oct'] = "Oct";
 $lang['Nov'] = "Nov";
 $lang['Dec'] = "Dec";
 
-
+$lang['Contacts']="Contacts";
+$lang['Rankings'] = "Rankings ";
+$lang['Vouchers and promotions'] ="Vouchers and promotions";
+$lang['FAQ'] = "FAQ";
 
 $lang['Reserve now']="Reserve now";
 $lang['Team building']="Team building";
+$lang['Change your language']="Change your language";
+
+$lang['Partners']="Partners";
+$lang['FAQ']="FAQ";
+$lang['Rankings']="Rankings";
+$lang['Terms & Conditions']="Terms & Conditions";
+$lang['Vouchers and Promotions']="Vouchers and Promotions";
 
 
 

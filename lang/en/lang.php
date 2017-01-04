@@ -61,8 +61,6 @@ $lang['ilweb'] = "ИЛ УЕБ";
 
 
 
-$lang['Reserve now']="Резервирай сега";
-$lang['Team building']="Тийм билдинг";
 
 
 ?>

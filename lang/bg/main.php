@@ -60,4 +60,23 @@ $lang['Oct'] = "Окт";
 $lang['Nov'] = "Ное";
 $lang['Dec'] = "Дек";
 
+$lang['Reserve now']="Резервирай";
+$lang['Team building']="Тийм билдинг";
+$lang['Change your language']="Смяна на езика";
+
+$lang['Contacts'] ="Контакти";
+$lang['Rankings'] = "Класиране ";
+$lang['Vouchers and promotions'] ="Ваучери";
+$lang['FAQ'] = "Често задавани въпроси ";
+
+
+$lang['Partners']="Партньори";
+$lang['FAQ']="Често задавани въпроси";
+$lang['Rankings']="Класиране";
+$lang['Terms & Conditions']="Условия за ползване";
+$lang['Vouchers and Promotions']="Ваучери ";
+
+
+
+
 ?>

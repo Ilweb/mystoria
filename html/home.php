@@ -8,7 +8,7 @@
 			</div>
 			
 				<div class="language">
-				<div class="choose_lang">Change your language</div>
+				<div class="choose_lang"><?php echo $lang['Change your language']; ?></div>
 				<div class="variety"><a href="<?php echo ROOT_URL.'en/'; ?>" class="var">EN</a><div>/</div><a href="<?php echo ROOT_URL.'bg/'; ?>" class="var">BG</a></div>
 			</div>
 		</div>
