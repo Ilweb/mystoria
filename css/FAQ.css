@@ -1,0 +1,161 @@
+.info_inner.FAQ
+{
+	background-color:#03061b;
+	background-image:none;
+	height:970px;
+}
+h4
+{
+	color:white;
+	font-size:26px;
+	text-transform:uppercase;
+	margin:0;
+	height:auto;
+}
+.info_inner > div
+{
+	width:95%;
+	margin-left:auto;
+	margin-right:auto;
+}
+	
+.info_inner div.info_part
+{
+	display:inline-block;
+	width:27%;
+	height:135px;
+	vertical-align:top;
+	top:0;
+}
+.info_inner div
+{
+	color:white !important;
+}
+.info_part div
+{
+	top:10px;
+	text-align:right;
+}
+
+.info_part:first-of-type
+{
+	text-align:left;
+	margin-right:200px;
+}
+.info_part div
+{
+	 height:150px;
+}
+.info_part:nth-of-type(2) h4
+{
+	text-align:right;
+}
+.book
+{
+	height:140px;
+}
+.add_explanation
+{
+	margin-top:70px;
+    margin-bottom: 75px;
+}	
+.add_explanation h5
+{
+	font-size:13px;
+}	
+.add_explanation div
+{
+	display:inline-block;
+	width: 16%;
+    text-align: left;
+    margin-right: 22px;
+}	
+.add_explanation div:last-of-type
+{
+	margin-right:0;
+}	
+.add_explanation p
+{
+	font-size:10px;
+}	
+.info_inner div.second
+{
+	margin-top:50px;
+	width:150px;
+	margin-right:auto;
+	margin-left:auto;
+	display:block;
+	float:none;
+}	
+.info_inner div.second div
+{
+	top:7px;
+}	
+@media only screen and (max-width: 1180px)
+{
+	.add_explanation div
+	{
+		width:30%;
+		margin-right:14%;
+	}
+	.add_explanation div:nth-of-type(2)
+	{
+		margin-right:0;
+	}
+	.info_inner.FAQ
+	{
+		height:1100px;
+}	
+@media only screen and (max-width: 860px)
+{
+	
+	.info_inner div.info_part h4
+	{
+		text-align:center;
+	}
+	.info_inner div.info_part
+	{
+		display:block;
+		width:90%;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom:20px;
+	}
+	.info_inner div.info_part p,.info_inner div.info_part div
+	{
+		text-align:justify !important;
+		height:auto !important;
+	}
+	.book
+	{
+		display:none;
+	}
+	
+}
+@media only screen and (max-width: 780px)
+{
+	.add_explanation div
+	{
+		width:88%;
+		margin-right:0;
+	}
+	.info_inner.FAQ
+	{
+		height:1200px;
+	}
+}	
+@media only screen and (max-width: 480px)
+{
+	.info_inner.FAQ
+	{
+		height:1450px;
+	}
+}
+@media only screen and (max-width: 390px)
+{
+	.info_inner.FAQ
+	{
+		height:1600px;
+	}
+}

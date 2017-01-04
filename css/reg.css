@@ -1,0 +1,38 @@
+.back_terms
+{
+	background:url('../images/reg/back.png') center center;
+	height:calc(100vh - 100px);
+}	
+.terms
+{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	text-align:center;
+}	
+.choose:first-of-type
+{
+	text-align:center;
+	margin: 20px 0 0 0;
+}	
+.terms h3
+{
+	color: white;
+}
+
+@media only screen and (max-width: 680px)
+{
+	.terms 
+	{
+		width:90%;
+	}
+	.terms h3
+	{
+		font-size:24px;
+	}
+	.terms .second
+	{
+		float:none;
+	}	
+}		

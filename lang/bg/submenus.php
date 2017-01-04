@@ -1,0 +1,1 @@
+<?php$lang['Title'] = "Заглавие";$lang['Category'] = "Категория";$lang['Choose another title'] = "Не можете да използвате това заглавие!";$lang['Submenu'] = "Подменю";$lang['Description'] = "Описание";$lang['Order'] = "Ред";$lang['External'] = "Външен линк";$lang['Upload image'] = "Качи картинка";$lang['Image'] = "Картинка";$lang['Featured'] = "На фокус";?>

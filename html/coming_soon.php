@@ -1,0 +1,1 @@
+<img alt="Очаквайте скоро" style="width: 100%;" src="<?php echo IMAGE_URL.'coming-soon.jpg'; ?>" />

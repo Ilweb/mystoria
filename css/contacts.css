@@ -1,0 +1,123 @@
+.info_inner
+{
+	height: 690px;
+	background-image:url("../images/contact_back.png");
+}
+h3
+{
+	text-transform:uppercase;
+	text-align:center;
+	color:white;
+	margin-top:0;
+	font-size:33px;
+	font-family:Monserrat,Roboto;
+	top:72px;
+	position:relative;
+}
+.info_inner div
+{
+	color:#4b5385;
+	font-family:Monserrat,Roboto;
+    position: relative;
+    top: 40px;
+    text-align: center;
+	font-size:10px;
+}
+.info_inner div.cont_e
+{
+width:65%;
+height:270px;
+margin-left: auto;
+margin-right: auto;
+top:120px;
+}
+.cont_e > div
+{
+	display:inline-block;
+	vertical-align: top;
+	
+}	
+.cont_e div
+{
+	top:0;
+}	
+.cont_e > div:first-of-type
+{
+	float:left;
+}	
+.cont_e > div:last-of-type
+{
+	float:right;
+}	
+#wall_5
+{
+	width:450px;
+	height:305px;
+}	
+
+.info_inner div div.under
+{
+	margin-bottom:5px;
+}
+.info_inner div div.under,.info_inner div div.under_info
+{
+	text-align:left;
+}
+.info_inner div div.under_info
+{
+	color:white;
+	font-size:21px;
+	margin-bottom:20px;
+}
+@media only screen and (max-width: 1180px)
+{
+	
+	.cont_e > div
+	{
+		float:left !important;
+	}
+	.info_inner 
+	{
+		height: 850px;
+		background-size: cover;
+	}
+	.info_inner div.cont_e
+	{
+		width:50%;
+		float:none;
+	}
+}
+@media only screen and (max-width: 780px)
+{
+	
+	#wall_5
+	{
+		width:100%;
+	}	
+	.info_inner div.cont_e > div
+	{
+		margin-left:auto;
+		margin-right:auto;
+		
+}		
+@media only screen and (max-width: 560px)
+{
+	.info_inner div.cont_e
+	{
+	width:100%;
+	}
+	.info_inner div.cont_e div
+	{
+		
+		width: 85%;
+	}
+
+}
+@media only screen and (max-width: 390px)
+{
+	
+	.info_inner div.cont_e div.under_info
+	{
+		font-size:14px;
+	}
+}

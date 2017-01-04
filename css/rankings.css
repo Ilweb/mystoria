@@ -1,0 +1,155 @@
+../images/
+{
+	background:#03061b;
+}
+.outer
+{
+	background:white;
+}
+.ranks div div
+{
+	display:inline-block;
+}
+.nth_row div
+{
+	display:inline-block;
+}
+.info_inner div.nth_row 
+{
+	text-align:center;
+}
+.info_inner div.nth_row div.nth_row
+{
+	top:0px;
+}	
+.info_inner
+{
+	min-height: 1300px;
+	height:auto !important;
+	background:#03061C !important;
+}
+#first_place
+{
+	background:url('images/rankings/image1.png');
+}
+
+.second_place
+{
+	background:url('images/rankings/image2.png');
+}
+#third_place
+{
+	background:url('images/rankings/image3.png');
+}
+#fourth_place
+{
+	background:url('images/rankings/image4.png');
+}
+#first_place,.second_place,.rest
+{
+	width: 380px;
+    height: 293px;
+    background-size: contain;
+	background-repeat:no-repeat;
+	margin-bottom:15px;
+	margin-right:15px;
+}
+.second_place:last-of-type
+{
+	margin-right:0;
+}	
+.info_inner div.timings
+{
+	height:50px;
+	background:rgba(22,25,64,0.7);
+	position:absolute;
+	width:100%; 
+	top: 243px;
+    display: block;
+	text-transform:uppercase;
+	color:white;
+	text-align:left;
+}
+.nth_row
+{
+	margin-left:auto;
+}
+.timings div
+{
+	width:100%;
+}
+.timings span
+{
+	margin-left:30px;
+	color:white;
+}
+.timings img
+{
+	left: 180px;
+    position: relative;
+}
+.timings div,.timings img
+{
+	display:inline-block;
+	vertical-align:middle;
+}
+ .info_inner div.timings div
+ {
+	top: 3px;
+ }
+
+.info_inner p:first-of-type
+{
+	text-align:center;
+}
+.info_inner div.nth_row div
+{
+	text-align:left !important;
+}	
+.info_inner .top,.info_inner .other
+{
+	text-transform:uppercase;
+	font-family:Monserrat;
+	color:white;
+	font-weight:bold;
+}	
+.info_inner .other
+{
+	top:70px;
+	line-height: 80px;
+}	
+.info_inner div.nth_row div.second_place
+{
+	margin-right:15px;
+}	
+@media only screen and (max-width: 780px)
+{
+	
+	#first_place,.second_place, #third_place
+	{
+		margin-right:0 !important;
+	}
+	.info_inner div.nthh_row #fourth_place
+	{
+		margin-right:0;
+	}	
+	.info_inner 
+	{
+		min-height:3100px !important;
+	}	
+	.info_inner .nth_row:last-of-type
+	{
+		top:0;
+	}
+}	
+@media only screen and (max-width: 390px)
+{
+	#first_place,.second_place,#third_place,#fourth_place
+	{
+		width:100%;
+	}
+	.timings img
+	{
+		left:45%;
+	}
+}

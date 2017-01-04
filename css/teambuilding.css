@@ -1,0 +1,157 @@
+.team
+{
+	background:url('images/team/team_back.png');
+	
+    background-size: cover;
+    background-position: center top;
+	background-attachment:fixed;
+	width:100%;
+	height:100vh;
+	text-align:center;
+}
+.team div
+{
+	top:50px;
+	background:url('images/team/circle.png');
+	background-size:contain;
+	background-position:center center;
+	background-repeat:no-repeat;
+	width:100%;
+	height:550px;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	font-family:Monserrat;
+	font-size:34px;
+}
+.team div span, .team div img
+{
+	color:white;
+	text-transform:uppercase;
+	position:relative;
+	top:45%;
+	display:block;
+}
+.team div img
+{
+	width:230px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+.additional_info
+{
+	height:437px;
+	background:#080a20;
+	margin:0;
+	padding:0;
+	width:100%;
+	font-family:Roboto;
+	color:white;
+	font-size:13px;
+}
+.additional_info div div
+{
+	display:inline-block;
+	width:49.8%;
+	vertical-align:middle;
+}
+.additional_info div div div
+{
+	width:350px;
+	margin-left: 30%;
+}
+.fst_img
+{
+	background:url('images/team/first_team.png');
+    height: 220px;
+}
+
+.first_info div,.sec_info div
+{
+	width:40%;
+}
+.sec_img
+{
+	background:url('images/team/second_team.png');
+    height: 217.5px;
+}
+.contacts
+{
+	height:250px;
+	background:#03061b;
+	font-family:Monserrat;
+	padding-top:70px;
+}
+.contacts > div
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+}
+.moon
+{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	text-align:center;
+}	
+.moon img
+{
+	width:80%;
+}	
+.contacts div div
+{
+	display:inline-block;
+}	
+
+.contacts div div:nth-of-type(2)
+{
+	float:right;
+}
+
+.contacts div div div:nth-of-type(1)
+{
+	color:#4f588c;
+	font-size:13px;
+	display:block;
+}
+.contacts div div div:nth-of-type(2)
+{
+	color:white;
+	font-size:22px;
+}
+@media only screen and (max-width:1100px)
+{
+	.additional_info div div div
+	{
+		width:350px;
+		margin-left: 15%;
+	}
+}	
+@media only screen and (max-width:860px)
+{
+	.additional_info
+	{
+		height:auto;
+	}	
+	.additional_info div div div
+	{
+		margin-left:5%;
+		margin-right:5%;
+		width:auto;
+	}	
+	.additional_info div div 
+	{
+		display:block;
+		width:100%;
+	}
+	.contacts div div:nth-of-type(2)
+	{
+		float:none;
+	}
+	.contacts div div div:nth-of-type(2)
+	{
+		font-size:18px;
+	}	
+}	
