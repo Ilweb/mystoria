@@ -420,5 +420,14 @@ class Main extends Controller
 		);
 	    $this->_template->render($array);
 	}
+	function terms()
+	{
+		$this->_template->setView('terms');
+		$array = array(
+			"title"=>'terms',
+			"styles"=>array('terms')
+		);
+	    $this->_template->render($array);
+	}
 }
 ?>

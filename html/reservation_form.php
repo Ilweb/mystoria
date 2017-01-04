@@ -145,7 +145,7 @@ $(".prev_next .next").click(function()
 				<div class="col-sm-4"></div>
 				<div class="col-sm-4">
 					<div class="checkbox">
-						<label><input id="agree" type="checkbox" value="1"><?php echo $lang['I agree with']; ?> <a><?php echo $lang['T&C']; ?></a></label>
+						<label><input id="agree" type="checkbox" value="1"><?php echo $lang['I agree with']; ?> <a href="<?php echo LOCALE_URL; ?>terms.php"><?php echo $lang['T&C']; ?></a></label>
 					</div>
 				</div>
 				<div class="col-sm-4"></div>
