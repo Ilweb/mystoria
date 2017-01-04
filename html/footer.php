@@ -20,11 +20,11 @@ if (SHOW_FOOTER)
 		
 		<div class="inner_set">
 			<div>Pages</div>
-			<a>FAQ</a>
-			<a>Rankings</a>
+			<a href="faq.php">FAQ</a>
+			<a href="rankings">Rankings</a>
 			<a>Terms & Conditions</a>
-			<a>Vouchers</a>
-			<a>Promotions</a>
+			<a href="vp.php">Vouchers</a>
+			<a href="vp.php">Promotions</a>
 		</div>
 		
 		<div class="inner_set">
