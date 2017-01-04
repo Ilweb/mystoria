@@ -30,7 +30,6 @@ if (isset($styles))
 }
 ?>
 
-<script type="text/javascript" SRC="<?php echo ROOT_URL; ?>js/jquery-ui.min.js"></script>
 <script type="text/javascript" SRC="<?php echo ROOT_URL; ?>js/main.js?v=1"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgRfpfzYdPBGQDWPAU7DPlLxVCuJfkKQY&callback=initMap"></script>
 
