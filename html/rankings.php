@@ -13,11 +13,10 @@ $this->showView('sticky_header');
 			<div class="timings">
 					<div>
 					<span>Team friends</span>
-
 					<img src="<?php echo ROOT_URL; ?>images/record.png"/>
-						<i>00.65</i>
+					<i>00.65</i>
 					</div>
-				
+
 					
 				</div>
 			</div>

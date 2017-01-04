@@ -204,3 +204,14 @@ $("#confirmRes").click(function()
 	}
 });
 </script>
+<script type="text/javascript">
+
+$('#form').submit(function() {
+var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+var emailinput = $('#femail').value();
+
+if (email_reg.test(emailinput) == false) {
+    window.alert('blqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
+}
+});
+</script>
