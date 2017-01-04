@@ -23,8 +23,8 @@ if (SHOW_FOOTER)
 			<a href="faq.php">FAQ</a>
 			<a href="rankings">Rankings</a>
 			<a>Terms & Conditions</a>
-			<a href="vp.php">Vouchers</a>
-			<a href="vp.php">Promotions</a>
+			<a href="vp.php">Vouchers and Promotions</a>
+			
 		</div>
 		
 		<div class="inner_set">
@@ -33,7 +33,7 @@ if (SHOW_FOOTER)
 			<a>Second company title</a>
 			<a>Third company title</a>
 			<a>Fourth company title</a>
-			<a>Vouchers</a>
+		
 		</div>
 	</div>	
 	</footer>

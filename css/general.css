@@ -174,6 +174,9 @@ h2,h4
   text-decoration: none;
   padding:10px 0;
 }
+.navigation_bars ul li a{
+	color: #000;
+}
 
 .navigation_bars  li:hover 
 {
