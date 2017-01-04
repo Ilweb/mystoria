@@ -324,6 +324,14 @@ h2,h4
 	font-weight:bold;
 	text-align:left;
 }
+.timings i {
+
+	float: right;
+    color: #fff;
+    margin-top: 16px;
+    margin-right: 18px;
+
+}
 
 .info p
 {

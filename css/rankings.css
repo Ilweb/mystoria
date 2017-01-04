@@ -28,23 +28,8 @@
 	height:auto !important;
 	background:#03061C !important;
 }
-#first_place
-{
-	background:url('../images/rankings/image1.png');
-}
 
-.second_place
-{
-	background:url('../images/rankings/image2.png');
-}
-#third_place
-{
-	background:url('../images/rankings/image3.png');
-}
-#fourth_place
-{
-	background:url('../images/rankings/image4.png');
-}
+
 #first_place,.second_place,.rest
 {
 	width: 380px;

@@ -16,7 +16,7 @@
 <link href="<?php echo ROOT_URL; ?>css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo ROOT_URL; ?>css/general.css?ver=1" type="text/css" rel="stylesheet"/>
 <link href="<?php echo ROOT_URL; ?>css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
-<link href="<?php echo ROOT_URL; ?>css/lightbox.min.css" type="text/css" rel="stylesheet"/>
+<link href="<?php echo ROOT_URL; ?>css/lightbox.css" type="text/css" rel="stylesheet"/>
 
 <?php
 if (isset($styles))
@@ -86,5 +86,6 @@ if (isset($tinyMice))
 }
 ?>
 </head>
-<script type="text/javascript" SRC="<?php echo ROOT_URL; ?>js/lightbox.min,js"></script>
+
+<script type="text/javascript" src="<?php echo ROOT_URL; ?>js/lightbox.js"></script>
 <body>
