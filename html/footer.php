@@ -20,10 +20,10 @@ if (SHOW_FOOTER)
 		
 		<div class="inner_set">
 			<div>Pages</div>
-			<a href="faq.php">FAQ</a>
-			<a href="rankings">Rankings</a>
-			<a>Terms & Conditions</a>
-			<a href="vp.php">Vouchers and Promotions</a>
+			<a href="<?php echo LOCALE_URL; ?>faq.php">FAQ</a>
+			<a href="<?php echo LOCALE_URL; ?>rankings">Rankings</a>
+			<a href="<?php echo LOCALE_URL; ?>terms.php">Terms & Conditions</a>
+			<a href="<?php echo LOCALE_URL; ?>vp.php">Vouchers and Promotions</a>
 			
 		</div>
 		
