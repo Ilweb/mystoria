@@ -56,6 +56,11 @@ h2,h4
     background: #242946;
 	 letter-spacing: 1px;
 }
+.choose a {
+	color: #fff;
+	text-decoration: none;
+
+}
 .choose:first-of-type
 {
 	margin-right:22px;
@@ -155,25 +160,26 @@ h2,h4
 	color:#131843;
 	display:inline-block;
 }
-.navigation_bars div
+.navigation_bars ul li
 {
 	margin-left:25px;
 	margin-right:25px;
 	cursor:pointer;
 }
-.navigation_bars div 
+.navigation_bars ul li 
 {
+	display: inline-block;
   position: relative;
   color: #000;
   text-decoration: none;
   padding:10px 0;
 }
 
-.navigation_bars div:hover 
+.navigation_bars  li:hover 
 {
   color: #000;
 }
-.navigation_bars div:before {
+.navigation_bars li:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -187,10 +193,13 @@ h2,h4
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
-.navigation_bars div:hover:before {
+.navigation_bars li:hover:before {
 	visibility: visible;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
+}
+.navigation_bars ul li a{
+	text-decoration: none;
 }
 .menu div .choose.second
 {
@@ -763,13 +772,14 @@ footer div img
 		background:white;
 		display:none;
 	}
-	.menu div.navigation_bars div
+	.menu div.navigation_bars  ul{
+		width: 100%;
+	}
+	.menu div.navigation_bars li
 	{
-		display:block;
-		padding:20px 0 20px 0;
-		width:50%;
-		margin-left:auto;
-		margin-right:auto;
+		display: block;
+    text-align: center;
+    padding: 20px 0 20px 0;
 	}
 	.menu div.mobile_button
 	{

@@ -6,7 +6,7 @@
 }
 .first_chos
 {
-	background-image:url("images/FAQ/planet_background1.png");
+	background-image:url("../images/FAQ/planet_background1.png");
 	width:100%;
 	height:33.3%;
 	top:75px;
@@ -70,14 +70,14 @@
 }
 #second_chos
 {
-	background-image:url("images/FAQ/planet_background2.png");
+	background-image:url("../images/FAQ/planet_background2.png");
 	width:100%;
 	height:33.3%;
 	background-repeat:no-repeat;
 }
 #third_chos
 {
-	background-image:url("images/FAQ/planet_background3.png");
+	background-image:url("../images/FAQ/planet_background3.png");
 	width:100%;
 	height:33.3%;
 	background-size: cover;

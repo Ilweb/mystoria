@@ -2,6 +2,7 @@
 $this->showView('sticky_header');
 ?>
 <div class="info_inner FAQ">
+
 	<h3>FAQ</h3>
 	<div><p>Frequently asked questions</p></div>
 	<div>
@@ -25,7 +26,7 @@ $this->showView('sticky_header');
 			id lobortis justo lacinia. Fusce sagittis malesuada magna. </div>
 		</div>
 		</div>
-	<div class="book"><img src="images/FAQ/book.jpg"></div>
+	<div class="book"><img src="<?php echo ROOT_URL; ?>images/FAQ/book.jpg"></div>
 		<div>
 			<div>
 				<div class="info_part">

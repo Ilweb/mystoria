@@ -324,31 +324,6 @@ class Main extends Controller
 	    $this->_template->render($array);
 	}
 	
-	function contacts()
-	{
-		$page = new Page;
-		if (LOCALE == 'bg')
-		{
-			$page->load(2);
-		}
-		if (LOCALE == 'en')
-		{
-			$page->load(4);
-		}
-		$this->_template->setView('contacts');
-		$this->_template->menuItem = "contacts";
-		$array = array(
-			"title"=>$this->lang['Contact us'],
-			"description"=>$this->lang['Company'].' '.$this->lang['Contact lines 1'],
-			"canonical"=>LOCALE_URL.'contacts.html',
-			"topImages"=>RichController::getSortedImages(5),
-			"topDir"=>'pages/5/',
-			"noSidebar"=>true,
-			"googleMaps"=>true,
-			"p"=>$page
-		);
-	    $this->_template->render($array);
-	}
 	
 	function contactForm()
 	{
@@ -405,7 +380,43 @@ class Main extends Controller
 		$this->_template->setView('faq');
 		$array = array(
 			"title"=>'faq',
-			"styles"=>array('FAQ')
+			"styles"=>array('contacts','FAQ')
+		);
+	    $this->_template->render($array);
+	}
+	function rankings()
+	{
+		$this->_template->setView('rankings');
+		$array = array(
+			"title"=>'rankings',
+			"styles"=>array('rankings','contacts')
+		);
+	    $this->_template->render($array);
+	}
+	function vp()
+	{
+		$this->_template->setView('vp');
+		$array = array(
+			"title"=>'vp',
+			"styles"=>array('vp')
+		);
+	    $this->_template->render($array);
+	}
+	function contacts()
+	{
+		$this->_template->setView('contacts');
+		$array = array(
+			"title"=>'contacts',
+			"styles"=>array('contacts')
+		);
+	    $this->_template->render($array);
+	}
+	function teambuilding()
+	{
+		$this->_template->setView('teambuilding');
+		$array = array(
+			"title"=>'teambuilding',
+			"styles"=>array('teambuilding')
 		);
 	    $this->_template->render($array);
 	}

@@ -6,10 +6,12 @@
 				<div class="choose second"><a href="<?php echo LOCALE_URL.'#reserve'; ?>">Reserve now</a></div>
 				<div class="mobile_button"><img src="<?php echo ROOT_URL; ?>images/menu.png"></div>
 				<div class="navigation_bars">
-					<div>Contacts</div>
-					<div>Rankings</div>
-					<div>Vouchers and promotions</div>
-					<div>FAQ</div>
+					<ul>
+					<li><a href="contacts.php">Contacts</a></li>
+					<li><a href="rankings.php">Rankings</a></li>
+					<li><a href="vp.php">Vouchers and promotions</a></li>
+					<li><a href="faq.php">FAQ</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
