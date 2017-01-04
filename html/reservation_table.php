@@ -2,11 +2,13 @@
 <table class="table table-striped table-hover table-responsive">
 	<thead>
 		<tr>
-			<th>-</th>
+			<th>Edit</th>
 			<th>ID</th>
 			<th>Date & Time</th>
 			<th>Name</th>
+			<th>Phone</th>
 			<th>Status</th>
+			<th>Action</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -14,11 +16,24 @@
 	foreach ($reservations as $r)
 	{
 		echo '<tr>';
-		echo '<td><a class="btn btn-primary btn-xs" href="'.ROOT_URL.'index.php?content=reservations&action=edit&id='.$r->id.'"><i class="fa fa-edit"></i> Edit</a></td>';
+		echo '<td>';
+		echo '<a class="btn btn-primary btn-xs" href="'.ROOT_URL.'index.php?content=reservations&action=edit&id='.$r->id.'"><i class="fa fa-edit"></i> Edit</a>';
+		echo '</td>';
 		echo '<td>'.$r->id.'</td>';
 		echo '<td>'.date('d.m.Y H:i', strtotime($r->start_time)).'</td>';
 		echo '<td>'.$r->name.'</td>';
+		echo '<td>'.$r->phone.'</td>';
 		echo '<td><strong>'.$r->status.'</strong></td>';
+		echo '<td>';
+		if (in_array($r->status, array("pending", "confirmed")) && (strtotime($r->start_time) < time()))
+		{
+			echo '<a class="btn btn-success btn-xs" href="'.ROOT_URL.'index.php?content=reservations&action=edit&id='.$r->id.'&state=completed"><i class="fa fa-check"></i> Complete</a>';
+		}
+		elseif ($r->status == "pending")
+		{
+			echo '<a class="btn btn-warning btn-xs" onclick="statusConfirm('.$r->id.')"><i class="fa fa-check"></i> Confirm</a>';
+		}
+		echo '</td>';
 		echo '</tr>';
 	}
 	?>

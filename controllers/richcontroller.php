@@ -202,6 +202,8 @@ abstract class RichController extends Controller
 						move_uploaded_file($_FILES[$input_image]['tmp_name'], $dir.$newName);
 						
 						$this->clarThumb($dir, $newName);
+						
+						return $newName;
 					}
 					else
 					{
@@ -214,6 +216,8 @@ abstract class RichController extends Controller
 		{
 			echo 'error';
 		}
+		
+		return false;
 	}
 	
 	protected function clarThumb($dir, $image)

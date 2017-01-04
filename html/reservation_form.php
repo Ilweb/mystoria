@@ -173,7 +173,13 @@ $("#confirmRes").click(function()
 {
 	if(validate1("#resForm"))
 	{
-		if ($("#agree").prop("checked"))
+		var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+		var emailinput = $('#femail').val();
+
+		if (email_reg.test(emailinput) == false) {
+			jQuery('#femail').parents(".required").addClass("has-error");
+		}
+		else if ($("#agree").prop("checked"))
 		{
 			$("#confirmRes").hide();
 			$("#myModal").modal("hide");
@@ -202,16 +208,5 @@ $("#confirmRes").click(function()
 			alert("Please confirm you agree with T&C!");
 		}
 	}
-});
-</script>
-<script type="text/javascript">
-
-$('#form').submit(function() {
-var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-var emailinput = $('#femail').value();
-
-if (email_reg.test(emailinput) == false) {
-    window.alert('blqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
-}
 });
 </script>

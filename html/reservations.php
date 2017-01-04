@@ -112,4 +112,17 @@ jQuery("#reservvationList").on("click", ".pagination a", function()
 {
 	loadReservations(jQuery(this).data("page"));
 });
+
+function statusConfirm(rid)
+{
+	$.post("<?php echo ROOT_URL ?>",
+	{
+		content: "reservations",
+		action: "confirm",
+		id: rid
+	}, function()
+	{
+		loadReservations(<?php echo $page; ?>);
+	});
+}
 </script>

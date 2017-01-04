@@ -88,7 +88,12 @@ class Reservations extends RichController
 		}
 		if (isset($_REQUEST['id']))
 		{
+			$this->_model->properties['image'] = null;
 			$this->_model->load((int)$_REQUEST['id']);
+			if (isset($_REQUEST['state']))
+			{
+				$this->_model->properties['status'] = $_REQUEST['state'];
+			}
 		}
 		$this->_template->setView('reservation_edit');
 		$array = array(
@@ -99,12 +104,27 @@ class Reservations extends RichController
 	    $this->_template->render($array);
 	}
 	
+	function confirm()
+	{
+		if (isset($_REQUEST['id']))
+		{
+			$this->_model->load((int)$_REQUEST['id']);
+			$this->_model->properties['status'] = "confirmed";
+			$this->_model->update();
+		}
+	}
+	
 	protected function proceedSave()
 	{
 		$this->_model->save();
 		if ($this->_model->properties["id"])
 		{
-			$this->saveImage();
+			$image = $this->saveImage();
+			if ($image)
+			{
+				$this->_model->properties['image'] = $image;
+				$this->_model->update();
+			}
 		}
 		
 		if ($_POST['id'])
@@ -115,12 +135,6 @@ class Reservations extends RichController
 		{
 			$this->edit();
 		}
-	}
-	
-	function uploadImage()
-	{
-		$this->saveImage();
-		$this->editGallery();
 	}
 }
 ?>

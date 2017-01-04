@@ -1,8 +1,8 @@
 Options +FollowSymLinks
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^www\.hotelakladi\.com
-RewriteRule (.*) http://hotelakladi\.com//$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.mystoria\.bg
+RewriteRule (.*) http://mystoria\.bg//$1 [R=301,L]
 
 RewriteRule ^(\w\w)/?$ index.php?locale=$1
 

@@ -14,7 +14,8 @@ class Reservation extends model
 			"language"=>'bg',
 			"payment"=>null,
 			"players"=>null,
-			"status"=>'pending'
+			"status"=>'pending',
+			"time"=>null
 		);
 		
 	function __construct()

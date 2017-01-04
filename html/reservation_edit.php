@@ -1,6 +1,6 @@
 <div class="container">
 	<h1>Edit reservation</h1>
-	<form method="post" role="form" id="resForm" action="<?php echo LOCALE_URL.'index.php'; ?>">
+	<form method="post" role="form" id="resForm" action="<?php echo LOCALE_URL.'index.php'; ?>"  enctype="multipart/form-data">
 		<input type="hidden" name="id" value="<?php echo $reservation->id; ?>"/>
 		<input type="hidden" name="content" value="reservations" />
 		<input type="hidden" name="action" value="save" />
@@ -74,6 +74,24 @@
 				</div>
 			</div>
 		</div>
+		<div id="results" <?php if ($reservation->status != "completed") echo 'style="display: none;"' ?>>
+			<h3>Results</h3>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="form-group required">
+						<label for="ftime">Time</label>
+						<input type="text" class="form-control" id="ftime" name="time" value="<?php echo $reservation->time; ?>" />
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<label>Team photo</label>
+					<label class="btn btn-info btn-block btn-file">
+						Upload file <input type="file" name="image_file" style="display: none;" onchange="$('#upload-file-info').html($(this).val());">
+					</label>
+					<span class="label label-info" id="upload-file-info"></span>
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-sm-6">
 				<a id="submitButton" class="btn btn-block btn-primary"><i class="fa fa-check"></i> Save</a>
@@ -90,6 +108,18 @@ $("#submitButton").click(function()
 	if (validate1("#resForm"))
 	{
 		$("#resForm").submit();
+	}
+});
+
+$("#fstatus").change(function()
+{
+	if ($(this).val() == "completed")
+	{
+		$("#results").show();
+	}	
+	else
+	{
+		$("#results").hide();
 	}
 });
 </script>
