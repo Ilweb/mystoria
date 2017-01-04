@@ -89,11 +89,18 @@ function slideWheel()
 //sticky header scrolling
 function stickyHeader()
 {
-	if ($(window).scrollTop() > $("#wall_1").height()) {
-        $('.menu').addClass('fixed');
-    } else {
-        $('.menu').removeClass('fixed');
-    }
+	if ($("#wall_1").length)
+	{
+		if ($(window).scrollTop() > $("#wall_1").height()) {
+			$('.menu').addClass('fixed');
+		} else {
+			$('.menu').removeClass('fixed');
+		}
+	}
+	else if (!$('.menu').hasClass("fixed"))
+	{
+		$('.menu').addClass('fixed');
+	}
 }
 
 $(window).on('hashchange', function() {

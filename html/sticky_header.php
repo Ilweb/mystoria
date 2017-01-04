@@ -7,10 +7,10 @@
 				<div class="mobile_button"><img src="<?php echo ROOT_URL; ?>images/menu.png"></div>
 				<div class="navigation_bars">
 					<ul>
-					<li><a href="contacts.php">Contacts</a></li>
-					<li><a href="rankings.php">Rankings</a></li>
-					<li><a href="vp.php">Vouchers and promotions</a></li>
-					<li><a href="faq.php">FAQ</a></li>
+					<li><a href="<?php echo LOCALE_URL; ?>contacts.php">Contacts</a></li>
+					<li><a href="<?php echo LOCALE_URL; ?>rankings.php">Rankings</a></li>
+					<li><a href="<?php echo LOCALE_URL; ?>vp.php">Vouchers and promotions</a></li>
+					<li><a href="<?php echo LOCALE_URL; ?>faq.php">FAQ</a></li>
 					</ul>
 				</div>
 			</div>
