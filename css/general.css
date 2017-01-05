@@ -972,6 +972,10 @@ div:hover svg line {
 	width: 321px;
 
 	}
+	.times {
+    margin-left: -25px;
+ }
+
 }
 @media only screen and (max-width: 460px)
 {
