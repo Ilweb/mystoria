@@ -4,7 +4,7 @@ $this->showView('sticky_header');
 <div class="info_inner FAQ">
 
 	<h3>FAQ</h3>
-	<div><p>Frequently asked questions</p></div>
+	<div><p><?php echo $lang['Frequently asked questions']; ?></p></div>
 	<div>
 		<div>
 		<div class="info_part">

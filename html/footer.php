@@ -15,7 +15,7 @@ if (SHOW_FOOTER)
 			<div>
 				<a><i class="fa fa-twitter-square"></i></a>
 				<a><i class="fa fa-facebook-square"></i></a>
-				&copy; Mystoria 2016</div>	
+				&copy; <?php date('Y');?></div>	
 		</div>
 		
 		<div class="inner_set">

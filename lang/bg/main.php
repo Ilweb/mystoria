@@ -69,6 +69,10 @@ $lang['Rankings'] = "Класиране ";
 $lang['Vouchers and promotions'] ="Ваучери";
 $lang['FAQ'] = "Често задавани въпроси ";
 
+$lang['Success rate']="Успеваемост";
+$lang['Record time']="Рекорди";
+$lang['Average time']="Средно време";
+
 
 $lang['Partners']="Партньори";
 $lang['FAQ']="Често задавани въпроси";
@@ -76,7 +80,21 @@ $lang['Rankings']="Класиране";
 $lang['Terms & Conditions']="Условия за ползване";
 $lang['Vouchers and Promotions']="Ваучери ";
 
+$lang['Address']="Адрес";
+$lang['1504 Sofia']="1504 София";
+$lang['Tsar Osvoboditel 15, CA 94043']="Цар Освободител 15, CA 94043";
+$lang['Email']="Имейл";
 
+$lang['These are the people with<br/> best times in our room!']=" Хората, с <br/> най-добри времена в нашата стая!";
+$lang['top 3 teams']="топ 3 отбори";
+$lang['Team friends']="Тийм приятели";
+$lang['The rest of participants']="Останалите участници";
+
+$lang['VOUCHER']="ВАУЧЕРИ";
+$lang['Get voucher for you and your friends']="Вземете ваучер за Вас и за вашите приятели";
+$lang['RESERVE NOW']="РЕЗЕРВИРАЙ";
+
+$lang['Frequently asked questions']="Често задавани въпроси";
 
 
 ?>

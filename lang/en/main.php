@@ -69,11 +69,34 @@ $lang['Reserve now']="Reserve now";
 $lang['Team building']="Team building";
 $lang['Change your language']="Change your language";
 
+$lang['Success rate']="Success rate";
+$lang['Record time']="Record time";
+$lang['Average time']="Average time";
+
 $lang['Partners']="Partners";
 $lang['FAQ']="FAQ";
 $lang['Rankings']="Rankings";
 $lang['Terms & Conditions']="Terms & Conditions";
 $lang['Vouchers and Promotions']="Vouchers and Promotions";
+
+$lang['Address']="Address";
+$lang['1504 Sofia']='1504 Sofia';
+$lang['Tsar Osvoboditel 15, CA 94043']="Tsar Osvoboditel 15, CA 94043";
+$lang['Email']="Email";
+
+$lang['These are the people with<br/> best times in our room!']="These are the people with<br/> best times in our room!";
+$lang['top 3 teams']="top 3 teams";
+$lang['Team friends']="Team friends";
+$lang['The rest of participants']="The rest of participants";
+
+
+
+$lang['VOUCHER']="VOUCHER";
+$lang['Get voucher for you and your friends']="Get voucher for you and your friends";
+$lang['RESERVE NOW']="RESERVE NOW";
+$lang['Frequently asked questions']="Frequently asked questions";
+
+
 
 
 

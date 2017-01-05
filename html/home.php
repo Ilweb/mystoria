@@ -36,9 +36,9 @@ $this->showView('sticky_header');
 
 				<p>Вие познавате приказния свят, магическите Ви способности растат с всеки изминал ден. На деня кръстов 14 септември, съдбата ви подготвя изненада, която ще преобърне целия Ви свят. Вашият учител заминава на далечно пътешествие из приказните светове, а на Вас се пада не леката задача да обедините разединеното кралство.</p>
 				<div class="times">
-					<div><img src="<?php echo ROOT_URL; ?>images/success.png"><span>Success rate</span><div><span>70%</span></div></div>
-					<div><img src="<?php echo ROOT_URL; ?>images/record.png"><span>Record time</span><div><span class="other">35 min</span></div></div>
-					<div><img src="<?php echo ROOT_URL; ?>images/3d.png"><span>Average time</span><div><span class="other">57 min</span></div></div>
+					<div><img src="<?php echo ROOT_URL; ?>images/success.png"><span><?php echo $lang['Success rate']; ?></span><div><span>70%</span></div></div>
+					<div><img src="<?php echo ROOT_URL; ?>images/record.png"><span><?php echo $lang['Record time']; ?></span><div><span class="other">35 min</span></div></div>
+					<div><img src="<?php echo ROOT_URL; ?>images/3d.png"><span><?php echo $lang['Average time']; ?></span><div><span class="other">57 min</span></div></div>
 				</div>
 			</div>
 		</div>
