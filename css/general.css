@@ -1015,6 +1015,9 @@ div:hover svg line {
 	width: 320px;
 
 	}
+	.cont_e > div:first-of-type {
+     float: none !important;
+}
 	
 
 }
