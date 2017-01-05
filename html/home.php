@@ -22,12 +22,26 @@ $this->showView('sticky_header');
 		<div class="two_sides">
 			<div class="left_part">
 				<div id="circle">
-					<div class="map">	
+					<!--<div class="map">	
 						<div class="arrows">
 							<div class="left_arrow"></div>
 							<div class="right_arrow"></div>
 						</div>
-					</div>
+					</div>-->
+        <div id="slider">
+            <a class="control_next"><img src="<?php echo ROOT_URL; ?>images/r_arrow.png"></a>
+
+            <a class="control_prev"><img src="<?php echo ROOT_URL; ?>images/l_arrow.png"></a>
+ 
+          <ul>
+            <li><img src="<?php echo ROOT_URL; ?>images/moon2.jpg"></li>
+            <li><img src="<?php echo ROOT_URL; ?>images/moon4.jpg"></li>
+          </ul>  
+      </div>
+
+
+
+
 				</div>
 			</div>
 			<div class="info">
@@ -53,3 +67,49 @@ $this->showView('reservation_form');
 </div>
 </div>
 <script type="text/javascript" src="<?php echo ROOT_URL; ?>js/map.js"></script>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function ($) {
+  
+  var slideCount = $('#slider ul li').length;
+  var slideWidth = $('#slider ul li').width();
+  var slideHeight = $('#slider ul li').height();
+  var sliderUlWidth = slideCount * slideWidth;
+  
+  $('#slider').css({ width: slideWidth, height: slideHeight });
+  
+  $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+  
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});    
+
+  
+</script>
