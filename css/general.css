@@ -825,10 +825,19 @@ footer div img
 	{
 		display:block;
 	}
-	.prev_next
-	{
-		width:90%;
+	.prev_next .next {
+    float: none;
+}
+	.prev_next {
+    color: #fff;
+    font-family: Monserrat,Roboto;
+    line-height: 18px;
+    text-align: center;
 	}
+	.prev_next .noselect {
+    margin-bottom: 11px;
+ }
+
 }
 @media only screen and (max-width: 560px)
 {
