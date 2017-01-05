@@ -104,6 +104,11 @@
 {
 	display:inline-block;
 }	
+.contacts a{
+	text-decoration: none;
+	color: #fff;
+
+}
 
 .contacts div div:nth-of-type(2)
 {

@@ -26,8 +26,10 @@ $this->showView('sticky_header');
 					<a class="control_next"><img src="<?php echo ROOT_URL; ?>images/r_arrow.png"></a>
 					<a class="control_prev"><img src="<?php echo ROOT_URL; ?>images/l_arrow.png"></a>
 						<ul>
+							<li><img src="<?php echo ROOT_URL; ?>images/moon6.jpg"></li>
 							<li><img src="<?php echo ROOT_URL; ?>images/moon2.jpg"></li>
 							<li><img src="<?php echo ROOT_URL; ?>images/moon4.jpg"></li>
+							<li><img src="<?php echo ROOT_URL; ?>images/moon5.jpg"></li>
 						</ul>  
 					</div>
 				</div>

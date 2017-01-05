@@ -18,11 +18,11 @@ $this->showView('sticky_header');
 	<div>
 		<div>
 			<div><?php echo $lang['Phone number']; ?></div>
-			<div>+359 888 11 22 33</div>
+			<div><a href="tel:+359 888 11 22 33">+359 888 11 22 33</div>
 		</div>
 		<div>
 			<div><?php echo $lang['Email']; ?></div>
-			<div>hello@escapemystoria.com</div>
+			<div><a href="mailto:hello@escapemystoria.com">hello@escapemystoria.com</a></div>
 		</div>
 	</div>
 	<div class="moon">
