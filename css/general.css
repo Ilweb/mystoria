@@ -170,15 +170,15 @@ h2,h4
 .navigation_bars ul li 
 {
 	display: inline-block;
-  position: relative;
-  color: #000;
-  text-decoration: none;
+	position: relative;
+	color: #000;
+	text-decoration: none;
  
 }
 .navigation_bars ul li a{
 	color: #000;
-	 padding:10px 0;
-	 display: inline-block;
+	padding:10px 0;
+	display: inline-block;
 }
 
 .navigation_bars  li:hover 
