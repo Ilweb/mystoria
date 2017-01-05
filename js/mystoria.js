@@ -120,11 +120,14 @@ $(window).bind('mousewheel DOMMouseScroll', function(event)  {
 	clearTimeout(scrollTimer);
 	scrollTimer = setTimeout(function()
 	{ 
-		stickyHeader();
+		
 		slideWheel();
 	}, 150);
 });
+$(window).on('scroll', function (e) {
 
+		stickyHeader();
+	});
 function goToByScroll( id, correction)
 {
 	if (enabledScroll)
