@@ -56,7 +56,8 @@ h2,h4
     background: #242946;
 	 letter-spacing: 1px;
 }
-.choose a {
+.choose a, 
+.under_info a {
 	color: #fff;
 	text-decoration: none;
 

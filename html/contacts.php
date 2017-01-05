@@ -11,9 +11,10 @@ $this->showView('sticky_header');
 			<?php echo $lang['Tsar Osvoboditel 15, CA 94043']; ?>
 			</div>
 			<div class="under"><?php echo $lang['Email']; ?></div>
-			<div class="under_info">hello@escapemystoria.com</div>
+			<div class="under_info"><a href="mailto:hello@escapemystoria.com">hello@escapemystoria.com</a></div>
 			<div class="under"><?php echo $lang['Phone number']; ?></div>
-			<div class="under_info">+359 888 11 22 33</div>
+			<div class="under_info"><a href="tel:+359 888 11 22 33">+359 888 11 22 33</a>
+</div>
 		</div>
 		<div id="wall_5"  data-stellar-background-ratio="0.5">
 			
