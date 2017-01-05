@@ -22,26 +22,14 @@ $this->showView('sticky_header');
 		<div class="two_sides">
 			<div class="left_part">
 				<div id="circle">
-					<!--<div class="map">	
-						<div class="arrows">
-							<div class="left_arrow"></div>
-							<div class="right_arrow"></div>
-						</div>
-					</div>-->
-        <div id="slider">
-            <a class="control_next"><img src="<?php echo ROOT_URL; ?>images/r_arrow.png"></a>
-
-            <a class="control_prev"><img src="<?php echo ROOT_URL; ?>images/l_arrow.png"></a>
- 
-          <ul>
-            <li><img src="<?php echo ROOT_URL; ?>images/moon2.jpg"></li>
-            <li><img src="<?php echo ROOT_URL; ?>images/moon4.jpg"></li>
-          </ul>  
-      </div>
-
-
-
-
+					<div id="slider">
+					<a class="control_next"><img src="<?php echo ROOT_URL; ?>images/r_arrow.png"></a>
+					<a class="control_prev"><img src="<?php echo ROOT_URL; ?>images/l_arrow.png"></a>
+						<ul>
+							<li><img src="<?php echo ROOT_URL; ?>images/moon2.jpg"></li>
+							<li><img src="<?php echo ROOT_URL; ?>images/moon4.jpg"></li>
+						</ul>  
+					</div>
 				</div>
 			</div>
 			<div class="info">
