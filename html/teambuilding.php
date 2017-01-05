@@ -2,7 +2,7 @@
 $this->showView('sticky_header');
 ?>
 <div class="back team">
-	<div><span>team building</span><img src="<?php echo ROOT_URL; ?>images/logo.png"></div>
+	<div><span><?php echo $lang['Team building']; ?></span><img src="<?php echo ROOT_URL; ?>images/logo.png"></div>
 </div>
 <div class="additional_info">
 	<div>
@@ -17,11 +17,11 @@ $this->showView('sticky_header');
 <div class="contacts">
 	<div>
 		<div>
-			<div>Phone number</div>
+			<div><?php echo $lang['Phone number']; ?></div>
 			<div>+359 888 11 22 33</div>
 		</div>
 		<div>
-			<div>E-mail</div>
+			<div><?php echo $lang['Email']; ?></div>
 			<div>hello@escapemystoria.com</div>
 		</div>
 	</div>
