@@ -386,10 +386,24 @@ class Main extends Controller
 	}
 	function rankings()
 	{
+		$result = $this->_model->select(
+			"id, team, time, image",
+			"reservations",
+			"status = 'completed' AND time IS NOT NULL AND image IS NOT NULL",
+			"time, id",
+			"0, 9"
+		);
+		$teams = array();
+		while ($row = $result->fetch_object())
+		{
+			$teams[] = $row;
+		}
+		
 		$this->_template->setView('rankings');
 		$array = array(
-			"title"=>'rankings',
-			"styles"=>array('rankings','contacts')
+			"title"=>$this->lang['Rankings'],
+			"styles"=>array('rankings','contacts'),
+			"teams"=>$teams
 		);
 	    $this->_template->render($array);
 	}
