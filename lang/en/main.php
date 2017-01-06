@@ -97,7 +97,7 @@ $lang['RESERVE NOW']="RESERVE NOW";
 $lang['Frequently asked questions']="Frequently asked questions";
 
 
-
+$lang['vp']="vp";
 
 
 

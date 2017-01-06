@@ -379,7 +379,7 @@ class Main extends Controller
 	{
 		$this->_template->setView('faq');
 		$array = array(
-			"title"=>'faq',
+			"title"=>$this->lang['FAQ'],
 			"styles"=>array('contacts','FAQ')
 		);
 	    $this->_template->render($array);
@@ -411,7 +411,7 @@ class Main extends Controller
 	{
 		$this->_template->setView('vp');
 		$array = array(
-			"title"=>'vp',
+			"title"=>$this->lang['vp'],
 			"styles"=>array('vp')
 		);
 	    $this->_template->render($array);
@@ -420,7 +420,7 @@ class Main extends Controller
 	{
 		$this->_template->setView('contacts');
 		$array = array(
-			"title"=>'contacts',
+			"title"=>$this->lang['Contacts'],
 			"styles"=>array('contacts')
 		);
 	    $this->_template->render($array);
@@ -429,7 +429,7 @@ class Main extends Controller
 	{
 		$this->_template->setView('teambuilding');
 		$array = array(
-			"title"=>'teambuilding',
+			"title"=>$this->lang['Team building'],
 			"styles"=>array('teambuilding')
 		);
 	    $this->_template->render($array);
@@ -438,7 +438,7 @@ class Main extends Controller
 	{
 		$this->_template->setView('terms');
 		$array = array(
-			"title"=>'terms',
+			"title"=>$this->lang['terms'],
 			"styles"=>array('terms')
 		);
 	    $this->_template->render($array);

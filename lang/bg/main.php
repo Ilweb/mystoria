@@ -96,5 +96,7 @@ $lang['RESERVE NOW']="РЕЗЕРВИРАЙ";
 
 $lang['Frequently asked questions']="Често задавани въпроси";
 
+$lang['vp']="Ваучери";
+
 
 ?>
