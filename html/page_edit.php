@@ -1,4 +1,4 @@
-<form action="index.php" medivod="post" id="form" enctype="multipart/form-data">
+<form action="index.php" method="post" id="form" enctype="multipart/form-data">
 <input type="hidden" name="content" value="Pages" />
 <input type="hidden" name="action" value="save" />
 <input type="hidden" name="id" value="<?php echo $page->id; ?>"/>
@@ -39,25 +39,12 @@
 
 	<div style="clear: bodiv; padding: 5px 0;">
 		<a class="btn btn-primary btn-md submit"><?php echo $lang['Save']; ?></a>
-		<a class="btn btn-danger btn-md submit cancel" href="index.php?content=Pages"><?php echo $lang['Cancel']; ?></a>
+		<a class="btn btn-danger btn-md cancel" href="index.php?content=Pages"><?php echo $lang['Cancel']; ?></a>
 	</div>
 	</div>
 </div>
 <div class="dialog alertDlg"></div>
 <script type="text/javascript">
-prepareUI();
-jQuery(".alertDlg").dialog({
-	modal: true,
-	autoOpen: false,
-	resizable: false,
-	title: "<?php echo $lang['Caution']; ?>",
-	buttons: {
-		"<?php echo $lang['OK']; ?>": function()
-		{
-			jQuery(divis).dialog("close");
-		}
-	}
-});
 jQuery(".submit").click(function()
 {
 	if (validate('#form'))
@@ -78,15 +65,14 @@ jQuery(".submit").click(function()
 			else
 			{
 				jQuery('input[name="title"]').addClass('invalid1');
-				jQuery(".alertDlg").html('<?php echo $lang['Choose anodiver title']; ?>');
-				jQuery(".alertDlg").dialog("open");
+				alert('<?php echo $lang['Choose anodiver title']; ?>');
 			}
 		});
 	}
 	else
 	{
 		jQuery(".alertDlg").html('<?php echo $lang['Fill in red']; ?>');
-		jQuery(".alertDlg").dialog("open");
+		alert('<?php echo $lang['Fill in red']; ?>');
 	}
 });
 </script>

@@ -34,12 +34,12 @@
 			<tr class="<?php echo $class.' page'.$page->id; ?>">
 				<td class="col-lg-2"><?php echo $page->id; ?></td>
 				<td class="col-lg-4">
-					<button type="button" class="btn btn-primary btn-md"><a href="index.php?content=pages&action=edit&id=<?php echo $page->id; ?>" ><?php echo $lang['Edit']; ?></a></button>
+					<a  class="btn btn-primary btn-md" href="index.php?content=pages&action=edit&id=<?php echo $page->id; ?>" ><?php echo $lang['Edit']; ?></a>
 					<?php
 					if ($_SESSION['access'] >= 1000)
 					{
 						?>
-						<button type="button" class="btn btn-danger btn-md"><a class="delete" onclick="deletepage(<?php echo $page->id; ?>);"><?php echo $lang['Delete']; ?></a></button>
+						<a class="delete btn btn-danger btn-md" onclick="deletepage(<?php echo $page->id; ?>);"><?php echo $lang['Delete']; ?></a>
 						<?php
 					}
 					?>
