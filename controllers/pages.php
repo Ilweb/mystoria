@@ -39,6 +39,7 @@ class Pages extends RichController
 		$this->_template->setView('page_edit');
 		$array = array(
 			"title"=>$title,
+				"styles"=>array('pages'),
 			"page"=>$this->_model->getProperties(),
 			"tinyMice"=>true
 		);

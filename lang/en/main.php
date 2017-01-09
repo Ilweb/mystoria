@@ -60,6 +60,7 @@ $lang['Oct'] = "Oct";
 $lang['Nov'] = "Nov";
 $lang['Dec'] = "Dec";
 
+$lang['Pages'] = "Pages";
 $lang['Contacts']="Contacts";
 $lang['Rankings'] = "Rankings ";
 $lang['Vouchers and promotions'] ="Vouchers and promotions";
@@ -97,7 +98,7 @@ $lang['RESERVE NOW']="RESERVE NOW";
 $lang['Frequently asked questions']="Frequently asked questions";
 
 
-$lang['vp']="vp";
+$lang['Vouchers']="Vouchers";
 
 
 

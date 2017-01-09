@@ -14,6 +14,35 @@ body
 
 
 }
+.pagePreview h1{
+ text-align: left !important;
+
+}
+.ui-widget-header{
+	background-color: #337ab7 !important;
+}
+.ui-widget-header th{
+	color: #fff;
+}
+a.add{
+	margin-bottom: 10px !important;
+	text-decoration: none;
+	bottom: 10px;
+	
+}
+.col-lg-4 .btn-primary a, .btn-danger a{
+	color: #fff;
+
+}
+.line div:first-of-type{
+	font-weight: 700;
+	font-size: 20px;
+	display: inline-block;
+}
+
+div.line{
+	padding-bottom: 28px;
+}
 
 h2,h4
 {
@@ -42,6 +71,7 @@ h2,h4
 	height: 100%;
     width: 100%;
 }
+
 .buttons, #people_num
 {
 	text-align: center;

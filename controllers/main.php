@@ -411,7 +411,7 @@ class Main extends Controller
 	{
 		$this->_template->setView('vp');
 		$array = array(
-			"title"=>$this->lang['vp'],
+			"title"=>$this->lang['Vouchers'],
 			"styles"=>array('vp')
 		);
 	    $this->_template->render($array);
@@ -440,6 +440,14 @@ class Main extends Controller
 		$array = array(
 			"title"=>$this->lang['terms'],
 			"styles"=>array('terms')
+		);
+	    $this->_template->render($array);
+	}
+	function pages()
+	{
+		$this->_template->setView('pages');
+		$array = array(
+			"styles"=>array('pages')
 		);
 	    $this->_template->render($array);
 	}
