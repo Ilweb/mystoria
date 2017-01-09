@@ -48,7 +48,8 @@ div.line{
     background-color: transparent;
     border-color: #adadad;
 }
-.required{
+.required
+{
 	
     display: block;
     width: 100%;
@@ -62,6 +63,21 @@ div.line{
     border: 1px solid #ccc;
     border-radius: 4px;
    
+}
+.title{
+	text-align: center;
+	background-color: #adadad;
+	color: #fff;
+	text-decoration: none;
+	 height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-color: #337ab7;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 }
