@@ -11,7 +11,8 @@
 	}
 	?>
 
-	<table class="full table table-striped table-hover table-responsive">
+<div class="table-responsive">          
+  <table class="table">
 		<tr class="  ui-widget-header"> 
 			<th>#</th>
 			<th style="width: 80px;"><?php echo $lang['Edit']; ?></th>
@@ -32,8 +33,8 @@
 			}
 			?>
 			<tr class="<?php echo $class.' page'.$page->id; ?>">
-				<td class="col-lg-2"><?php echo $page->id; ?></td>
-				<td class="col-lg-4">
+				<td class="col-xs-1"><?php echo $page->id; ?></td>
+				<td class="col-xs-1">
 					<a  class="btn btn-primary btn-md" href="index.php?content=pages&action=edit&id=<?php echo $page->id; ?>" ><?php echo $lang['Edit']; ?></a>
 					<?php
 					if ($_SESSION['access'] >= 1000)
@@ -44,7 +45,7 @@
 					}
 					?>
 				</td>
-				<td class="col-lg-6">
+				<td class="col-xs-10">
 					<?php 
 					echo $page->title; 
 					?>

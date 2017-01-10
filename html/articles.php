@@ -1,3 +1,4 @@
+<div class="container">
 <div class="pagePreview dark">
 	<h1><?php echo $lang['Articles']; ?></h1>
 	<a class="add" href="index.php?content=articles&action=edit"><?php echo $lang['New article']; ?></a>
@@ -16,8 +17,10 @@
 	}
 	?>
 	</select>
-	<table class="full">
-		<tr class="ui-widget-header">
+
+<div class="table-responsive">          
+  <table class="table">
+		<tr>
 			<th>#</th>
 			<th style="width: 90px;">-</th>
 			<th><?php echo $lang['Language']; ?> </th>
@@ -43,8 +46,8 @@
 			<tr class="<?php echo $class.' article'.$article->id; ?>">
 				<td><?php echo $article->id; ?></td>
 				<td>
-					<a class="edit" href="index.php?content=articles&action=edit&id=<?php echo $article->id; ?>" ><?php echo $lang['Edit']; ?></a>
-					<a class="delete" onclick="deleteArticle(<?php echo $article->id; ?>);"><?php echo $lang['Delete']; ?></a>
+					<a class="edit btn btn-primary btn-md" href="index.php?content=articles&action=edit&id=<?php echo $article->id; ?>" ><?php echo $lang['Edit']; ?></a>
+					<a class="delete  btn btn-danger btn-md" onclick="deleteArticle(<?php echo $article->id; ?>);"><?php echo $lang['Delete']; ?></a>
 				</td>
 				<td>
 					<?php
@@ -114,6 +117,7 @@
 		}
 		?>
 	</table>
+</div>
 </div>
 <script type="text/javascript">
 jQuery('select[name="category"]').val('<?php echo $category; ?>');
