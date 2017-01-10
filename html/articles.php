@@ -1,28 +1,30 @@
 <div class="container">
-<div class="pagePreview dark">
-	<h1><?php echo $lang['Articles']; ?></h1>
-	<a class="add" href="index.php?content=articles&action=edit"><?php echo $lang['New article']; ?></a>
-	<?php
-	if ($pages > 1)
-	{
-		$this->pages($page, $pages);
-	}
-	?>
-	<select name="category">
-	<?php
-	echo '<option value="0">'.$lang['All categories'].'</option>';
-	while ($cat = $categories->fetch_object())
-	{
-		echo '<option value="'.$cat->id.'">'.$cat->category.'</option>';
-	}
-	?>
-	</select>
-
+<h1><?php echo $lang['Articles']; ?></h1>
+<div class="row">
+	<div class="col-sm-6"><a class="add btn btn-primary btn-block" href="index.php?content=articles&action=edit"><?php echo $lang['New article']; ?></a></div>
+	<div class="col-sm-6">
+		<select name="category" class="form-control">
+		<?php
+		echo '<option value="0">'.$lang['All categories'].'</option>';
+		while ($cat = $categories->fetch_object())
+		{
+			echo '<option value="'.$cat->id.'">'.$cat->category.'</option>';
+		}
+		?>
+		</select>
+	</div>
+</div>
+<?php
+if ($pages > 1)
+{
+	$this->pages($page, $pages);
+}
+?>
 <div class="table-responsive">          
   <table class="table">
 		<tr>
 			<th>#</th>
-			<th style="width: 90px;">-</th>
+			<th style="width: 120px;">-</th>
 			<th><?php echo $lang['Language']; ?> </th>
 			<th style="width: 60px;">-</th>
 			<th><?php echo $lang['Title']; ?></th>
@@ -46,8 +48,8 @@
 			<tr class="<?php echo $class.' article'.$article->id; ?>">
 				<td><?php echo $article->id; ?></td>
 				<td>
-					<a class="edit btn btn-primary btn-md" href="index.php?content=articles&action=edit&id=<?php echo $article->id; ?>" ><?php echo $lang['Edit']; ?></a>
-					<a class="delete  btn btn-danger btn-md" onclick="deleteArticle(<?php echo $article->id; ?>);"><?php echo $lang['Delete']; ?></a>
+					<a class="edit btn btn-primary btn-md" href="index.php?content=articles&action=edit&id=<?php echo $article->id; ?>" title="<?php echo $lang['Edit']; ?>"><i class="fa fa-edit"></i></a>
+					<a class="delete btn btn-danger btn-md" onclick="deleteArticle(<?php echo $article->id; ?>);"><i class="fa fa-close"></i></a>
 				</td>
 				<td>
 					<?php
@@ -121,10 +123,9 @@
 </div>
 <script type="text/javascript">
 jQuery('select[name="category"]').val('<?php echo $category; ?>');
-prepareUI();
 jQuery(".page").change(function()
 {
-	jQuery("#content").load("index.php",
+	jQuery("body > .container").load("index.php",
 	{
 		content: "articles",
 		page: jQuery(".page:checked").val(),
@@ -133,7 +134,7 @@ jQuery(".page").change(function()
 });
 jQuery('select[name="category"]').change(function()
 {
-	jQuery("#content").load("index.php",
+	jQuery("body > .container").load("index.php",
 	{
 		content: "articles",
 		page: 1,
