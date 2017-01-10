@@ -52,7 +52,9 @@ div.txt{
 	font-weight: 700;
 	font-size: 20px;
 }
-
+.smallImage{
+	margin-bottom: 5px;
+}
 
 iframe{
 	width: 100%;
@@ -82,7 +84,8 @@ iframe{
 
 
 .title{
-
+	float: left;
+	text-align: center;
 	background-color: #adadad;
 	color: #fff;
 	text-decoration: none;

@@ -87,16 +87,18 @@
 					{
 						?>
 						<div class="line">
-						<div class="col-sm-6 "><?php echo $lang['Upload image']; ?></div>
-						<input type="file" name="image_file" />
+							<div class="col-sm-6 "><?php echo $lang['Upload image']; ?></div>
+							<input type="file" name="image_file" />
 						</div>
 						<?php
 					}
 					else
 					{
 						?>
-				<div class="line">
-					<div colspan="2"><iframe src="index.php?content=articles&action=editGallery&id=<?php echo $article->id; ?>" frameborder="0" style="border:none; width:50%; height:320px;" allowTransparency="true"></iframe></div>
+				<div class="col-lg-12">
+					<div class="form-group required">
+					<div colspan="2"><iframe src="index.php?content=articles&action=editGallery&id=<?php echo $article->id; ?>" frameborder="0" style="border:none; width:100%; height:320px;" allowTransparency="true"></iframe></div>
+				</div>
 				</div>
 				<?php
 			}
