@@ -64,6 +64,15 @@ div.line{
     border-radius: 4px;
    
 }
+.table {
+  
+    margin-top: 31px;
+}
+
+.btn {
+    display: block;
+    }
+
 .title{
 	text-align: center;
 	background-color: #adadad;
@@ -80,7 +89,7 @@ div.line{
     border-radius: 4px;
 }
 
-}
+
 h2,h4
 {
 	font-size: 28px;
@@ -747,7 +756,7 @@ footer div img
 }
 .content {
     background-attachment: fixed;
-    min-height: 800px;
+    min-height: 900px;
 }
 #content_4 {
 	min-height: auto;
