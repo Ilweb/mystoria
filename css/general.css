@@ -53,10 +53,7 @@ div.txt{
 	font-size: 20px;
 }
 
-select , input{
-	border:none;
-	outline: none;
-}
+
 iframe{
 	width: 100%;
 }
@@ -85,7 +82,7 @@ iframe{
 
 
 .title{
-	text-align: center;
+
 	background-color: #adadad;
 	color: #fff;
 	text-decoration: none;
@@ -1110,7 +1107,6 @@ div:hover svg line {
 	.cont_e > div:first-of-type {
      float: none !important;
 }
-
 	
 
 }
