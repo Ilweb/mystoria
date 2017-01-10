@@ -2,11 +2,11 @@
 $this->showView('gallery_header');
 ?>
 
-		<form action="index.php" method="post" id="form"  enctype="multipart/form-data">
+		<form action="index.php" method="post" id="form"   enctype="multipart/form-data">
 		<input type="hidden" name="content" value="<?php echo $class; ?>" />
 		<input type="hidden" name="action" value="uploadImage" />
 		<input type="hidden" name="id" value="<?php echo $id; ?>"/>
-		<input type="file" name="image_file" />
+		<input type="file" style="outline: none;" name="image_file" />
 		<input type="submit" class="button btn btn-warning" style="margin-top: 10px; " value="Качи снимка">
 		</form>
 

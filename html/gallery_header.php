@@ -27,4 +27,4 @@ function deleteImage(url, image)
 }
 </script>
 </head>
-<body style="background: none;">
+<body style="background: none; overflow-x:hidden; ">
