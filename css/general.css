@@ -756,7 +756,7 @@ footer div img
 }
 .content {
     background-attachment: fixed;
-    min-height: 900px;
+    min-height: 100vh;
 }
 #content_4 {
 	min-height: auto;
