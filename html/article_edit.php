@@ -1,81 +1,106 @@
 <div class="container">
 <div class="dark">
 	<h1><?php echo $title; ?></h1>
-	<form action="index.php" method="post" id="form" enctype="multipart/form-data">
-	<input type="hidden" name="content" value="Articles" />
-	<input type="hidden" name="action" value="save" />
-	<input type="hidden" name="id" value="<?php echo $article->id; ?>"/>
+		<form action="index.php" method="post" id="form" enctype="multipart/form-data">
+		<input type="hidden" name="content" value="Articles" />
+		<input type="hidden" name="action" value="save" />
+		<input type="hidden" name="id" value="<?php echo $article->id; ?>"/>
 	<div class="full">
 		<div class="line">
-			<div class="col-sm-6 title"><?php echo $lang['Language']; ?></div>
-		
-				<input class="checkButton " type="radio" name="lang" id="c_bg " value="bg" />
-				<label for="c_bg"><img src="<?php echo IMAGE_URL.'flags/bg.png'; ?>" alt="bg" title="български" /></label>
-				<input class="checkButton" type="radio" name="lang" id="c_en" value="en" />
-				<label for="c_en"><img src="<?php echo IMAGE_URL.'flags/en.png'; ?>" alt="en" title="English" /></label>
-			
+			<div class="row">
+				<div class="col-lg-6 title"><?php echo $lang['Language']; ?></div>
+				<div class="col-lg-6 center">
+					<input class="checkButton" type="radio" name="lang" id="c_bg " value="bg" />
+					<label for="c_bg"><img src="<?php echo IMAGE_URL.'flags/bg.png'; ?>" alt="bg" title="български" /></label>
+					<input class="checkButton" type="radio" name="lang" id="c_en" value="en" />
+					<label for="c_en"><img src="<?php echo IMAGE_URL.'flags/en.png'; ?>" alt="en" title="English" /></label>
+				</div>
+			</div>
 		</div>
 		<div class="line">
-			<div class="col-sm-6 title"><?php echo $lang['Title']; ?></div>
-		<input class="textbox required col-sm-6" type="text" name="title" value="<?php echo $article->title; ?>"/>
+			<div class="row">
+				<div class="col-lg-6 title"><?php echo $lang['Title']; ?></div>
+				<div class="col-lg-6 center">
+					<input class="textbox required" type="text" name="title" value="<?php echo $article->title; ?>"/>
+				</div>
+			</div>
 		</div>
 		<div class="line">
-		<div class="col-sm-6 title"><?php echo $lang['Category']; ?></div>
-		
-				<select name="category col-sm-6" >
-					<?php
-					while ($cat = $categories->fetch_object())
-					{
-						echo '<option value="'.$cat->id.'"';
-						if ($cat->id == $article->category)
-						{
-							echo ' selected="selected"';
-						}
-						echo '>'.$cat->category.'</option>';
-					}
-					?>
-				</select>
-			
+			<div class="row">
+				<div class="col-lg-6 title"><?php echo $lang['Category']; ?></div>
+					<div class="col-lg-6 center">
+						<select name="category">
+							<?php
+							while ($cat = $categories->fetch_object())
+							{
+								echo '<option value="'.$cat->id.'"';
+								if ($cat->id == $article->category)
+								{
+									echo ' selected="selected"';
+								}
+								echo '>'.$cat->category.'</option>';
+							}
+							?>
+						</select>
+					</div>
+			</div>
 		</div>
 		<div class="line">
-<div class="col-sm-6 title "><?php echo $lang['Submenu']; ?></div>
-	
-				<select name="submenu">
-					<option value="0"></option>
-				</select>
-		
+			<div class="row">
+				<div class="col-sm-6 title "><?php echo $lang['Submenu']; ?></div>
+				<div class="col-lg-6 center">
+					<select name="submenu">
+						<option value="0"></option>
+					</select>
+				</div>
+			</div>
 		</div>
 		<div class="line">
-	<div class="col-sm-6 title "><?php echo $lang['Publish date']; ?></div>
-	<input class="date" type="text" name="publish_date" value="<?php echo $article->publish_date; ?>"/>
+			<div class="row">
+				<div class="col-lg-6 title "><?php echo $lang['Publish date']; ?></div>
+				<div class="col-lg-6 center">
+					<input class="date" type="text" name="publish_date" value="<?php echo $article->publish_date; ?>"/>
+				</div>
+			</div>
 		</div>
 		<div class="line">
-			<p>Featured</p>
-		<input type="checkbox" name="featured" <?php if ($article->featured) echo 'checked="checked"'; ?> value="1"/>
+			<div class="row">
+				<div class="col-lg-6">Featured
+					<input type="checkbox" name="featured" <?php if ($article->featured) echo 'checked="checked"'; ?> value="1"/>
+				</div>
+			</div>
 		</div>
 		<div class="line" style="display:none;">
-			<div class="col-sm-6 title"><?php echo $lang['Important']; ?></div>
-			<input type="checkbox" name="important" <?php if ($article->important) echo 'checked="checked"'; ?> value="1"/>
+			<div class="row">
+				<div class="col-lg-6 "><?php echo $lang['Important']; ?></div>
+				<div class="col-lg-6">
+					<input type="checkbox" name="important" <?php if ($article->important) echo 'checked="checked"'; ?> value="1"/>
+				</div>
+			</div>
 		</div>
 		<div class="line" style="display:none;">
-	<div class="col-sm-6 "><?php echo $lang['Feedback']; ?></div>
-	<input type="checkbox" name="feedback" <?php if ($article->feedback) echo 'checked="checked"'; ?> value="1"/>
+			<div class="row">
+				<div class="col-lg-6 "><?php echo $lang['Feedback']; ?></div>
+				<div class="col-lg-6">
+					<input type="checkbox" name="feedback" <?php if ($article->feedback) echo 'checked="checked"'; ?> value="1"/>
+				</div>
+			</div>
 		</div>
-		<div class="line">
+		<div class="line txt">
 			<p colspan="2"><?php echo $lang['Body']; ?></p>
 		</div>
 		<div class="line">
 			<div colspan="2">
 				<textarea class="tinymce" name="body" style="width: 95%; height: 350px;"><?php echo $article->body; ?></textarea>
-			</div>
-		</div>
+			i</div>
+		</dv>
 		<?php 
 		if (!$article->id)
 		{
 			?>
 			<div class="line">
 			<div class="col-sm-6 "><?php echo $lang['Upload image']; ?></div>
-			<div class="col-sm-6 "><input type="file" name="image_file" /></div>
+			<input type="file" name="image_file" />
 			</div>
 			<?php
 		}
@@ -83,29 +108,33 @@
 		{
 			?>
 			<div class="line">
-				<div colspan="2"><iframe src="index.php?content=articles&action=editGallery&id=<?php echo $article->id; ?>" frameborder="0" style="border:none; width:100%; height:320px;" allowTransparency="true"></iframe></div>
+				<div colspan="2"><iframe src="index.php?content=articles&action=editGallery&id=<?php echo $article->id; ?>" frameborder="0" style="border:none; width:50%; height:320px;" allowTransparency="true"></iframe></div>
 			</div>
 			<?php
 		}
 		?>
 		<div class="line">
-			<div class="col-sm-6 "><?php echo $lang['YouTube video']; ?></div>
-			<div><input class="textbox" type="text" name="video" value="<?php echo $article->video; ?>"/></div>
-		</div>
-		<div>
-			<div> colspan="2" class="videoHere">
-			<?php
-			if (strlen($article->video) == 11)
-			{
-				echo '<iframe width="600" height="340" src="http://www.youtube.com/embed/'.$article->video.'" frameborder="0" allowfullscreen></iframe>';
-			}
-			?>
+			<div class="row">
+				<div class="col-sm-6 "><?php echo $lang['YouTube video']; ?>
+					<input class="textbox" type="text" name="video" value="<?php echo $article->video; ?>"/>
+				
+
+				<?php
+				if (strlen($article->video) == 11)
+				{
+					echo '<iframe width="600" height="340" src="http://www.youtube.com/embed/'.$article->video.'" frameborder="0" allowfullscreen></iframe>';
+				}
+				?>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div style="clear: both; padding: 5px 0;">
-		<a class="submit"><?php echo $lang['Save']; ?></a>
-		<a class="cancel" href="index.php?content=articles"><?php echo $lang['Cancel']; ?></a>
+	<div class= "row" style="clear: both; padding: 5px 0;">
+		<div class="col-sm-6">
+			<a class="submit btn btn-block btn-primary"><?php echo $lang['Save']; ?></a>
+		</div>
+		<div class="col-sm-6">
+			<a class="cancel btn btn-block btn-warning" href="index.php?content=articles"><?php echo $lang['Cancel']; ?></a>
+		</div>
 	</div>
 </div>
 </div>
