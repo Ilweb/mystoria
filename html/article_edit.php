@@ -109,7 +109,7 @@
 	</div>
 </div>
 <script type="text/javascript">
-jQuery("#c_<?php echo $article->lang; ?>").attr("checked", "checked");
+jQuery("#c_<?php echo $article->lang; ?>").prop("checked", true);
 function loadParents()
 {
 	jQuery.post("index.php",
@@ -126,7 +126,7 @@ function loadParents()
 		jQuery('select[name="submenu"]').val(<?php echo $article->submenu; ?>);
 	});
 }
-prepareUI();
+
 loadParents();
 jQuery('select[name="category"], input[name="lang"]').change(function()
 {
@@ -170,15 +170,17 @@ jQuery(".submit").click(function()
 			else
 			{
 				jQuery('input[name="title"]').addClass('invalid1');
-				jQuery(".alertDlg").html('<?php echo $lang['Choose another title']; ?>');
-				jQuery(".alertDlg").dialog("open");
+				//jQuery(".alertDlg").html('<?php echo $lang['Choose another title']; ?>');
+				//jQuery(".alertDlg").dialog("open");
+				alert('<?php echo $lang['Choose another title']; ?>');
 			}
 		});
 	}
 	else
 	{
-		jQuery(".alertDlg").html('<?php echo $lang['Fill in red']; ?>');
-		jQuery(".alertDlg").dialog("open");
+		//jQuery(".alertDlg").html('<?php echo $lang['Fill in red']; ?>');
+		//jQuery(".alertDlg").dialog("open");
+		alert('<?php echo $lang['Fill in red']; ?>');
 	}
 });
 </script>

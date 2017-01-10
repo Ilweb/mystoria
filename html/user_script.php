@@ -1,7 +1,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function()
 {
-	jQuery(".changePass").dialog({
+	/*jQuery(".changePass").dialog({
 		modal: true,
 		autoOpen: false,
 		resizable: false,
@@ -50,10 +50,10 @@ jQuery(document).ready(function()
 				jQuery('.changePass .alert').html('');
 			}
 		}
-	});
+	});*/
 	jQuery(".changePassLink").click(function()
 	{
-		jQuery(".changePass").dialog("open");
+		//jQuery(".changePass").dialog("open");
 	});
 });
 </script>

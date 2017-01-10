@@ -13,10 +13,24 @@ class Main extends Controller
 		$p->properties['url'] = null;
 		$p->load(1);
 		
+		$rooms = $this->_model->select(
+			"id, url, title, body",
+			"articles",
+			"!deleted AND publish_date <= CURDATE() AND category = 1 AND lang = '".LOCALE."'",
+			"publish_date DESC",
+			1
+		);
+		while ($row = $rooms->fetch_object())
+		{
+			$room = $row;
+		}
+		
 		$this->_template->setView('home');
 		$array = array(
 			"canonical"=>'',
-			"hours"=>$this->getHours()
+			"hours"=>$this->getHours(),
+			"room"=>$room,
+			"images"=>RichController::getSortedImages($room->id)
 		);
 	    $this->_template->render($array);
 	}

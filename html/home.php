@@ -26,19 +26,21 @@ $this->showView('sticky_header');
 					<a class="control_next"><img src="<?php echo ROOT_URL; ?>images/r_arrow.png"></a>
 					<a class="control_prev"><img src="<?php echo ROOT_URL; ?>images/l_arrow.png"></a>
 						<ul>
-							<li><img src="<?php echo ROOT_URL; ?>images/moon6.jpg"></li>
-							<li><img src="<?php echo ROOT_URL; ?>images/moon2.jpg"></li>
-							<li><img src="<?php echo ROOT_URL; ?>images/moon4.jpg"></li>
-							<li><img src="<?php echo ROOT_URL; ?>images/moon5.jpg"></li>
+						<?php
+						foreach ($images as $key => $image)
+						{
+							echo '<li><img src="'.$this->thumbnail("articles/".$room->id."/".$image, 450, array('crop'=>(450 / 300))).'"></li>';
+						}
+						?>
 						</ul>  
 					</div>
 				</div>
 			</div>
 			<div class="info">
-				<h2>Kingdom of death</h2>
-				<p>Отборът Ви ще се озове в специално изграден декор изпълнен с разнообразни загадки. Вашата цел е  да преминете през цялото приключение за 60 минути и да откриете изхода. С всяка разрешена загадка ще разкривате нови детайли от историята, приближавайки се до крайната цел. Обединете силите си с близки, приятели, колеги и изживейте приключението заедно.</p>
-
-				<p>Вие познавате приказния свят, магическите Ви способности растат с всеки изминал ден. На деня кръстов 14 септември, съдбата ви подготвя изненада, която ще преобърне целия Ви свят. Вашият учител заминава на далечно пътешествие из приказните светове, а на Вас се пада не леката задача да обедините разединеното кралство.</p>
+				<h2><?php echo $room->title; ?></h2>
+				<?php
+				echo $room->body;
+				?>
 				<div class="times">
 					<div><img src="<?php echo ROOT_URL; ?>images/success.png"><span><?php echo $lang['Success rate']; ?></span><div><span>70%</span></div></div>
 					<div><img src="<?php echo ROOT_URL; ?>images/record.png"><span><?php echo $lang['Record time']; ?></span><div><span class="other">35 min</span></div></div>
