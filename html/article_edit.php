@@ -1,28 +1,28 @@
+<div class="container">
 <div class="dark">
 	<h1><?php echo $title; ?></h1>
 	<form action="index.php" method="post" id="form" enctype="multipart/form-data">
 	<input type="hidden" name="content" value="Articles" />
 	<input type="hidden" name="action" value="save" />
 	<input type="hidden" name="id" value="<?php echo $article->id; ?>"/>
-	<table class="full">
-		<tr class="line">
-			<th><?php echo $lang['Language']; ?></th>
-			<td>
-				<input class="checkButton" type="radio" name="lang" id="c_bg" value="bg" />
+	<div class="full">
+		<div class="line">
+			<div class="col-sm-6 title"><?php echo $lang['Language']; ?></div>
+		
+				<input class="checkButton " type="radio" name="lang" id="c_bg " value="bg" />
 				<label for="c_bg"><img src="<?php echo IMAGE_URL.'flags/bg.png'; ?>" alt="bg" title="български" /></label>
-				
 				<input class="checkButton" type="radio" name="lang" id="c_en" value="en" />
 				<label for="c_en"><img src="<?php echo IMAGE_URL.'flags/en.png'; ?>" alt="en" title="English" /></label>
-			</td>
-		</tr>
-		<tr class="line">
-			<th><?php echo $lang['Title']; ?></th>
-			<td><input class="textbox required" type="text" name="title" value="<?php echo $article->title; ?>"/></td>
-		</tr>
-		<tr class="line">
-			<th><?php echo $lang['Category']; ?></th>
-			<td>
-				<select name="category">
+			
+		</div>
+		<div class="line">
+			<div class="col-sm-6 title"><?php echo $lang['Title']; ?></div>
+		<input class="textbox required col-sm-6" type="text" name="title" value="<?php echo $article->title; ?>"/>
+		</div>
+		<div class="line">
+		<div class="col-sm-6 title"><?php echo $lang['Category']; ?></div>
+		
+				<select name="category col-sm-6" >
 					<?php
 					while ($cat = $categories->fetch_object())
 					{
@@ -35,78 +35,79 @@
 					}
 					?>
 				</select>
-			</td>
-		</tr>
-		<tr class="line">
-			<th><?php echo $lang['Submenu']; ?></th>
-			<td>
+			
+		</div>
+		<div class="line">
+<div class="col-sm-6 title "><?php echo $lang['Submenu']; ?></div>
+	
 				<select name="submenu">
 					<option value="0"></option>
 				</select>
-			</td>
-		</tr>
-		<tr class="line">
-			<th><?php echo $lang['Publish date']; ?></th>
-			<td><input class="date" type="text" name="publish_date" value="<?php echo $article->publish_date; ?>"/></td>
-		</tr>
-		<tr class="line">
-			<th>Featured</th>
-			<td><input type="checkbox" name="featured" <?php if ($article->featured) echo 'checked="checked"'; ?> value="1"/></td>
-		</tr>
-		<tr class="line" style="display:none;">
-			<th><?php echo $lang['Important']; ?></th>
-			<td><input type="checkbox" name="important" <?php if ($article->important) echo 'checked="checked"'; ?> value="1"/></td>
-		</tr>
-		<tr class="line" style="display:none;">
-			<th><?php echo $lang['Feedback']; ?></th>
-			<td><input type="checkbox" name="feedback" <?php if ($article->feedback) echo 'checked="checked"'; ?> value="1"/></td>
-		</tr>
-		<tr class="line">
-			<th colspan="2"><?php echo $lang['Body']; ?></th>
-		</tr>
-		<tr class="line">
-			<td colspan="2">
+		
+		</div>
+		<div class="line">
+	<div class="col-sm-6 title "><?php echo $lang['Publish date']; ?></div>
+	<input class="date" type="text" name="publish_date" value="<?php echo $article->publish_date; ?>"/>
+		</div>
+		<div class="line">
+			<p>Featured</p>
+		<input type="checkbox" name="featured" <?php if ($article->featured) echo 'checked="checked"'; ?> value="1"/>
+		</div>
+		<div class="line" style="display:none;">
+			<div class="col-sm-6 title"><?php echo $lang['Important']; ?></div>
+			<input type="checkbox" name="important" <?php if ($article->important) echo 'checked="checked"'; ?> value="1"/>
+		</div>
+		<div class="line" style="display:none;">
+	<div class="col-sm-6 "><?php echo $lang['Feedback']; ?></div>
+	<input type="checkbox" name="feedback" <?php if ($article->feedback) echo 'checked="checked"'; ?> value="1"/>
+		</div>
+		<div class="line">
+			<p colspan="2"><?php echo $lang['Body']; ?></p>
+		</div>
+		<div class="line">
+			<div colspan="2">
 				<textarea class="tinymce" name="body" style="width: 95%; height: 350px;"><?php echo $article->body; ?></textarea>
-			</td>
-		</tr>
+			</div>
+		</div>
 		<?php 
 		if (!$article->id)
 		{
 			?>
-			<tr class="line">
-				<th><?php echo $lang['Upload image']; ?></th>
-				<td><input type="file" name="image_file" /></td>
-			</tr>
+			<div class="line">
+			<div class="col-sm-6 "><?php echo $lang['Upload image']; ?></div>
+			<div class="col-sm-6 "><input type="file" name="image_file" /></div>
+			</div>
 			<?php
 		}
 		else
 		{
 			?>
-			<tr class="line">
-				<td colspan="2"><iframe src="index.php?content=articles&action=editGallery&id=<?php echo $article->id; ?>" frameborder="0" style="border:none; width:100%; height:320px;" allowTransparency="true"></iframe></td>
-			</tr>
+			<div class="line">
+				<div colspan="2"><iframe src="index.php?content=articles&action=editGallery&id=<?php echo $article->id; ?>" frameborder="0" style="border:none; width:100%; height:320px;" allowTransparency="true"></iframe></div>
+			</div>
 			<?php
 		}
 		?>
-		<tr class="line">
-			<th><?php echo $lang['YouTube video']; ?></th>
-			<td><input class="textbox" type="text" name="video" value="<?php echo $article->video; ?>"/></td>
-		</tr>
-		<tr>
-			<td colspan="2" class="videoHere">
+		<div class="line">
+			<div class="col-sm-6 "><?php echo $lang['YouTube video']; ?></div>
+			<div><input class="textbox" type="text" name="video" value="<?php echo $article->video; ?>"/></div>
+		</div>
+		<div>
+			<div> colspan="2" class="videoHere">
 			<?php
 			if (strlen($article->video) == 11)
 			{
 				echo '<iframe width="600" height="340" src="http://www.youtube.com/embed/'.$article->video.'" frameborder="0" allowfullscreen></iframe>';
 			}
 			?>
-			</td>
-		</tr>
-	</table>
+			</div>
+		</div>
+	</div>
 	<div style="clear: both; padding: 5px 0;">
 		<a class="submit"><?php echo $lang['Save']; ?></a>
 		<a class="cancel" href="index.php?content=articles"><?php echo $lang['Cancel']; ?></a>
 	</div>
+</div>
 </div>
 <script type="text/javascript">
 jQuery("#c_<?php echo $article->lang; ?>").prop("checked", true);

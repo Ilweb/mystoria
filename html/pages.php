@@ -34,7 +34,7 @@
 			?>
 			<tr class="<?php echo $class.' page'.$page->id; ?>">
 				<td class="col-xs-1"><?php echo $page->id; ?></td>
-				<td class="col-xs-1">
+				<td class="col-xs-6">
 					<a  class="btn btn-primary btn-md" href="index.php?content=pages&action=edit&id=<?php echo $page->id; ?>" ><?php echo $lang['Edit']; ?></a>
 					<?php
 					if ($_SESSION['access'] >= 1000)
@@ -45,7 +45,7 @@
 					}
 					?>
 				</td>
-				<td class="col-xs-10">
+				<td class="col-xs-5">
 					<?php 
 					echo $page->title; 
 					?>
