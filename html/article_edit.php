@@ -77,10 +77,10 @@
 					<div class="form-group required"><?php echo $lang['Body']; ?>
 					</div>
 				</div>
-				<div class="line">
+				<div class="col-sm-12">
 					<div colspan="2">
 						<textarea class="tinymce" name="body" style="width: 95%; height: 350px;"><?php echo $article->body; ?></textarea>
-					i</div>
+					</div>
 				</div>
 					<?php 
 					if (!$article->id)
