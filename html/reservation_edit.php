@@ -9,7 +9,7 @@
 				<div class="form-group required">
 					<label for="fdate">Date & Time</label>
 					<input type="text" class="form-control" id="fdate" name="start_time" value="<?php echo $reservation->start_time; ?>" />
-					<input class="textbox required " type="text" name="title" value="<?php echo $article->title; ?>"/>
+					
 				</div>
 				<div class="form-group required">
 					<label for="fname">Name</label>

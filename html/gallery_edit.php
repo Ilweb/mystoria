@@ -16,8 +16,12 @@ $this->showView('gallery_header');
 foreach ($images as $key=>$image)
 {
 	
-	echo '<li style="display:inline-block; list-style-type:none;padding:10px;">';
-	echo '<div class="number" style="width:100%; position:absolute; background-color:rgba(255,250,250, 0.7);"></div>';
+	echo '<li style="display:inline-block; position:relative; list-style-type:none;padding:10px;">';
+	echo '<div class="number" style="padding: 8px; height: 30px; width:147px; position:absolute; top:5px; background-color:rgba(255,250,250, 0.7);">
+
+	</div>';
+	echo '<i class="fa fa-times" aria-hidden="true" style="padding:5px; right:13px; position:absolute; cursor:pointer" onclick="deleteImage(\'index.php?content='.$class.'&action=deleteImage&id='.$id.'&image='.$image.'\', \''.$image.'\');">'.'</i>';
+
 	echo '<img style="margin-bottom:5px;"alt="'.$image.'" class="smallImage" src="'.$this->thumbnail(
 			$dir.$image, 
 			145,
@@ -25,8 +29,8 @@ foreach ($images as $key=>$image)
 				"crop"=>1
 			)
 		).'" />';
-	echo '<a class="delete btn btn-danger btn-md" style="display:block;" onclick="deleteImage(\'index.php?content='.$class.'&action=deleteImage&id='.$id.'&image='.$image.'\', \''.$image.'\');">'.$lang['Delete'].'</a>';
 	
+		
 	echo '</li>';
 }
 ?>
