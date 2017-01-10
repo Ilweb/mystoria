@@ -38,7 +38,7 @@ if (isset($styles))
 
 <script src="<?php echo ROOT_URL; ?>js/mystoria.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="<?php echo IMAGE_URL; ?>akladi.ico" />  
+<link rel="shortcut icon" href="<?php echo IMAGE_URL; ?>mystoria.ico" />  
 <meta property="og:site_name" content="<?php echo $lang[SITENAME]; ?>"/>
 <?php
 $this->showView('title');
