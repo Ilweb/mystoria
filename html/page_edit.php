@@ -7,7 +7,7 @@
 	<h1><?php echo $lang['Edit']; ?></h1>
 	<div class="row buttonrow">
 		<div class="col-sm-6 title"><?php echo $lang['Title']; ?></div>
-		<div class="col-sm-6"><input class=" textbox required" type="text" name="title" value="<?php echo $page->title; ?>"/></div>
+		<div class="col-sm-6"><input class=" textbox required2" type="text" name="title" value="<?php echo $page->title; ?>"/></div>
 	</div>
 	<div class="line">
 		<div colspan="2"><?php echo $lang['Body']; ?></div>
