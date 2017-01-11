@@ -1,6 +1,5 @@
 <?php
 $this->showView('sticky_header');
-var_dump($teams);
 ?>
 
 <div>
@@ -34,7 +33,7 @@ var_dump($teams);
 					<a href="<?php echo $large; ?>" data-lightbox="team-<?php echo $i; ?>"><img src="<?php echo $small; ?>" alt="Team <?php echo $teams[$i]->team; ?>"/></a>
 					<div class="timings">
 						<div>
-							<span><?php echo $teams[$i]->team; ?></span>
+							<span><?php echo ($i + 1).'. '.$teams[$i]->team; ?></span>
 							<img src="<?php echo ROOT_URL; ?>images/record.png"/>
 							<i><?php echo $teams[$i]->time; ?></i>
 						</div>
@@ -46,45 +45,27 @@ var_dump($teams);
 		?>
 		</div>	
 		<div class="other"><?php echo $lang['The rest of participants']; ?></div>
-		<div class="nth_row">
-			<div class="rest" id="third_place">
-			<a href="<?php echo ROOT_URL; ?>images/rankings/image3.png" data-lightbox="example-4"><img src="<?php echo ROOT_URL; ?>images/rankings/image3.png" alt=""/></a>
-				<div class="timings">
-					<div><span><?php echo $lang['Team friends']; ?></span><img src="<?php echo ROOT_URL; ?>images/record.png"></div>
-				</div>
-			</div>
-			<div class="rest" id="fourth_place">
-			<a href="<?php echo ROOT_URL; ?>images/rankings/image4.png" data-lightbox="example-6"><img src="<?php echo ROOT_URL; ?>images/rankings/image4.png" alt=""/></a>
-				<div class="timings">
-					<div><span><?php echo $lang['Team friends']; ?></span><img src="<?php echo ROOT_URL; ?>images/record.png"></div>
-				</div>
-			</div>
-			<div class="rest" id="fourth_place">
-			<a href="<?php echo ROOT_URL; ?>images/rankings/image4.png" data-lightbox="example-5"><img src="<?php echo ROOT_URL; ?>images/rankings/image4.png" alt=""/></a>
-				<div class="timings">
-					<div><span><?php echo $lang['Team friends']; ?></span><img src="<?php echo ROOT_URL; ?>images/record.png"></div>
-				</div>
-			</div>	
-		</div>
-		<div class="nth_row">
-			<div class="rest" id="third_place">
-			<a href="<?php echo ROOT_URL; ?>images/rankings/image4.png" data-lightbox="example-7"><img src="<?php echo ROOT_URL; ?>images/rankings/image4.png" alt=""/></a>
-				<div class="timings">
-					<div><span><?php echo $lang['Team friends']; ?></span><img src="<?php echo ROOT_URL; ?>images/record.png"></div>
-				</div>
-			</div>
-			<div class="rest" id="fourth_place">
-			<a href="<?php echo ROOT_URL; ?>images/rankings/image4.png" data-lightbox="example-8"><img src="<?php echo ROOT_URL; ?>images/rankings/image4.png" alt=""/></a>
-				<div class="timings">
-					<div><span><?php echo $lang['Team friends']; ?></span><img src="<?php echo ROOT_URL; ?>images/record.png"></div>
-				</div>
-			</div>
-			<div class="rest" id="fourth_place">
-			<a href="<?php echo ROOT_URL; ?>images/rankings/image4.png" data-lightbox="example-9"><img src="<?php echo ROOT_URL; ?>images/rankings/image4.png" alt=""/></a>
-				<div class="timings">
-					<div><span><?php echo $lang['Team friends']; ?></span><img src="<?php echo ROOT_URL; ?>images/record.png"></div>
-				</div>
-			</div>
-		</div>
-		</div>
+		<div id="restRankings"></div>
+	</div>
 </div>
+
+<script type="text/javascript">
+
+function loadRankings(page)
+{
+	$("#restRankings").load("<?php echo ROOT_URL ?>",
+	{
+		content: "main",
+		action: "restRankings",
+		"page": page
+	});
+}
+
+loadRankings(1);
+
+jQuery("#restRankings").on("click", ".pagination a", function()
+{
+	loadRankings(jQuery(this).data("page"));
+});
+
+</script>

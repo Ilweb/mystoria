@@ -90,7 +90,7 @@ if ($pages > 1)
 				</td>
 				<td>
 					<?php 
-					echo $lang[$article->category]; 
+					echo $article->category; 
 					if ($article->parent != "")
 					{
 						echo ' -> '.$article->parent;

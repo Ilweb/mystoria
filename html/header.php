@@ -16,7 +16,6 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<link href="<?php echo ROOT_URL; ?>css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo ROOT_URL; ?>css/general.css?ver=1" type="text/css" rel="stylesheet"/>
 <link href="<?php echo ROOT_URL; ?>css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 <link href="<?php echo ROOT_URL; ?>css/lightbox.css" type="text/css" rel="stylesheet"/>

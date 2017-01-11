@@ -34,12 +34,10 @@ class Reservations extends RichController
 		if (isset($_REQUEST['page']))
 		{
 			$page = (int)$_REQUEST['page'];
-			$simple = true;
 		}
 		else
 		{
 			$page = 1;
-			$simple = false;
 		}
 		if ($page < 1)
 		{

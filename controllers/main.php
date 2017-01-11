@@ -405,7 +405,7 @@ class Main extends Controller
 			"reservations",
 			"status = 'completed' AND time IS NOT NULL AND image IS NOT NULL",
 			"time, id",
-			"0, 9"
+			"0, 3"
 		);
 		$teams = array();
 		while ($row = $result->fetch_object())
@@ -421,6 +421,59 @@ class Main extends Controller
 		);
 	    $this->_template->render($array);
 	}
+	
+	function restRankings()
+	{
+		$where = "status = 'completed' AND time IS NOT NULL AND image IS NOT NULL";
+		if (isset($_REQUEST['page']))
+		{
+			$page = (int)$_REQUEST['page'];
+		}
+		else
+		{
+			$page = 1;
+		}
+		if ($page < 1)
+		{
+			$page = 1;
+		}
+		$count = $this->_model->count($where, "reservations r");
+		$pages = ceil($count / PAGE_ROWS);
+		if ($pages == 0)
+		{
+			$pages = 1;
+		}
+		if ($page > $pages)
+		{
+			$page = $pages;
+		}
+		$start_from = ($page - 1) * 6 + 3;
+	
+		$result = $this->_model->select(
+			"id, team, time, image",
+			"reservations",
+			$where,
+			"time, id",
+			$start_from.", 6"
+		);
+		$teams = array();
+		while ($row = $result->fetch_object())
+		{
+			$teams[] = $row;
+		}
+		
+		$pages = 5;
+		
+		$this->_template->setView('rankings_rest');
+		$array = array(
+			"teams"=>$teams,
+			"pages"=>$pages,
+			"page"=>$page,
+			"count"=>$count
+		);
+	    $this->_template->simpleRender($array);
+	}
+	
 	function vp()
 	{
 		$this->_template->setView('vp');
