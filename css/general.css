@@ -588,7 +588,8 @@ ul div:nth-of-type(2)
 	height: 34px;
 }
 
-.dates input[type="radio"]{
+.dates input[type="radio"],
+.choose_people input[type="radio"]{
 display: none;
     
 }
