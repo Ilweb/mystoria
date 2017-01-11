@@ -588,18 +588,20 @@ ul div:nth-of-type(2)
 	height: 34px;
 }
 
- input[type="radio"]{
+.dates input[type="radio"]{
 display: none;
     
 }
-input[type="radio"]:checked{
+
+.checkbox input[type="radio"]{
+display: none;
+    
+}
+.checkbox input[type="radio"]:checked{
 	display: inline-block;
 
 } 
-input[type="radio"]:checked  label{
-	
-	
-} 
+
 .checkbox, .radio {
   
     margin-top: 0;
