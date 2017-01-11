@@ -26,7 +26,7 @@
         				</div>
         			</div>
     			</div>	
-    			</div>	
+    			</div>		
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="fcategory"><?php echo $lang['Category']; ?></label>
@@ -122,7 +122,7 @@
 				}
 				?>
 			</div>
-		</div>
+	
 			<div class= "row" style="clear: both; padding: 5px 0;">
 		<div class="col-sm-6">
 			<a class="submit btn btn-block btn-primary"><?php echo $lang['Save']; ?></a>
@@ -131,7 +131,7 @@
 			<a class="cancel btn btn-block btn-warning" href="index.php?content=articles"><?php echo $lang['Cancel']; ?></a>
 		</div>
 	</div>
-
+	</div>
 <script type="text/javascript">
 jQuery("#c_<?php echo $article->lang; ?>").prop("checked", true);
 function loadParents()
