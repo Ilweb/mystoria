@@ -7,7 +7,8 @@ $this->showView('sticky_header');
 		<h3><?php echo $lang['Rankings']; ?></h3>
 		<div><p><?php echo $lang['These are the people with<br/> best times in our room!']; ?></p></div>
 		<div class="top"><?php echo $lang['top 3 teams']; ?></div>
-		<div class="nth_row">
+		<div class="nth_row ">
+
 		<?php
 		for ($i = 0; $i < 3; $i++)
 		{
