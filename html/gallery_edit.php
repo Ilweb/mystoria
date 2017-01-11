@@ -6,10 +6,17 @@ $this->showView('gallery_header');
 		<input type="hidden" name="content" value="<?php echo $class; ?>" />
 		<input type="hidden" name="action" value="uploadImage" />
 		<input type="hidden" name="id" value="<?php echo $id; ?>"/>
-		<input type="file" style="outline: none;" name="image_file" />
-		<input type="submit" class="button btn btn-warning" style="margin-top: 10px; " value="Качи снимка">
+			<div class="row">
+				<div class="col-sm-8">
+					<label class="btn btn-info btn-block btn-file">
+					Upload file<input type="file" name="image_file" style="display: none;" onchange="$('#upload-file-info').html($(this).val());"/></label>
+					<span class="label label-info" id="upload-file-info"></span>
+				</div>
+				<div class="col-sm-4">
+					<input type="submit" class="button btn btn-warning"  value="Качи снимка">
+				</div>
+			</div>
 		</form>
-	
 
 
 <ul class="editImages">

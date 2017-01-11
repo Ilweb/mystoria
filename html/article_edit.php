@@ -7,25 +7,29 @@
 		<input type="hidden" name="id" value="<?php echo $article->id; ?>"/>
 
 			<div class="row">
-				<div class="col-sm-4">
-					<div class="form-group required">
-						<label for="flang"><?php echo $lang['Language']; ?></label>
-						<input class="checkButton" type="radio" name="lang" id="c_bg " value="bg" />
-						<label class="form-control" style="border:none;" for="c_bg">
-						<img src="<?php echo IMAGE_URL.'flags/bg.png'; ?>" alt="bg" title="български" />
-						<input class="form-control checkButton" type="radio" name="lang" id="c_en" value="en" />
-						<img src="<?php echo IMAGE_URL.'flags/en.png'; ?>" alt="en" title="English" /></label>
-					</div>
+				<div class="col-sm-8">
 					<div class="form-group required">
 						<label for="title"><?php echo $lang['Title']; ?></label>
 						<input class="form-control textbox required" type="text" name="title" value="<?php echo $article->title; ?>"/>
-
 					</div>
 				</div>
 				<div class="col-sm-4">
+					<div class="form-group required">
+						<label  for="flang"><?php echo $lang['Language']; ?></label>
+						<div class="checkbox " style="border: none;">
+						 	<label class="c_bg" >
+                   				 <input type="radio" class="checkButton" id="c_bg " name="lang" value="bg" /> <img src="<?php echo IMAGE_URL.'flags/bg.png'; ?>">
+                			</label> 
+							<label class="c_en" >
+                   				 <input type="radio" class="checkButton" id="c_en " name="lang" value="en" /> <img src="<?php echo IMAGE_URL.'flags/en.png'; ?>" alt="en" title="English" />
+                			</label>
+        				</div>
+        			</div>
+    			</div>	
+    			</div>	
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="fcategory"><?php echo $lang['Category']; ?></label>
-						
 							<select name="category" class="form-control">
 								<?php
 								while ($cat = $categories->fetch_object())
@@ -40,6 +44,8 @@
 								?>
 							</select>
 					</div>
+				</div>
+				<div class="col-sm-4">
 					<div class="form-group required">
 						<label for="fsubmenu"><?php echo $lang['Submenu']; ?></label>
 						<select name="submenu" class="form-control">
@@ -125,8 +131,7 @@
 			<a class="cancel btn btn-block btn-warning" href="index.php?content=articles"><?php echo $lang['Cancel']; ?></a>
 		</div>
 	</div>
-</div>
-</div>
+
 <script type="text/javascript">
 jQuery("#c_<?php echo $article->lang; ?>").prop("checked", true);
 function loadParents()
