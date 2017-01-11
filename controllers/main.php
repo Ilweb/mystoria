@@ -389,15 +389,30 @@ class Main extends Controller
 		);
 	    $this->_template->render($array);
 	}
+	
 	function faq()
 	{
+		$rooms = $this->_model->select(
+			"id, url, title, body",
+			"articles",
+			"!deleted AND publish_date <= CURDATE() AND category = 2 AND lang = '".LOCALE."'",
+			"publish_date DESC"
+		);
+		$questions = array();
+		while ($row = $rooms->fetch_object())
+		{
+			$questions[] = $row;
+		}
+	
 		$this->_template->setView('faq');
 		$array = array(
 			"title"=>$this->lang['FAQ'],
-			"styles"=>array('contacts','FAQ')
+			"styles"=>array('contacts','FAQ'),
+			"questions"=>$questions
 		);
 	    $this->_template->render($array);
 	}
+	
 	function rankings()
 	{
 		$result = $this->_model->select(
