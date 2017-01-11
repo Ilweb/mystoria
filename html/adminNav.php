@@ -6,7 +6,6 @@
     <ul class="nav navbar-nav">
       <li ><a href="index.php?content=reservations">Резервации</a></li>      
       <li><a href="index.php?content=articles&action=edit">Нова статия</a></li>
-    
       <li><a href="index.php?content=pages">Страници </a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
