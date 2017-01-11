@@ -13,7 +13,7 @@ $this->showView('gallery_header');
 					<span class="label label-info" id="upload-file-info"></span>
 				</div>
 				<div class="col-sm-4">
-					<input type="submit" class="button btn btn-warning"  value="Качи снимка">
+					<input type="submit" class="button btn btn-warning btn-block"  value="Качи снимка">
 				</div>
 			</div>
 		</form>
