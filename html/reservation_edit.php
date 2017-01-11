@@ -1,3 +1,7 @@
+<?php
+$this->showView('adminNav');
+?>
+
 <div class="container">
 	<h1>Edit reservation</h1>
 	<form method="post" role="form" id="resForm" action="<?php echo LOCALE_URL.'index.php'; ?>"  enctype="multipart/form-data">
@@ -82,7 +86,7 @@
 					<div class="col-sm-6">
 						<div class="form-group">
 							<label for="ftime">Time</label>
-							<input type="time" class="form-control" id="ftime" name="time" value="<?php echo $reservation->time; ?>" placeholder="HH:MM:SS" />
+							<input type="time" class="form-control" id="ftime" name="time" value="<?php echo $reservation->time; ?>"	 placeholder="HH:MM:SS" />
 						</div>
 					</div>
 					<div class="col-sm-6">

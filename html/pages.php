@@ -1,3 +1,6 @@
+<?php
+$this->showView('adminNav');
+?>
 
 <div class="container">
 <div class="pagePreview dark">

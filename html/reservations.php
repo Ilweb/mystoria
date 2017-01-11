@@ -1,3 +1,7 @@
+<?php
+$this->showView('adminNav');
+?>
+
 <div class="container">
 	<h1>Reservations</h1>
 	<div class="row buttonrow">

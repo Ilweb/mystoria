@@ -1,3 +1,7 @@
+<?php
+$this->showView('adminNav');
+?>
+
 <form action="index.php" method="post" id="form" enctype="multipart/form-data">
 <input type="hidden" name="content" value="Pages" />
 <input type="hidden" name="action" value="save" />

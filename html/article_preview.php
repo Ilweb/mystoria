@@ -1,3 +1,7 @@
+<?php
+$this->showView('adminNav');
+?>
+
 <div class="articlePreview">
 	<div class="pagePreview">
 		<?php

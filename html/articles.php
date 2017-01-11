@@ -1,3 +1,7 @@
+<?php
+$this->showView('adminNav');
+?>
+
 <div class="container">
 <h1><?php echo $lang['Articles']; ?></h1>
 <div class="row">
