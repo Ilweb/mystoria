@@ -6,7 +6,6 @@
 				<div class="choose"><div onclick="goToByScroll( '#wall_4', -100 );"><?php echo $lang['Reserve now']; ?></div></div>
 				<div class="choose"><div><a href="<?php echo LOCALE_URL; ?>teambuilding.php"><?php echo $lang['Team building']; ?></a></div></div>
 			</div>
-			
 				<div class="language">
 				<div class="choose_lang"><?php echo $lang['Change your language']; ?></div>
 				<div class="variety"><a href="<?php echo ROOT_URL.'en/'; ?>" class="var">EN</a><div>/</div><a href="<?php echo ROOT_URL.'bg/'; ?>" class="var">BG</a></div>
@@ -25,7 +24,7 @@ $this->showView('sticky_header');
 					<div id="slider">
 					<a class="control_next"><img src="<?php echo ROOT_URL; ?>images/r_arrow.png"></a>
 					<a class="control_prev"><img src="<?php echo ROOT_URL; ?>images/l_arrow.png"></a>
-						<ul style="margin-left: 0">
+						<ul>
 						<?php
 						foreach ($images as $key => $image)
 						{
