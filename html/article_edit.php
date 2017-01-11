@@ -93,10 +93,16 @@
 					if (!$article->id)
 					{
 						?>
-						<div class="line">
-							<div class="col-sm-6 "><?php echo $lang['Upload image']; ?></div>
-							<input type="file" name="image_file" />
-						</div>
+						<div class="row"">
+				<div class="col-sm-8">
+					<label class="btn btn-info btn-block btn-file" style="margin: 20px 0 20px 0;">
+					Upload file<input type="file" name="image_file" style="display: none;" onchange="$('#upload-file-info').html($(this).val());"/></label>
+					<span class="label label-info" id="upload-file-info"></span>
+				</div>
+				<div class="col-sm-4" >
+					<input type="submit" class="button btn btn-warning"  value="Качи снимка" style="margin: 20px 0 20px 0;">
+				</div>
+			</div> 	
 						<?php
 					}
 					else
