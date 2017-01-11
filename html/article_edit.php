@@ -16,11 +16,13 @@
 					<div class="form-group required">
 						<label  for="flang"><?php echo $lang['Language']; ?></label>
 						<div class="checkbox " style="border: none;">
-						 	<label class="c_bg" >
-                   				 <input type="radio" class="checkButton" id="c_bg" name="lang" value="bg" /> <img src="<?php echo IMAGE_URL.'flags/bg.png'; ?>">
+							<input type="radio" class="checkButton" id="c_bg" name="lang" value="bg" />
+						 	<label for="c_bg" >
+                   				  <img src="<?php echo IMAGE_URL.'flags/bg.png'; ?>">
                 			</label> 
-							<label class="c_en" >
-                   				 <input type="radio" class="checkButton" id="c_en" name="lang" value="en" /> <img src="<?php echo IMAGE_URL.'flags/en.png'; ?>" alt="en" title="English" />
+							<input type="radio" class="checkButton" id="c_en" name="lang" value="en" />
+							<label for="c_en" >
+                   				  <img src="<?php echo IMAGE_URL.'flags/en.png'; ?>" alt="en" title="English" />
                 			</label>
         				</div>
         			</div>

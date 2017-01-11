@@ -597,8 +597,8 @@ display: none;
 display: none;
     
 }
-.checkbox input[type="radio"]:checked{
-	display: inline-block;
+.checkbox input[type="radio"]:checked + label{
+	border: 1px solid red;
 
 } 
 
