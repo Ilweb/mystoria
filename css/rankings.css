@@ -30,7 +30,7 @@
 }
 
 
-#first_place,.second_place,.rest
+.rest1, .rest
 {
 	width: 380px;
     height: 293px;
@@ -91,10 +91,12 @@
 .info_inner p:first-of-type
 {
 	text-align:center;
+
 }
 .info_inner div.nth_row div
 {
 	text-align:left !important;
+	margin-right: 15px;
 }	
 .info_inner .top,.info_inner .other
 {

@@ -2,7 +2,7 @@
 {
 	background-color:#03061b;
 	background-image:none;
-	height:970px;
+	height:auto;
 }
 h4
 {
@@ -68,7 +68,7 @@ h4
 	display:inline-block;
 	width: 16%;
     text-align: left;
-    margin-right: 22px;
+    margin-left: 50px;
 }	
 .add_explanation div:last-of-type
 {

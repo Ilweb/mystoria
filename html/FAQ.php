@@ -51,7 +51,13 @@ $this->showView('sticky_header');
 	if (count($questions) > 8)
 	{
 		?>
-		<div class="choose second"><div>Learn more</div></div>
+		<div class="choose second">
+			<a href="#" id="loadMore">Load More</a>
+				<p class="totop"> 
+	    	<a href="#top">Back to top</a> 
+			</p>
+		</div>
+		
 		<?php
 	}
 	?>
