@@ -7,54 +7,52 @@ $this->showView('sticky_header');
 	<div><p><?php echo $lang['Frequently asked questions']; ?></p></div>
 	<div>
 		<div>
-		<div class="info_part">
-			<h4>Game record</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			Nunc laoreet hendrerit dolor, et vestibulum quam
-			sodales eu. Quisque in tortor nunc. Curabitur porttitor
-			molestie sem viverra lacinia. Proin bibendum non turpis
-			non mollis. Aliquam placerat enim venenatis dolor dapibus,
-			id lobortis justo lacinia. Fusce sagittis malesuada magna. </p>
-		</div>
-		<div class="info_part">
-			<h4>Escape game success</h4>
-			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			Nunc laoreet hendrerit dolor, et vestibulum quam
-			sodales eu. Quisque in tortor nunc. Curabitur porttitor
-			molestie sem viverra lacinia. Proin bibendum non turpis
-			non mollis. Aliquam placerat enim venenatis dolor dapibus,
-			id lobortis justo lacinia. Fusce sagittis malesuada magna. </div>
-		</div>
+		<?php
+		for ($i = 0; $i <= 1 && isset($questions[$i]); $i++)
+		{
+			?>
+			<div class="info_part">
+				<h4><?php echo $questions[$i]->title; ?></h4>
+				<?php echo $questions[$i]->body; ?>
+			</div>
+			<?php
+		}
+		?>
 		</div>
 	<div class="book"><img src="<?php echo ROOT_URL; ?>images/FAQ/book.jpg"></div>
 		<div>
 			<div>
+				
+			<?php
+			for ($i = 2; $i <= 3 && isset($questions[$i]); $i++)
+			{
+				?>
 				<div class="info_part">
-					<h4>Game record</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Nunc laoreet hendrerit dolor, et vestibulum quam
-					sodales eu. Quisque in tortor nunc. Curabitur porttitor
-					molestie sem viverra lacinia. Proin bibendum non turpis
-					non mollis. Aliquam placerat enim venenatis dolor dapibus,
-					id lobortis justo lacinia. Fusce sagittis malesuada magna. </p>
+					<h4><?php echo $questions[$i]->title; ?></h4>
+					<?php echo $questions[$i]->body; ?>
 				</div>
-				<div class="info_part">
-					<h4>Escape game success</h4>
-					<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Nunc laoreet hendrerit dolor, et vestibulum quam
-					sodales eu. Quisque in tortor nunc. Curabitur porttitor
-					molestie sem viverra lacinia. Proin bibendum non turpis
-					non mollis. Aliquam placerat enim venenatis dolor dapibus,
-					id lobortis justo lacinia. Fusce sagittis malesuada magna. </div>
-				</div>
+				<?php
+			}
+			?>
 			</div>
 		</div>
 	</div>
 	<div class="add_explanation">
-		<div><h5>ESCAPE GAME TIME?</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit dolor, et vestibulum quam sodales eu. Quisque in tortor nunc. Curabitur porttitor molestie sem viverra lacinia. Proin bibendum non turpis non mollis. Aliquam placerat enim venenatis dolor dapibus, id lobortis justo lacinia. Fusce sagittis malesuada magna.</p></div>
-		<div><h5>ESCAPE GAME TIME?</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit dolor, et vestibulum quam sodales eu. Quisque in tortor nunc. Curabitur porttitor molestie sem viverra lacinia. Proin bibendum non turpis non mollis. Aliquam placerat enim venenatis dolor dapibus, id lobortis justo lacinia. Fusce sagittis malesuada magna.</p></div>
-		<div><h5>ESCAPE GAME TIME?</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit dolor, et vestibulum quam sodales eu. Quisque in tortor nunc. Curabitur porttitor molestie sem viverra lacinia. Proin bibendum non turpis non mollis. Aliquam placerat enim venenatis dolor dapibus, id lobortis justo lacinia. Fusce sagittis malesuada magna.</p></div>
-		<div><h5>ESCAPE GAME TIME?</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit dolor, et vestibulum quam sodales eu. Quisque in tortor nunc. Curabitur porttitor molestie sem viverra lacinia. Proin bibendum non turpis non mollis. Aliquam placerat enim venenatis dolor dapibus, id lobortis justo lacinia. Fusce sagittis malesuada magna.</p></div>
+		<?php
+		for ($i = 4; isset($questions[$i]); $i++)
+		{
+			?>
+			<div <?php if ($i >= 8) echo 'style="display: none;"'; ?>><h5><?php echo $questions[$i]->title; ?></h5><?php echo $questions[$i]->body; ?></div>
+			<?php
+		}
+		?>
 	</div>
-	<div onclick="window.location.href = '<?php echo LOCALE_URL; ?>'" class="choose second"><div>Learn more</div></div>
+	<?php
+	if (count($questions) > 8)
+	{
+		?>
+		<div class="choose second"><div>Learn more</div></div>
+		<?php
+	}
+	?>
 </div>

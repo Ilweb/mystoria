@@ -60,8 +60,8 @@ $this->showView('adminNav');
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group required">
-						<label for="datee"><?php echo $lang['Publish date']; ?></label>
-						<input type="text" class="form-control" id="fname" name="name" value="<?php echo $article->publish_date; ?>"/>
+						<label for="pdate"><?php echo $lang['Publish date']; ?></label>
+						<input type="text" class="form-control" id="pdate" name="publish_date" value="<?php echo $article->publish_date; ?>"/>
 					</div>
 				</div>
 			</div>
