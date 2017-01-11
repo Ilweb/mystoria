@@ -5,10 +5,10 @@ $this->showView('adminNav');
 <div class="container">
 	<h1>Reservations</h1>
 	<div class="row buttonrow">
-		<div class="col-sm-6">
+		<div class="col-sm-3">
 			<a class="btn btn-primary btn-block">Show Calendar</a>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-3">
 			<select name="status" id="fstatus" class="form-control">
 				<option value="">All not cancelled</option>
 				<?php
@@ -18,6 +18,16 @@ $this->showView('adminNav');
 				}
 				?>
 			</select>
+		</div>
+		<div class="col-sm-3">
+			<select name="order_by" id="forder" class="form-control">
+				<option value="status, start_time">Order by status, date</option>
+				<option value="start_time ASC">Order by date Asc.</option>
+				<option value="start_time DESC">Order by date Desc.</option>
+			</select>
+		</div>
+		<div class="col-sm-3">
+			<input name="search" id="fsearch" class="form-control" placeholder="Search" />
 		</div>
 	</div>
 	<div class="row dates" style="background:#131843;"></div>
@@ -101,13 +111,15 @@ function loadReservations(page)
 		content: "reservations",
 		action: "filter",
 		"state": $("#fstatus").val(),
+		order_by: $("#forder").val(),
+		search: $("#fsearch").val(),
 		"page": page
 	});
 }
 
 loadReservations(1);
 
-$("#fstatus").change(function()
+$("#fstatus, #forder, #fsearch").change(function()
 {
 	loadReservations(1);
 });

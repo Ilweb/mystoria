@@ -86,7 +86,7 @@ $this->showView('adminNav');
 					<div class="col-sm-6">
 						<div class="form-group">
 							<label for="ftime">Time</label>
-							<input type="time" class="form-control" id="ftime" name="time" value="<?php echo $reservation->time; ?>"	 placeholder="HH:MM:SS" />
+							<input type="text" class="form-control time" id="ftime" name="time" value="<?php echo $reservation->time; ?>"	 placeholder="HH:MM:SS" />
 						</div>
 					</div>
 					<div class="col-sm-6">

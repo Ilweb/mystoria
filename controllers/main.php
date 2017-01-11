@@ -25,12 +25,29 @@ class Main extends Controller
 			$room = $row;
 		}
 		
+		$result = $this->_model->select(
+			"COUNT(id) AS teams, MINUTE(MIN(time)) AS record",
+			"reservations",
+			"status = 'completed' AND time IS NOT NULL AND image IS NOT NULL"
+		);
+		$records = $result->fetch_object();
+		
+		$result = $this->_model->select(
+			"COUNT(id) AS teams, ROUND(AVG(TIME_TO_SEC(time) / 60)) AS average",
+			"reservations",
+			"status = 'completed' AND time < '01:00:00' AND image IS NOT NULL"
+		);
+		$row = $result->fetch_object();
+		$records->rate = round(($row->teams / $records->teams) * 100);
+		$records->average = $row->average;
+		
 		$this->_template->setView('home');
 		$array = array(
 			"canonical"=>'',
 			"hours"=>$this->getHours(),
 			"room"=>$room,
-			"images"=>RichController::getSortedImages($room->id)
+			"images"=>RichController::getSortedImages($room->id),
+			"records"=>$records
 		);
 	    $this->_template->render($array);
 	}

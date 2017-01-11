@@ -80,7 +80,7 @@ function validate1(selector)
 	}
 	
 	// Check time
-	var inputs = jQuery(selector).find('input[type="time"]');
+	var inputs = jQuery(selector).find('input.time');
 	var patt1 = new RegExp(/[0123]\d\:[012345]\d\:[012345]\d/);
 	for (var i = 0; i < inputs.length; i++)
 	{
