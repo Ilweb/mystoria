@@ -438,7 +438,7 @@ class Main extends Controller
 			$page = 1;
 		}
 		$count = $this->_model->count($where, "reservations r");
-		$pages = ceil($count / PAGE_ROWS);
+		$pages = ceil(($count - 3) / 6);
 		if ($pages == 0)
 		{
 			$pages = 1;
@@ -461,8 +461,6 @@ class Main extends Controller
 		{
 			$teams[] = $row;
 		}
-		
-		$pages = 5;
 		
 		$this->_template->setView('rankings_rest');
 		$array = array(
