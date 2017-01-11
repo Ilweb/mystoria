@@ -6,9 +6,7 @@
 
  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
-
+<link href="https://fonts.googleapis.com/css?family=Roboto:500&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
