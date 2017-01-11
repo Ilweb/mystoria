@@ -9,6 +9,7 @@ $this->showView('gallery_header');
 		<input type="file" style="outline: none;" name="image_file" />
 		<input type="submit" class="button btn btn-warning" style="margin-top: 10px; " value="Качи снимка">
 		</form>
+	
 
 
 <ul class="editImages">

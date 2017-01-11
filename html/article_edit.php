@@ -17,8 +17,9 @@
 						<img src="<?php echo IMAGE_URL.'flags/en.png'; ?>" alt="en" title="English" /></label>
 					</div>
 					<div class="form-group required">
-						<label for="ftitle"><?php echo $lang['Title']; ?></label>
-						<input type="text" class="form-control" id="fname" name="name" 	value="<?php echo $article->title; ?>"/>
+						<label for="title"><?php echo $lang['Title']; ?></label>
+						<input class="form-control textbox required" type="text" name="title" value="<?php echo $article->title; ?>"/>
+
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -48,7 +49,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group required">
-						<label for="ftitle"><?php echo $lang['Publish date']; ?></label>
+						<label for="datee"><?php echo $lang['Publish date']; ?></label>
 						<input type="text" class="form-control" id="fname" name="name" value="<?php echo $article->publish_date; ?>"/>
 					</div>
 				</div>
@@ -117,15 +118,15 @@
 			</div>
 		</div>
 			<div class= "row" style="clear: both; padding: 5px 0;">
-				<div class="col-sm-6">
-					<a class="submit btn btn-block btn-primary"><?php echo $lang['Save']; ?></a>
-				</div>
-				<div class="col-sm-6">
-					<a class="cancel btn btn-block btn-warning" href="index.php?content=articles"><?php echo $lang['Cancel']; ?></a>
-				</div>
-			</div>
+		<div class="col-sm-6">
+			<a class="submit btn btn-block btn-primary"><?php echo $lang['Save']; ?></a>
+		</div>
+		<div class="col-sm-6">
+			<a class="cancel btn btn-block btn-warning" href="index.php?content=articles"><?php echo $lang['Cancel']; ?></a>
+		</div>
+	</div>
 </div>
-
+</div>
 <script type="text/javascript">
 jQuery("#c_<?php echo $article->lang; ?>").prop("checked", true);
 function loadParents()
