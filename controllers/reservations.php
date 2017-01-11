@@ -34,7 +34,11 @@ class Reservations extends RichController
 		if (isset($_REQUEST['search']) && !empty($_REQUEST['search']))
 		{
 			$search = addslashes($_REQUEST['search']);
-			$where .= "AND (phone LIKE '%$search%' OR name LIKE '%$search%' OR team LIKE '%$search%')";
+			$where .= "AND (phone LIKE '%$search%' 
+							OR name LIKE '%$search%' 
+							OR team LIKE '%$search%' 
+							OR DATE(start_time) = '".date('Y-m-d', strtotime($search))."'
+						)";
 		}
 		if (isset($_REQUEST['order_by']))
 		{

@@ -6,31 +6,30 @@
 			<div class="next noselect"><?php echo $lang['Next week']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<div class="dates"><?php $this->showView('calendar'); ?></div>
-	
 		<div class="choose_people">
 			<ul>
 				<li class="dates1">2 <?php echo $lang['Players']; ?></li>
-				<li><input type="radio" name="players" value="2" id="price"><label for="price" class="noselect"><span>30 BGN</span></label></input></li>
+				<li><input type="radio" name="players" value="2" id="price"><label for="price" class="noselect"><span><?php echo $settings['Price 2 players']; ?> BGN</span></label></input></li>
 			</ul>
 			
 			<ul>
 				<li class="dates1">3 <?php echo $lang['Players']; ?></li>
-				<li><input type="radio" name="players" value="3" id="price2"><label for="price2" class="noselect"><span>45 BGN</span></label></input></li>
+				<li><input type="radio" name="players" value="3" id="price2"><label for="price2" class="noselect"><span><?php echo $settings['Price 3 players']; ?> BGN</span></label></input></li>
 			</ul>
 			
 			<ul>
 				<li class="dates1">4 <?php echo $lang['Players']; ?></li>
-				<li><input type="radio" name="players" value="4" id="price3"><label for="price3" class="noselect"><span>55 BGN</span></label></input></li>
+				<li><input type="radio" name="players" value="4" id="price3"><label for="price3" class="noselect"><span><?php echo $settings['Price 4 players']; ?> BGN</span></label></input></li>
 			</ul>
 			
 			<ul>
 				<li class="dates1">5 <?php echo $lang['Players']; ?></li>
-				<li><input type="radio" name="players" value="5" id="price4"><label for="price4" class="noselect"><span>65 BGN</span></label></input></li>
+				<li><input type="radio" name="players" value="5" id="price4"><label for="price4" class="noselect"><span><?php echo $settings['Price 5 players']; ?> BGN</span></label></input></li>
 			</ul>
 			
 			<ul>
 				<li class="dates1">6 <?php echo $lang['Players']; ?></li>
-				<li><input type="radio" name="players" value="6" id="price5"><label for="price5" class="noselect"><span>70 BGN</span></label></input></li>
+				<li><input type="radio" name="players" value="6" id="price5"><label for="price5" class="noselect"><span><?php echo $settings['Price 6 players']; ?> BGN</span></label></input></li>
 			</ul>
 			
 		</div>
@@ -38,6 +37,7 @@
 </div>
 <script type="text/javascript">
 var week = 0;
+var maxWeeks = <?php echo $settings['Nomber of weeks for available reservations']; ?>;
 function loadWeek()
 {
 	$(".dates").load("<?php echo ROOT_URL ?>",
@@ -64,10 +64,10 @@ $(".prev_next .prev").click(function()
 
 $(".prev_next .next").click(function()
 {
-	if (week < 8)
+	if (week < maxWeeks)
 	{
 		week++;
-		if (week >= 8)
+		if (week >= maxWeeks)
 		{
 			$(this).css("visibility", "hidden");
 		}
