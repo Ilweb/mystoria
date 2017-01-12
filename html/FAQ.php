@@ -52,13 +52,28 @@ $this->showView('sticky_header');
 	{
 		?>
 		<div class="choose second">
-			<a href="#" id="loadMore">Load More</a>
-				<p class="totop"> 
-	    	<a href="#top">Back to top</a> 
-			</p>
+			<div><a href="#" id="loadMore">Load More</a></div>
 		</div>
 		
 		<?php
 	}
 	?>
 </div>
+<script>
+$(function () {
+$(".add_explanation > div").slice(0, 4).show();
+	$("#loadMore").on('click', function (e) {
+  	  e.preventDefault();
+   		 $(".add_explanation > div:hidden").slice(0, 100).slideDown();
+			if ($(".add_explanation > div:hidden").length == 0) {
+       			 $("#load").fadeOut('slow');
+   				}
+	        $('html,body').animate({
+	            scrollTop: $(this).offset().top
+	        }, 1500);
+    });
+});
+
+
+
+</script>

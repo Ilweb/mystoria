@@ -35,6 +35,8 @@ h4
 {
 	top:10px;
 	text-align:right;
+	height: 100px;
+	line-height: 100px;
 }
 
 .info_part:first-of-type
@@ -42,6 +44,11 @@ h4
 	text-align:left;
 	margin-right:200px;
 }
+.info_part:nth-of-type(2),
+.info_part:nth-of-type(4) {
+	text-align: right;
+ }
+
 .info_part div
 {
 	 height:150px;
@@ -66,6 +73,7 @@ h4
 .add_explanation div
 {
 	display:inline-block;
+	vertical-align: top;
 	width: 16%;
     text-align: left;
     margin-left: 50px;
