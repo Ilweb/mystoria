@@ -56,7 +56,6 @@
   
 
   var contentString =  $('.backwo').html();
-  alert(contentString);
 
   var infowindow = new google.maps.InfoWindow({
           content: contentString,
