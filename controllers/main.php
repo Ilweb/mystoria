@@ -548,20 +548,35 @@ class Main extends Controller
 	}
 	function teambuilding()
 	{
+		$rooms = $this->_model->select(
+			"id, url, title, body",
+			"articles",
+			"!deleted AND publish_date <= CURDATE() AND category = 3 AND lang = '".LOCALE."'",
+			"publish_date DESC"
+		);
+		$team = array();
+		while ($row = $rooms->fetch_object())
+		{
+			$team[] = $row;
+		}
+	
 		$this->_template->setView('teambuilding');
 		$array = array(
 			"title"=>$this->lang['Team building'],
 			"styles"=>array('teambuilding'),
+			"team"=>$team,
 			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
+
 	function terms()
 	{
 		$this->_template->setView('terms');
 		$array = array(
 			"title"=>$this->lang['terms'],
 			"styles"=>array('terms'),
+			
 			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);

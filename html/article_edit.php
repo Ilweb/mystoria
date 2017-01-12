@@ -59,9 +59,11 @@ $this->showView('adminNav');
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div class="form-group required">
+				<div class="form-group required">
+
 						<label for="pdate"><?php echo $lang['Publish date']; ?></label>
-						<input type="text" class="form-control" id="pdate" name="publish_date" value="<?php echo $article->publish_date; ?>"/>
+				 <input type="text" id="datepicker" class="form-control" name="publish_date" value="<?php echo $article->publish_date; ?>">
+				
 					</div>
 				</div>
 			</div>
@@ -147,6 +149,15 @@ $this->showView('adminNav');
 			</div>
 		</div>
 	</div>
+	<script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+    	  format: 'dd.mm.yyyy'
+
+    });
+
+  } );
+  </script>
 <script type="text/javascript">
 jQuery("#c_<?php echo $article->lang; ?>").prop("checked", true);
 

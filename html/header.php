@@ -17,6 +17,7 @@
 	<link href="<?php echo ROOT_URL; ?>css/general.css?ver=1" type="text/css" rel="stylesheet"/>
 	<link href="<?php echo ROOT_URL; ?>css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 	<link href="<?php echo ROOT_URL; ?>css/lightbox.css" type="text/css" rel="stylesheet"/>
+	<link href="<?php echo ROOT_URL; ?>css/bootstrap-datepicker.min.css" type="text/css" rel="stylesheet"/>
 
 <?php
 if (isset($styles))
@@ -87,4 +88,5 @@ if (isset($tinyMice))
 </head>
 
 <script type="text/javascript" src="<?php echo ROOT_URL; ?>js/lightbox.js"></script>
+<script type="text/javascript" src="<?php echo ROOT_URL; ?>js/bootstrap-datepicker.min.js"></script>
 <body>

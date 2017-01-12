@@ -25,12 +25,7 @@ $this->showView('sticky_header');
 					<a class="control_next"><img src="<?php echo ROOT_URL; ?>images/r_arrow.png"></a>
 					<a class="control_prev"><img src="<?php echo ROOT_URL; ?>images/l_arrow.png"></a>
 						<ul>
-						<?php
-						foreach ($images as $key => $image)
-						{
-							echo '<li><img src="'.$this->thumbnail("articles/".$room->id."/".$image, 450, array('crop'=>(450 / 100))).'"></li>';
-						}
-						?>
+					
 						</ul>  
 					</div>
 				</div>
@@ -54,7 +49,7 @@ $this->showView('reservation_form');
 ?>
 <div class="backwo">
 	<div class="id"><?php echo $lang['1504 Sofia']?> </div><div class="adress">
-	<?php echo $lang['Tsar Osvoboditel 15, CA 94043']?></div><div class="email">hello@escapemystoria.com </div><div class="contact">+359 888 11 22 33</div>
+	<?php echo $lang['Tsar Osvoboditel 15, CA 94043']?></div><div class="email"><a href="mailto:<?php echo $settings['Contact email']; ?>"><?php echo $settings['Contact email']; ?></a></div><div class="contact"><a href="tel:<?php echo $settings['Contact Phone']; ?>"><?php echo $settings['Contact Phone']; ?></a></div>
 </div>
 <div id="wall_5" style="width:100%;height:350px;">
 	<div id="content_5" class="content">

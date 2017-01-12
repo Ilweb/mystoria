@@ -41,7 +41,7 @@
 }
 .additional_info
 {
-	height:437px;
+	height:auto;
 	background:#080a20;
 	margin:0;
 	padding:0;
@@ -58,8 +58,9 @@
 }
 .additional_info div div div
 {
-	width:350px;
-	margin-left: 30%;
+	width: 450px;
+    padding: 10px;
+    margin-left: 15%;
 }
 .fst_img
 {

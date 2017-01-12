@@ -472,6 +472,7 @@ a.control_next {
 	display:inline-block;
 	color:white;
 	font-weight:bold;
+	vertical-align: middle;
 	font-family:Monserrat,Roboto;
 	font-size:11.5px;
 	letter-spacing:0.5px;
@@ -482,6 +483,7 @@ a.control_next {
 	display: block;
     left: 35px;
     top: -20px;
+    width: 100px;
     position: relative;
 	background-image:url("../images/window_count.png");
 	background-size:contain;
