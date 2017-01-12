@@ -41,9 +41,9 @@ $this->showView('sticky_header');
 				echo $room->body;
 				?>
 				<div class="times">
-					<div><img src="<?php echo ROOT_URL; ?>images/success.png"><span><?php echo $lang['Success rate']; ?></span><div><span>70%</span></div></div>
-					<div><img src="<?php echo ROOT_URL; ?>images/record.png"><span><?php echo $lang['Record time']; ?></span><div><span class="other">35 min</span></div></div>
-					<div><img src="<?php echo ROOT_URL; ?>images/3d.png"><span><?php echo $lang['Average time']; ?></span><div><span class="other">57 min</span></div></div>
+					<div><img src="<?php echo ROOT_URL; ?>images/success.png"><span><?php echo $lang['Success rate']; ?></span><div><span><?php echo $records->rate; ?>%</span></div></div>
+					<div><img src="<?php echo ROOT_URL; ?>images/record.png"><span><?php echo $lang['Record time']; ?></span><div><span class="other"><?php echo $records->record; ?> min</span></div></div>
+					<div><img src="<?php echo ROOT_URL; ?>images/3d.png"><span><?php echo $lang['Average time']; ?></span><div><span class="other"><?php echo $records->average; ?> min</span></div></div>
 				</div>
 			</div>
 		</div>

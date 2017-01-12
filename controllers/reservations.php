@@ -31,6 +31,23 @@ class Reservations extends RichController
 		{
 			$where = "status != 'cancelled'";
 		}	
+		if (isset($_REQUEST['search']) && !empty($_REQUEST['search']))
+		{
+			$search = addslashes($_REQUEST['search']);
+			$where .= "AND (phone LIKE '%$search%' 
+							OR name LIKE '%$search%' 
+							OR team LIKE '%$search%' 
+							OR DATE(start_time) = '".date('Y-m-d', strtotime($search))."'
+						)";
+		}
+		if (isset($_REQUEST['order_by']))
+		{
+			$order_by = $_REQUEST['order_by'];
+		}
+		else
+		{
+			$order_by = "status, start_time";
+		}
 		if (isset($_REQUEST['page']))
 		{
 			$page = (int)$_REQUEST['page'];
@@ -58,7 +75,7 @@ class Reservations extends RichController
 			"*",
 			"reservations",
 			$where,
-			"status, start_time",
+			$order_by,
 			$start_from.", ".PAGE_ROWS
 		);
 		$reservations = array();

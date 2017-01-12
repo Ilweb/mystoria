@@ -13,8 +13,8 @@ if (SHOW_FOOTER)
 					adipiscing elit. Quisque leo massa.
 			</div>
 			<div>
-				<a><i class="fa fa-twitter-square"></i></a>
-				<a><i class="fa fa-facebook-square"></i></a>
+				<a target="_blank" href="<?php echo $settings["Facebook URL"] ?>"><i class="fa fa-twitter-square"></i></a>
+				<a target="_blank" href="<?php echo $settings["Twitter URL"] ?>"><i class="fa fa-facebook-square"></i></a>
 				&copy; <?php date('Y');?></div>	
 		</div>
 		
@@ -29,10 +29,15 @@ if (SHOW_FOOTER)
 		
 		<div class="inner_set">
 			<div><?php echo $lang['Partners']; ?></div>
-			<a>First company title</a>
-			<a>Second company title</a>
-			<a>Third company title</a>
-			<a>Fourth company title</a>
+			<?php
+			for ($i = 1; $i <= 4; $i++)
+			{
+				if (isset($settings["Partner $i"]) && !empty($settings["Partner $i"]))
+				{
+					echo '<a target="_blank" href="'.$settings["Partner $i URL"].'">'.$settings["Partner $i"].'</a>';
+				}
+			}
+			?>
 		
 		</div>
 	</div>	

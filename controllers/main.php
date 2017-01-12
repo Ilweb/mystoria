@@ -7,6 +7,24 @@ class Main extends Controller
 		$this->setModel('article');
 	}
 	
+	private function getSettings()
+	{
+		$result = $this->_model->select(
+			"id, set_key, set_value",
+			"settings",
+			1,
+			"id"
+		);
+		
+		$settings = array();
+		while ($row = $result->fetch_object())
+		{
+			$settings[$row->set_key] = $row->set_value;
+		}
+		
+		return $settings;
+	}
+	
 	function defaultAction()
 	{
 		$p = new Page;
@@ -25,12 +43,30 @@ class Main extends Controller
 			$room = $row;
 		}
 		
+		$result = $this->_model->select(
+			"COUNT(id) AS teams, MINUTE(MIN(time)) AS record",
+			"reservations",
+			"status = 'completed' AND time IS NOT NULL AND image IS NOT NULL"
+		);
+		$records = $result->fetch_object();
+		
+		$result = $this->_model->select(
+			"COUNT(id) AS teams, ROUND(AVG(TIME_TO_SEC(time) / 60)) AS average",
+			"reservations",
+			"status = 'completed' AND time < '01:00:00' AND image IS NOT NULL"
+		);
+		$row = $result->fetch_object();
+		$records->rate = round(($row->teams / $records->teams) * 100);
+		$records->average = $row->average;
+		
 		$this->_template->setView('home');
 		$array = array(
 			"canonical"=>'',
 			"hours"=>$this->getHours(),
 			"room"=>$room,
-			"images"=>RichController::getSortedImages($room->id)
+			"images"=>RichController::getSortedImages($room->id),
+			"records"=>$records,
+			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
@@ -385,7 +421,8 @@ class Main extends Controller
 		$this->_template->setView('thankyou');
 		$array = array(
 			"title"=>'Thank you',
-			"styles"=>array('reg')
+			"styles"=>array('reg'),
+			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
@@ -408,7 +445,8 @@ class Main extends Controller
 		$array = array(
 			"title"=>$this->lang['FAQ'],
 			"styles"=>array('contacts','FAQ'),
-			"questions"=>$questions
+			"questions"=>$questions,
+			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
@@ -432,7 +470,8 @@ class Main extends Controller
 		$array = array(
 			"title"=>$this->lang['Rankings'],
 			"styles"=>array('rankings','contacts'),
-			"teams"=>$teams
+			"teams"=>$teams,
+			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
@@ -492,7 +531,8 @@ class Main extends Controller
 		$this->_template->setView('vp');
 		$array = array(
 			"title"=>$this->lang['Vouchers'],
-			"styles"=>array('vp')
+			"styles"=>array('vp'),
+			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
@@ -501,7 +541,8 @@ class Main extends Controller
 		$this->_template->setView('contacts');
 		$array = array(
 			"title"=>$this->lang['Contacts'],
-			"styles"=>array('contacts')
+			"styles"=>array('contacts'),
+			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
@@ -510,7 +551,8 @@ class Main extends Controller
 		$this->_template->setView('teambuilding');
 		$array = array(
 			"title"=>$this->lang['Team building'],
-			"styles"=>array('teambuilding')
+			"styles"=>array('teambuilding'),
+			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
@@ -519,15 +561,8 @@ class Main extends Controller
 		$this->_template->setView('terms');
 		$array = array(
 			"title"=>$this->lang['terms'],
-			"styles"=>array('terms')
-		);
-	    $this->_template->render($array);
-	}
-	function pages()
-	{
-		$this->_template->setView('pages');
-		$array = array(
-			"styles"=>array('pages')
+			"styles"=>array('terms'),
+			"settings"=>$this->getSettings()
 		);
 	    $this->_template->render($array);
 	}
