@@ -16,7 +16,7 @@ $this->showView('sticky_header');
 				</div>
 				<?php
 			}
-			?>
+						?>
 		</div>
 		<div class="fst_img"></div>
 	</div>
