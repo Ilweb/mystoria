@@ -557,6 +557,11 @@ class Main extends Controller
 		$team = array();
 		while ($row = $rooms->fetch_object())
 		{
+			$images = RichController::getSortedImages($row->id);
+			if (isset($images[0]))
+			{
+				$row->image = $images[0];
+			}
 			$team[] = $row;
 		}
 	

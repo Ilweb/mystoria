@@ -31,7 +31,7 @@ while ($row = $settings->fetch_object())
 		<div class="col-sm-4 hour">
 			<div class="form-group">
 				<div class="input-group">
-					<input name="hours[]" class="form-control time" value="<?php echo $row->start; ?>" />
+					<input type="text" name="hours[]" class="form-control time" value="<?php echo $row->start; ?>" />
 					<a class="input-group-addon btn delete-hour">
 						<span class="fa fa-close"></span>
 					</a>

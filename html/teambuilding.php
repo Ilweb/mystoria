@@ -6,34 +6,35 @@ $this->showView('sticky_header');
 </div>
 <div class="additional_info">
 	<div>
-		<div>
+		
 			<?php
-			for ($i = 0; $i <= 1 && isset($team[$i]); $i++)
+			foreach ($team as $key => $t)
 			{
-				?>
-				<div class="first_info">
-					<?php echo $team[$i]->body; ?>
-				</div>
-				<?php
-			}
-						?>
-		</div>
-		<div class="fst_img"></div>
-	</div>
-	<div>
-	<div class="sec_img"></div>
-		<div>
-			<?php
-			for ($i = 2; $i <= 3 && isset($team[$i]); $i++)
-			{
-				?>
-				<div class="first_info">
-					<?php echo $team[$i]->body; ?>
-				</div>
-				<?php
+				if ($key % 2)
+				{
+					?>
+					<div>
+						<div class="first_info">
+							<?php echo $t->body;?>
+						</div>
+					</div>
+					<div class="fst_img" <?php if (isset($t->image)) echo 'style="background-image: url(../images/articles/'.$t->id.'/'.$t->image.')"' ?>></div>
+					<?php
+				}
+				else
+				{
+					?>
+					<div class="sec_img" <?php if (isset($t->image)) echo 'style="background-image: url(../images/articles/'.$t->id.'/'.$t->image.')"' ?>></div>
+					<div>
+						<div class="sec_info">
+							<?php echo $t->body; ?>
+						</div>
+					</div>
+					<?php
+				}
 			}
 			?>
-		</div>
+		
 	</div>
 </div>
 <div class="contacts">
