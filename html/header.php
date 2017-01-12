@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:500&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<link href="<?php echo ROOT_URL; ?>css/general.css?ver=1" type="text/css" rel="stylesheet"/>
-<link href="<?php echo ROOT_URL; ?>css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
-<link href="<?php echo ROOT_URL; ?>css/lightbox.css" type="text/css" rel="stylesheet"/>
+	<link href="<?php echo ROOT_URL; ?>css/general.css?ver=1" type="text/css" rel="stylesheet"/>
+	<link href="<?php echo ROOT_URL; ?>css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+	<link href="<?php echo ROOT_URL; ?>css/lightbox.css" type="text/css" rel="stylesheet"/>
 
 <?php
 if (isset($styles))

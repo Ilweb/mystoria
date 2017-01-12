@@ -54,11 +54,14 @@ $this->showView('reservation_form');
 ?>
 <div id="wall_5" style="width:100%;height:350px;">
 	<div id="content_5" class="content">
+	<div class="backwo"><div class="id"><?php echo $lang['1504 Sofia']?> </div><div class="adress">
+	<?php echo $lang['Tsar Osvoboditel 15, CA 94043']?></div><div class="email">hello@escapemystoria.com </div><div class="contact">+359 888 11 22 33</div></div>
 	</div>
 </div>
 </div>
-<script type="text/javascript" src="<?php echo ROOT_URL; ?>js/map.js"></script>
 
+<script type="text/javascript" src="<?php echo ROOT_URL; ?>js/map.js"></script>
+	
 
 <script type="text/javascript">
 jQuery(document).ready(function ($) {

@@ -54,7 +54,10 @@
   var map = new google.maps.Map(document.getElementById('wall_5'),
     mapOptions);
   
-  var contentString = '<div class="backwo"><div class="id">1504 Sofia </div><div class="adress">Tsar Osvoboditel 15, CA 94043</div><div class="email">hello@escapemystoria.com </div><div class="contact">+359 888 11 22 33</div></div>';
+
+  var contentString =  $('.backwo').html();
+  alert(contentString);
+
   var infowindow = new google.maps.InfoWindow({
           content: contentString,
 		  position: markerLatLng,

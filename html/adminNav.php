@@ -16,7 +16,7 @@
                 <li><a href="<?php echo ROOT_URL; ?>index.php?content=settings">Settings</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="fa fa-lock" aria-hidden="true"></span> </a></li>
+                <li><a href="#"><span class="fa fa-lock" aria-hidden="true"></span> Password </a></li>
                 <li><a href="<?php echo ROOT_URL; ?>index.php?content=users&action=logout"><span class="fa fa-times" aria-hidden="true"> </span> </a></li>
             </ul>
         </div>
