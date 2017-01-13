@@ -1,5 +1,8 @@
 <?php
-$this->showView('adminNav');
+if (!$simple)
+{
+	$this->showView('adminNav');
+}
 ?>
 
 <div class="container">

@@ -76,17 +76,15 @@ if (isset($canonical))
 	<?php
 }
 $this->showView('header_script');
-if ($_SESSION['user'])
-{
-	$this->showView('user_script');
-}
 if (isset($tinyMice))
 {
 	$this->showView('tinymice_init');
 }
 ?>
-</head>
+
 
 <script type="text/javascript" src="<?php echo ROOT_URL; ?>js/lightbox.js"></script>
 <script type="text/javascript" src="<?php echo ROOT_URL; ?>js/bootstrap-datepicker.min.js"></script>
+
+</head>
 <body>

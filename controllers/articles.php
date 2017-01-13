@@ -78,7 +78,8 @@ class Articles extends RichController
 				"categories",
 				"cat_type = 1 AND deleted = 0"
 			),
-			"category"=>$category
+			"category"=>$category,
+			"simple"=>$simple
 		);
 		if ($simple)
 		{
