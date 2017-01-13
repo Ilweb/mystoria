@@ -1,7 +1,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function()
 {
-	/*jQuery(".changePass").dialog({
+jQuery(".changePass").dialog({
 		modal: true,
 		autoOpen: false,
 		resizable: false,
@@ -12,7 +12,7 @@ jQuery(document).ready(function()
 			{ 
 				if (jQuery(".password1").val() != jQuery(".password2").val())
 				{
-					jQuery(".changePass .alert").html("<?php echo $lang['Pass not match']; ?>");
+					alert('<?php echo $lang['Choose another title']; ?>');
 				}
 				else if (jQuery(".changePass .password1").val() == '')
 				{
@@ -50,7 +50,7 @@ jQuery(document).ready(function()
 				jQuery('.changePass .alert').html('');
 			}
 		}
-	});*/
+	});
 	jQuery(".changePassLink").click(function()
 	{
 		//jQuery(".changePass").dialog("open");

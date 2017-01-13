@@ -25,7 +25,12 @@ $this->showView('sticky_header');
 					<a class="control_next"><img src="<?php echo ROOT_URL; ?>images/r_arrow.png"></a>
 					<a class="control_prev"><img src="<?php echo ROOT_URL; ?>images/l_arrow.png"></a>
 						<ul>
-					
+						<?php
+						foreach ($images as $key => $image)
+						{
+							echo '<li><img src="'.$this->thumbnail("articles/".$room->id."/".$image, 450, array('crop'=>(450 / 300))).'"></li>';
+						}
+						?>
 						</ul>  
 					</div>
 				</div>

@@ -19,14 +19,14 @@
                 <li><a href="<?php echo ROOT_URL; ?>index.php?content=settings">Settings</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li data-toggle="modal" data-target="#myModal"><a href="#" ><span class="fa fa-lock" aria-hidden="true""></span>Password</a></li>
+                <li  data-toggle="modal" data-target="#myModal"><a href="#" ><span class="fa fa-lock" aria-hidden="true""></span>Password</a></li>
                 <li><a href="<?php echo ROOT_URL; ?>index.php?content=users&action=logout"><span class="fa fa-times" aria-hidden="true"> </span> Logout</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade changePass" id="myModal" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -35,22 +35,22 @@
 			</div>
 			<div class="modal-body">
                 <div class="form-group required">
-                    <label for="current_password">Current password</label>
+                    <label for="current_password" >Current password</label>
                     <input type="password"  class="form-control" id="current_password" name="current_password">
                 </div>
                 <div class="form-group required">
-                    <label for="new_password">New password</label>
+                    <label for="new_password password2">New password</label>
                     <input type="password"  class="form-control" id="new_password" name="new_password">
                 </div>
                 <div class="form-group required">
-                    <label for="confirm_password">Confirm password</label>
+                    <label for="confirm_password password2">Confirm password</label>
                     <input type="password"  class="form-control" id="confirm_password" name="confirm_password">
                 </div> 
 			</div>
 			<div class="modal-footer">
                 <div class="row">
                      <div class="col-sm-6">
-                        <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Confirm</button>
+                        <button type="button" class="btn btn-success btn-block" data-dismiss="modal"><?php echo $lang['Save']; ?>"</button>
                     </div>
                     <div class="col-sm-6">
     				    <button type="button" class="btn btn-warning btn-block" data-dismiss="modal">Close</button>
@@ -62,7 +62,67 @@
 </div>
 
 <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker4').datetimepicker();
-            });
-        </script>
+    $(function () {
+        $('#datetimepicker4').datetimepicker();
+    });
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function()
+{
+jQuery(".changePass").dialog({
+        modal: true,
+        autoOpen: false,
+        resizable: false,
+        width: 400,
+        buttons: 
+        {
+            "<?php echo $lang['Save']; ?>": function() 
+            { 
+                if (jQuery(".password1").val() != jQuery(".password2").val())
+                {
+                    alert('<?php echo $lang['Choose another title']; ?>');
+                }
+                else if (jQuery(".changePass .password1").val() == '')
+                {
+                    jQuery(".changePass .alert").html("<?php echo $lang['Fill new pass']; ?>");
+                }
+                else 
+                {
+                    jQuery.post("index.php",
+                    {
+                        content: "users",
+                        action: "changePassword",
+                        password: jQuery(".changePass .password").val(),
+                        new_pass: jQuery(".changePass .password1").val()
+                    },
+                    function(data)
+                    {
+                        if (jQuery.trim(data) == 'OK')
+                        {
+                            jQuery('.changePass input[type="password"]').val('');
+                            jQuery('.changePass .alert').html('');
+                        }
+                        else
+                        {
+                            jQuery(".changePass").dialog("open");
+                            jQuery(".changePass .alert").html(data);
+                        }
+                    });
+                    jQuery(this).dialog("close"); 
+                }
+            },
+            "<?php echo $lang['Cancel']; ?>": function() 
+            { 
+                jQuery(this).dialog("close"); 
+                jQuery('.changePass input[type="password"]').val('');
+                jQuery('.changePass .alert').html('');
+            }
+        }
+    });
+    jQuery(".changePassLink").click(function()
+    {
+        //jQuery(".changePass").dialog("open");
+    });
+});
+</script>
