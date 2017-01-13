@@ -238,11 +238,24 @@ class Main extends Controller
 	
 	function vp()
 	{
+		$rooms = $this->_model->select(
+			"id, url, title, body, featured",
+			"articles",
+			"!deleted AND publish_date <= CURDATE() AND category = 4 AND lang = '".LOCALE."'",
+			"publish_date DESC"
+		);
+		$promos = array();
+		while ($row = $rooms->fetch_object())
+		{
+			$promos[] = $row;
+		}
+		
 		$this->_template->setView('vp');
 		$array = array(
 			"title"=>$this->lang['Vouchers'],
 			"styles"=>array('vp'),
-			"settings"=>$this->getSettings()
+			"settings"=>$this->getSettings(),
+			"promos"=>$promos
 		);
 	    $this->_template->render($array);
 	}

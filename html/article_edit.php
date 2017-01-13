@@ -109,13 +109,10 @@ $this->showView('adminNav');
 						?>
 						</div>
 				<div class="row">
-					<div class="col-sm-8">
+					<div class="col-sm-6">
 						<label class="btn btn-info btn-block btn-file" style="margin: 20px 0 20px 0;">
 						Upload file<input type="file" name="image_file" style="display: none;" onchange="$('#upload-file-info').html($(this).val());"/></label>
 						<span class="label label-info" id="upload-file-info"></span>
-					</div>
-					<div class="col-sm-4"  >
-						<input type="submit" class="button btn btn-warning btn-block"  value="Качи снимка" style="margin: 20px 0 20px 0;">
 					</div>
 				</div> 	
 						<?php
@@ -124,14 +121,14 @@ $this->showView('adminNav');
 					{
 						?>
 				<div class="col-lg-12">
-					<div class="form-group required">
+					<div class="form-group">
 						<div colspan="2"><iframe src="index.php?content=articles&action=editGallery&id=<?php echo $article->id; ?>" frameborder="0" style="border:none; width:100%; height:320px;" allowTransparency="true"></iframe></div>
 					</div>
 				</div>
 				<?php
 			}
 		?>
-				<div class="col-sm-12">
+				<div class="col-sm-12" style="display: none;">
 					<div class="form-group required"><?php echo $lang['YouTube video']; ?>
 						<input class="textbox" type="text" name="video" value="<?php echo $article->video; ?>"/>
 					</div>
