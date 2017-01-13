@@ -38,19 +38,19 @@
                     <label for="current_password" >Current password</label>
                     <input type="password"  class="form-control" id="current_password" name="current_password">
                 </div>
-                <div class="form-group required">
-                    <label for="new_password password2">New password</label>
+                <div class="form-group required password1 " id="password1">
+                    <label for="new_password ">New password</label>
                     <input type="password"  class="form-control" id="new_password" name="new_password">
                 </div>
-                <div class="form-group required">
-                    <label for="confirm_password password2">Confirm password</label>
+                <div class="form-group required password2" id="password2">
+                    <label for="confirm_password ">Confirm password</label>
                     <input type="password"  class="form-control" id="confirm_password" name="confirm_password">
                 </div> 
 			</div>
 			<div class="modal-footer">
                 <div class="row">
                      <div class="col-sm-6">
-                        <button type="button" class="btn btn-success btn-block" data-dismiss="modal"><?php echo $lang['Save']; ?>"</button>
+                        <button type="button" id="btnSubmit" class="btn btn-success btn-block" data-dismiss="modal"><?php echo $lang['Save']; ?></button>
                     </div>
                     <div class="col-sm-6">
     				    <button type="button" class="btn btn-warning btn-block" data-dismiss="modal">Close</button>
@@ -67,19 +67,19 @@
     });
 </script>
 
-<script type="text/javascript">
-jQuery(document).ready(function()
-{
-jQuery(".changePass").dialog({
-        modal: true,
-        autoOpen: false,
-        resizable: false,
-        width: 400,
-        buttons: 
-        {
-            "<?php echo $lang['Save']; ?>": function() 
-            { 
-                if (jQuery(".password1").val() != jQuery(".password2").val())
+   <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                //var password1 = $("#new_password").val();
+                //var password2 = $("#confirm_password").val();
+                //if (password1 != password2) {
+                  //  alert("Passwords do not match.");
+                    //return false;
+                //}
+                //return true;
+            //});
+        //});
+        if (jQuery(".password1").val() != jQuery(".password2").val())
                 {
                     alert('<?php echo $lang['Choose another title']; ?>');
                 }
@@ -125,4 +125,4 @@ jQuery(".changePass").dialog({
         //jQuery(".changePass").dialog("open");
     });
 });
-</script>
+    </script>
