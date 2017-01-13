@@ -34,7 +34,6 @@ $this->showView('sticky_header');
 				}
 			}
 			?>
-		
 	</div>
 </div>
 <div class="contacts">
