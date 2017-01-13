@@ -30,15 +30,7 @@
 }
 
 
-.rest1, .rest
-{
-	width: auto;
-    height: auto;
-    background-size: contain;
-	background-repeat:no-repeat;
-	margin-bottom:15px;
-	margin-right:15px;
-}
+
 .second_place:last-of-type
 {
 	margin-right:0;
@@ -48,7 +40,7 @@
 	height:50px;
 	background:rgba(22,25,64,0.7);
 	position:absolute;
-	width:100%; 
+	width:28vw; 
 	top: 243px;
     display: block;
 	text-transform:uppercase;
@@ -140,6 +132,18 @@
 	{
 		width:100%;
 	}
+	.teamrank{
+		width: 100%;
+
+	}
+	/*.rest .teamrank{
+		width: 100vw;
+
+	} */
+.info_inner div.timings
+{
+	width: 90vw;
+}
 	.timings img
 	{
 		left:45%;

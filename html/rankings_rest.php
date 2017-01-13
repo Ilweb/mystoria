@@ -24,7 +24,8 @@
 		);
 		?>
 		<div class="rest">
-			<a href="<?php echo $large; ?>" data-lightbox="team-<?php echo $i; ?>"><img src="<?php echo $small; ?>" alt="Team <?php echo $teams[$i]->team; ?>"/></a>
+			<a href="<?php echo $large; ?>" data-lightbox="team-<?php echo $i; ?>">
+			<img  class="teamrank" src="<?php echo $small; ?>" alt="Team <?php echo $teams[$i]->team; ?>"/></a>
 			<div class="timings">
 				<div>
 					<span><?php echo (($page - 1) * 6 + $i + 4).'. '.$teams[$i]->team; ?></span>
