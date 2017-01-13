@@ -41,11 +41,11 @@ $this->showView('sticky_header');
 	<div>
 		<div>
 			<div><?php echo $lang['Phone number']; ?></div>
-			<div><a href="tel:+359 888 11 22 33">+359 888 11 22 33</div>
+			<div><a href="tel:<?php echo $settings['Contact Phone']; ?>"><?php echo $settings['Contact Phone']; ?></div>
 		</div>
 		<div>
 			<div><?php echo $lang['Email']; ?></div>
-			<div><a href="mailto:hello@escapemystoria.com">hello@escapemystoria.com</a></div>
+			<div><a href="mailto:<?php echo $settings['Contact email']; ?>"><?php echo $settings['Contact email']; ?></a></div>
 		</div>
 	</div>
 	<div class="moon">
