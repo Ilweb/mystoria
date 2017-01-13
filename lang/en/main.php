@@ -100,6 +100,9 @@ $lang['Frequently asked questions']="Frequently asked questions";
 
 $lang['Vouchers']="Vouchers";
 
+ $lang['Current Password']="Current Password";
+ $lang['Confirm password']=" Confirm password";
+
 
 
 ?>

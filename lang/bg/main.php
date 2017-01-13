@@ -99,5 +99,8 @@ $lang['Frequently asked questions']="Често задавани въпроси"
 $lang['Vouchers']="Ваучери";
 $lang['Action']="Действие";
 
+ $lang['Current Password']=" Стара парола";
+  $lang['Confirm password']= "Потвърди паролата";
+
 
 ?>

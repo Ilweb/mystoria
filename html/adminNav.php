@@ -19,7 +19,7 @@
                 <li><a href="<?php echo ROOT_URL; ?>index.php?content=settings">Settings</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="fa fa-lock" aria-hidden="true" data-toggle="modal" data-target="#myModal"></span> Password </a></li>
+                <li data-toggle="modal" data-target="#myModal"><a href="#" ><span class="fa fa-lock" aria-hidden="true""></span>Password</a></li>
                 <li><a href="<?php echo ROOT_URL; ?>index.php?content=users&action=logout"><span class="fa fa-times" aria-hidden="true"> </span> Logout</a></li>
             </ul>
         </div>
@@ -31,33 +31,34 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Change Password</h4>
+				<h4>Change Password</h4>
 			</div>
 			<div class="modal-body">
-				<div class="control-group">
-					<label for="current_password" class="control-label">Current Password</label>
-					<div class="controls">
-						 <input type="password" name="current_password">
-					</div>
-				</div>
-				<div class="control-group">
-					 <label for="new_password" class="control-label">New Password</label>
-					<div class="controls">
-						 <input type="password" name="new_password">
-					</div>
-				</div>
-				<div class="control-group">
-					<label for="confirm_password" class="control-label">Confirm Password</label>
-					<div class="controls">
-						<input type="password" name="confirm_password">
-					</div>
-				</div>      
+                <div class="form-group required">
+                    <label for="current_password">Current password</label>
+                    <input type="password"  class="form-control" id="current_password" name="current_password">
+                </div>
+                <div class="form-group required">
+                    <label for="new_password">New password</label>
+                    <input type="password"  class="form-control" id="new_password" name="new_password">
+                </div>
+                <div class="form-group required">
+                    <label for="confirm_password">Confirm password</label>
+                    <input type="password"  class="form-control" id="confirm_password" name="confirm_password">
+                </div> 
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
+                <div class="row">
+                     <div class="col-sm-6">
+                        <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Confirm</button>
+                    </div>
+                    <div class="col-sm-6">
+    				    <button type="button" class="btn btn-warning btn-block" data-dismiss="modal">Close</button>
+                    </div>
+			 </div>
+		  </div>
+	   </div>
+    </div>
 </div>
 
 <script type="text/javascript">
