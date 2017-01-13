@@ -41,7 +41,7 @@ class Main extends Controller
 		}
 		
 		$result = $this->_model->select(
-			"COUNT(id) AS teams, MINUTE(MIN(time)) AS record",
+			"COUNT(id) AS teams, MINUTE(MIN(time)) AS record, ROUND(AVG(TIME_TO_SEC(time) / 60)) AS average",
 			"reservations",
 			"status = 'completed' AND time IS NOT NULL AND image IS NOT NULL"
 		);
@@ -54,7 +54,7 @@ class Main extends Controller
 		);
 		$row = $result->fetch_object();
 		$records->rate = round(($row->teams / $records->teams) * 100);
-		$records->average = $row->average;
+		//$records->average = $row->average;
 		
 		$this->_template->setView('home');
 		$array = array(
