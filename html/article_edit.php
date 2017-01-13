@@ -72,8 +72,9 @@ $this->showView('adminNav');
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="form-group required">Featured
-						<input type="checkbox" name="featured" <?php if ($article->featured) echo 'checked="checked"'; ?> value="1"/>
+					<div class="form-group">
+						<label>Featured
+						<input type="checkbox" name="featured" <?php if ($article->featured) echo 'checked="checked"'; ?> value="1"/></label>
 					</div>
 				</div>
 			</div>

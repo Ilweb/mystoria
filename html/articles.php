@@ -76,17 +76,9 @@ if ($pages > 1)
 				</td>
 				<td>
 				<?php 
-				if ($article->important)
-				{
-					echo '<span class="ui-icon ui-icon-pause" style="float: left;" title="'.$lang['Important'].'"></span> ';
-				}
-				if ($article->feedback)
-				{
-					echo '<span class="ui-icon ui-icon-contact" style="float: left;" title="'.$lang['Feedback'].'"></span> ';
-				}
 				if ($article->featured)
 				{
-					echo '<span class="ui-icon ui-icon-star" style="float: left;" title="'.$lang['Featured'].'"></span> ';
+					echo '<i class="fa fa-star" title="'.$lang['Featured'].'"></i> ';
 				}
 				?>
 				</td>
