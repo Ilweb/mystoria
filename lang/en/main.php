@@ -103,6 +103,8 @@ $lang['Vouchers']="Vouchers";
  $lang['Current Password']="Current Password";
  $lang['Confirm password']=" Confirm password";
 
+ $lang['Thank you for registration']="Thank you for registration";
+
 
 
 ?>
