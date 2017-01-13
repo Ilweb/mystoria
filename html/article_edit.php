@@ -12,7 +12,7 @@ $this->showView('adminNav');
 				<div class="col-sm-8">
 					<div class="form-group required">
 						<label for="title"><?php echo $lang['Title']; ?></label>
-						<input class="form-control textbox required" type="text" name="title" value="<?php echo $article->title; ?>"/>
+						<input class="form-control textbox required" id="title" type="text" name="title" value="<?php echo $article->title; ?>"/>
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -35,7 +35,7 @@ $this->showView('adminNav');
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="fcategory"><?php echo $lang['Category']; ?></label>
-							<select name="category" class="form-control">
+							<select name="category" id="fcategory" class="form-control">
 								<?php
 								while ($cat = $categories->fetch_object())
 								{
@@ -53,17 +53,20 @@ $this->showView('adminNav');
 				<div class="col-sm-4">
 					<div class="form-group required">
 						<label for="fsubmenu"><?php echo $lang['Submenu']; ?></label>
-						<select name="submenu" class="form-control">
+						<select name="submenu" id="fsubmenu" class="form-control">
 							<option value="0"></option>
 						</select>
 					</div>
 				</div>
 				<div class="col-sm-4">
-				<div class="form-group required">
-
-						<label for="pdate"><?php echo $lang['Publish date']; ?></label>
-				 <input type="text" id="datepicker" class="form-control" name="publish_date" value="<?php echo $article->publish_date; ?>">
-				
+					<div class="form-group required">
+						<label for="datepicker"><?php echo $lang['Publish date']; ?></label>
+					  	<div class='input-group date' id='datepicker'>
+		                    <input type='text' id="datepicker" class="form-control" name="publish_date" value="<?php echo $article->publish_date; ?> " />
+		                    <span class="input-group-addon">
+		                        <span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
 					</div>
 				</div>
 			</div>

@@ -10,9 +10,12 @@
 body
 {
 	margin:0;
-	
 
-
+}
+.modal-body {
+    position: relative;
+    padding: 15px;
+    text-align: center;
 }
 .pagePreview h1{
  text-align: left !important;
