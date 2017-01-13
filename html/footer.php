@@ -6,12 +6,7 @@ if (SHOW_FOOTER)
 	<div class="footer_condition">
 		<div class="inner_set">
 			<div>Mystoria tm</div>
-			<div>Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Quisque leo massa, vulputate
-					non magna sit amet, tincidunt aliquet eros.
-					Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Quisque leo massa.
-			</div>
+			<div><?php echo $settings['Footer '.strtoupper(LOCALE)]; ?></div>
 			<div>
 				<a target="_blank" href="<?php echo $settings["Facebook URL"] ?>"><i class="fa fa-twitter-square"></i></a>
 				<a target="_blank" href="<?php echo $settings["Twitter URL"] ?>"><i class="fa fa-facebook-square"></i></a>
