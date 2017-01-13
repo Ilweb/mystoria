@@ -32,8 +32,8 @@
 
 .rest1, .rest
 {
-	width: 380px;
-    height: 293px;
+	width: auto;
+    height: auto;
     background-size: contain;
 	background-repeat:no-repeat;
 	margin-bottom:15px;
@@ -144,4 +144,8 @@
 	{
 		left:45%;
 	}
+	.info_inner div.nth_row 
+{
+	text-align:left;
+
 }
