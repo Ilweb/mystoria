@@ -68,14 +68,14 @@
 	top: 7px;
 	position: relative;
 }
-#second_chos
+.second_chos
 {
 	background-image:url("../images/FAQ/planet_background2.png");
 	width:100%;
 	height:33.3%;
 	background-repeat:no-repeat;
 }
-#third_chos
+.third_chos
 {
 	background-image:url("../images/FAQ/planet_background3.png");
 	width:100%;

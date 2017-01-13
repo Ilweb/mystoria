@@ -131,7 +131,7 @@
 	}	
 	.info_inner .nth_row:last-of-type
 	{
-		top:0;
+		top:50px;
 	}
 }	
 @media only screen and (max-width: 390px)

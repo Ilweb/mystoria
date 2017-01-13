@@ -18,7 +18,7 @@ $this->showView('sticky_header');
 		<div><img src="<?php echo ROOT_URL; ?>images/FAQ/ship.png"></div>
 		</div>
 	</div>
-<div class="first_chos" id="second_chos">
+<div class="first_chos second_chos" >
 	<div>
 		<div><img src="<?php echo ROOT_URL; ?>images/FAQ/arrow.png"></div>
 		<div>
@@ -35,7 +35,7 @@ $this->showView('sticky_header');
 		
 	</div>
 </div>
-<div class="first_chos" id="third_chos">
+<div class="first_chos third_chos" >
 	<div><div>
 			<div>
 		<?php echo $lang['VOUCHER']; ?>
