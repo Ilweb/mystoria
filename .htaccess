@@ -6,11 +6,6 @@ RewriteRule (.*) http://mystoria\.bg//$1 [R=301,L]
 
 RewriteRule ^(\w\w)/?$ index.php?locale=$1
 
-RewriteRule ^(\w\w)/([a-z0-9\-]+)\.html$ index.php?content=main&action=page&url=$2&locale=$1
-RewriteRule ^(\w\w)/([a-z0-9\-]+)/?$ index.php?content=main&action=folder&url=$2&locale=$1
-RewriteRule ^(\w\w)/([a-z0-9\-]+)/([a-z0-9\-]+)/?$ index.php?content=main&action=folder&url=$2&sub1=$3&locale=$1
-RewriteRule ^(\w\w)/([a-z0-9\-]+)/([a-z0-9\-]+)/([a-z0-9\-]+)/?$ index.php?content=main&action=folder&url=$2&sub1=$3&sub2=$4&locale=$1
-RewriteRule ^(\w\w)/([a-z0-9\-]+)/([a-z0-9\-]+)\.html$ index.php?content=main&action=item&cat=$2&url=$3&locale=$1 [QSA]
 RewriteRule ^(\w\w)/([a-z0-9\-]+)\.php$ index.php?content=main&action=$2&locale=$1 [QSA]
 RewriteRule ^([a-zA-Z]+)/([a-z\-]+)\.php$ index.php?content=$1&action=$2 [QSA]
 
