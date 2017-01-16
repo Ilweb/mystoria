@@ -56,6 +56,9 @@
 	font-size:12px;
 	font-weight:bold;
 	letter-spacing:1px;
+	padding: 7px;
+	text-align: center
+
 }
 .first_chos .choose.second
 {
@@ -87,7 +90,7 @@
 {
 	footer 
 	{
-		position: absolute;
+		
 	}
 }
 @media only screen and (max-width: 570px)
@@ -121,7 +124,7 @@
 	}
 	.choose.second,.first_chos div div div:nth-of-type(2)
 	{
-		width:100%;
+		
 	}
 	.mobile_button
 	{

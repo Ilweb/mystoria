@@ -23,7 +23,7 @@ foreach ($promos as $key => $p)
 					{
 						?>
 						<div class="choose second">
-							<div><?php echo $lang['RESERVE NOW']; ?></div>
+							<a href="<?php echo LOCALE_URL.'#reserve'; ?>"><?php echo $lang['Reserve now']; ?></a>
 						</div>
 						<?php
 					}
@@ -47,7 +47,7 @@ foreach ($promos as $key => $p)
 					{
 						?>
 						<div class="choose second">
-							<div><?php echo $lang['RESERVE NOW']; ?></div>
+							<a href="<?php echo LOCALE_URL.'#reserve'; ?>"><?php echo $lang['Reserve now']; ?></a>
 						</div>
 						<?php
 					}
@@ -75,7 +75,7 @@ foreach ($promos as $key => $p)
 					{
 						?>
 						<div class="choose second">
-							<div><?php echo $lang['RESERVE NOW']; ?></div>
+							<a href="<?php echo LOCALE_URL.'#reserve'; ?>"><?php echo $lang['Reserve now']; ?></a>
 						</div>
 						<?php
 					}

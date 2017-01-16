@@ -36,7 +36,7 @@ $this->showView('sticky_header');
 					<div class="timings">
 						<div>
 							<span><?php echo ($i + 1).'. '.$teams[$i]->team; ?></span>
-							<img src="<?php echo ROOT_URL; ?>images/record.png"/>
+							<img  src="<?php echo ROOT_URL; ?>images/record.png"/>
 							<i><?php echo $teams[$i]->time; ?></i>
 						</div>
 					</div>

@@ -30,6 +30,15 @@
 }
 
 
+.rest1, .rest
+{
+	width: 380px;
+    height: 293px;
+    background-size: contain;
+	background-repeat:no-repeat;
+	margin-bottom:15px;
+	margin-right:15px;
+}
 
 .second_place:last-of-type
 {
@@ -40,7 +49,19 @@
 	height:50px;
 	background:rgba(22,25,64,0.7);
 	position:absolute;
-	width:28vw; 
+	width:100%; 
+	top: 243px;
+    display: block;
+	text-transform:uppercase;
+	color:white;
+	text-align:left;
+}
+
+.rest div.timings{
+	height:50px;
+	background:rgba(22,25,64,0.7);
+	position:absolute;
+	width:100%; 
 	top: 243px;
     display: block;
 	text-transform:uppercase;
@@ -89,6 +110,8 @@
 {
 	text-align:left !important;
 	margin-right: 15px;
+	margin-bottom: 20px;
+	
 }	
 .info_inner .top,.info_inner .other
 {
@@ -133,17 +156,13 @@
 		width:100%;
 	}
 	.teamrank{
-		width: 100%;
-
-	}
-	/*.rest .teamrank{
 		width: 100vw;
 
-	} */
-.info_inner div.timings
-{
-	width: 90vw;
-}
+	}
+	.rest .teamrank{
+		width: 100vw;
+
+	} 
 	.timings img
 	{
 		left:45%;
