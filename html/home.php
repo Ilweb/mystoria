@@ -3,8 +3,8 @@
 	<div id="content_1" class="content">
 		<div class="logo"><div id="innerr"><img src="<?php echo ROOT_URL; ?>images/logo.png"></div>
 			<div class="buttons">
-				<div class="choose"><div onclick="goToByScroll( '#wall_4', -100 );"><?php echo $lang['Reserve now']; ?></div></div>
-				<div class="choose"><div><a href="<?php echo LOCALE_URL; ?>teambuilding.php"><?php echo $lang['Team building']; ?></a></div></div>
+				<div class="choose"><a  onclick="goToByScroll( '#wall_4', -100 );"><?php echo $lang['Reserve now']; ?></a></div>
+				<div class="choose"><a href="<?php echo LOCALE_URL; ?>teambuilding.php"><?php echo $lang['Team building']; ?></a></div>
 			</div>
 				<div class="language">
 				<div class="choose_lang"><?php echo $lang['Change your language']; ?></div>

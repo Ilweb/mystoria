@@ -75,7 +75,7 @@ foreach ($promos as $key => $p)
 					{
 						?>
 						<div class="choose second">
-							<a href="<?php echo LOCALE_URL.'#reserve'; ?>"><?php echo $lang['Reserve now']; ?></a>
+							<a class="choose second" href="<?php echo LOCALE_URL.'#reserve'; ?>""><?php echo $lang['Reserve now']; ?></a>
 						</div>
 						<?php
 					}

@@ -151,6 +151,7 @@ h2,h4
 .under_info a {
 	color: #fff;
 	text-decoration: none;
+	vertical-align: -webkit-baseline-middle
 
 }
 .choose:first-of-type
@@ -164,14 +165,13 @@ h2,h4
 	box-shadow: inset 0px 0px 5px 0px rgba(57,64,107,1);
 	cursor:pointer;
 }
-.choose div,
-.choose a
+.choose div
+
 {
 	margin-top: 8px;
 }
-.choose a
-{
-	display: block;
+.choose a{
+	padding: 8px;
 }
 #people_num
 {
@@ -317,12 +317,17 @@ h2,h4
 	-moz-box-shadow: inset 0px 0px 43px 0px rgba(158,25,158,1);
 	box-shadow: inset 0px 0px 43px 0px rgba(158,25,158,1);
 }	
-.menu div div.choose.second div,
-.menu div div.choose.second a
+.menu div div.choose.second div
+
 {
 	margin-top:7px;
 	color: white;
 	display: block;
+}
+.menu div div.choose.second a{
+	color: white;
+	display: block;
+
 }
 .logo_small
 {
