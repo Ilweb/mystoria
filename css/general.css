@@ -169,6 +169,10 @@ h2,h4
 {
 	margin-top: 8px;
 }
+.choose a
+{
+	display: block;
+}
 #people_num
 {
 	color:white;

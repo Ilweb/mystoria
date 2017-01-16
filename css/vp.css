@@ -1,6 +1,6 @@
 .backVP
 {
-	height:900px;
+	height:auto;
 	color:white;
 	font-family:Monserrat,Roboto;
 }
@@ -8,7 +8,7 @@
 {
 	background-image:url("../images/FAQ/planet_background1.png");
 	width:100%;
-	height:33.3%;
+	height:300px;
 	top:75px;
 }
 .first_chos > div
@@ -56,7 +56,7 @@
 	font-size:12px;
 	font-weight:bold;
 	letter-spacing:1px;
-	padding: 7px;
+	padding: 1px;
 	text-align: center
 
 }
@@ -75,14 +75,18 @@
 {
 	background-image:url("../images/FAQ/planet_background2.png");
 	width:100%;
-	height:33.3%;
+	height:300px;
 	background-repeat:no-repeat;
+}
+ .second a{
+display: block;
+
 }
 .third_chos
 {
 	background-image:url("../images/FAQ/planet_background3.png");
 	width:100%;
-	height:33.3%;
+	height:300px;
 	background-size: cover;
 	background-position: center;
 }
