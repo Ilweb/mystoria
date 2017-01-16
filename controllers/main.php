@@ -302,13 +302,28 @@ class Main extends Controller
 
 	function terms()
 	{
+	$rooms = $this->_model->select(
+			"id, url, title, body, featured",
+			"articles",
+			"!deleted AND publish_date <= CURDATE() AND category = 5 AND lang = '".LOCALE."'",
+			"publish_date DESC"
+		);
+		$terms = array();
+		while ($row = $rooms->fetch_object())
+		{
+			$terms[] = $row;
+		}
 		$this->_template->setView('terms');
 		$array = array(
 			"title"=>$this->lang['terms'],
 			"styles"=>array('terms'),
-			"settings"=>$this->getSettings()
+			"settings"=>$this->getSettings(),
+			"terms"=>$terms
 		);
 	    $this->_template->render($array);
 	}
 }
 ?>
+
+		
+		
