@@ -41,8 +41,8 @@
 ]
     
   var markerLatLng = {lat: 42.694, lng: 23.334850};
-  var styledMap = new google.maps.StyledMapType(styles,
-    {name: "Styled Map"});
+  //var styledMap = new google.maps.StyledMapType(styles,
+    //{name: "Styled Map"});
   var mapOptions = {
     zoom: 17,
 	scrollwheel: false,
