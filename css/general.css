@@ -144,14 +144,18 @@ h2,h4
 	display:inline-block;
 	width: 145px;
     height: 30px;
+
     background: #242946;
 	 letter-spacing: 1px;
+}
+.buttons .choose a{
+	line-height: 30px;
 }
 .choose a, 
 .under_info a {
 	color: #fff;
 	text-decoration: none;
-	
+
 
 }
 .choose:first-of-type

@@ -19,6 +19,7 @@
 	font-size:33px;
 	font-family:Monserrat;	
 	text-align:center;
+	padding-bottom:60px;
 	
 }
 .terms p
@@ -33,7 +34,11 @@
 	text-align:center;
 	padding-bottom:60px;
 }
+.sec_p{
+padding-bottom: 60px
+}
  .sec_p p 
+
 {
 	color:white;
 	font-size:10px;
