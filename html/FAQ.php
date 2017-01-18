@@ -53,13 +53,15 @@ $this->showView('sticky_header');
 		?>
 	
 		<div class="choose second out">
-			<div><a href="#" id="loadMore">Load More</a></div>
+			<div><a href="#" id="loadMore" style="display: block; padding: 2px;">Load More</a></div>
 		</div>
+
 
 		<?php
 	}
 	?>
 </div>
+<script
 <script>
 $(function () {
 $(".add_explanation > div").slice(0, 4).show();
