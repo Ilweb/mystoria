@@ -4,7 +4,7 @@ for ($i = 0; $i < 7; $i++)
 	$day = time() + ($i * 60 * 60 * 24) + ($week * 60 * 60 * 24 * 7);
 	?>
 	<ul>
-		<li class="dates1"><div><?php echo date('j', $day).' '.$lang[date('M', $day)]; ?></div><div><?php echo $lang[date('l', $day)]; ?></div></li>
+		<li class="dates1 "><div><?php echo date('j', $day).' '.$lang[date('M', $day)]; ?></div><div><?php echo $lang[date('l', $day)]; ?></div></li>
 		<?php
 		foreach ($hours['hours'] as $key => $hour)
 		{
@@ -32,14 +32,24 @@ for ($i = 0; $i < 7; $i++)
 		}
 		?>
 	</ul>
+
 	<?php
 }
 ?>
+
+
+
+		
+</script>
 <script type="text/javascript">	
 jQuery(".dates1").click(function()
 	{
-		jQuery(" li.hour ").hide();
-		jQuery(this).parent().children(" li.hour ").show();
+		if($(window).width()<560){
+			
+			jQuery(" li.hour ").hide('slow');
+			jQuery(this).parent().children(" li.hour ").show('slow');
+		}
 	});
 
 </script>
+

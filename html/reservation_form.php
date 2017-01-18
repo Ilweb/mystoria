@@ -5,7 +5,14 @@
 			<div class="prev noselect" style="visibility: hidden;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <?php echo $lang['Previous week']; ?></div>
 			<div class="next noselect"><?php echo $lang['Next week']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
+
 		<div class="dates"><?php $this->showView('calendar'); ?></div>
+
+		<div id="media">
+			<div class="prev_next">
+				<div class="next noselect " style="margin-bottom: 10px"><?php echo $lang['Next week']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			</div>
+		</div>
 		<div class="choose_people">
 			<ul>
 				<li class="dates1">2 <?php echo $lang['Players']; ?></li>

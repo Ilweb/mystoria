@@ -860,6 +860,9 @@ footer div img
 	text-align: center;
 	color: #838596;
 }
+#media{
+	display: none;
+}
 
 .modal-content a {
 	color: #838596;
@@ -1060,6 +1063,37 @@ footer div img
 		float: none;
 		display: block;
 	}
+	#media{
+		display: block;
+	}
+	.prev_next div {
+   	display: block
+	}
+	
+	.prev_next div:nth-of-type(2){
+		display: none
+	}
+	.dates1{
+		padding: 4px 0;
+		background-color:#22264a;
+	}
+	.dates1 div{
+		display: inline-block;
+	}
+	.dates1 div:first-of-type {
+		margin-right: 5px;
+	}
+	.dates1 div:nth-of-type(2){
+		font-size: 18px;
+	}
+	.dates1
+	{
+	-webkit-box-shadow: inset 0px 0px 2px 1px rgba(180,184,216,1);
+	-moz-box-shadow: inset 0px 0px 2px 1px rgba(180,184,216,1);
+	box-shadow: inset 0px 0px 2px 1px rgba(180,184,216,1);
+	cursor:pointer;
+	}
+
 	
 	.dates ul li.hour,
 	.choose_people ul
@@ -1067,10 +1101,14 @@ footer div img
 	    display: block;
 	    width: 50%;
 	    margin: 10px 24.5%;
-	    
-
 
 	}
+	.dates ul li.hour{
+ 		display: none;
+    }
+    .dates1{
+    	cursor:pointer;
+    }
 	
 	.choose_people ul li
 	{
