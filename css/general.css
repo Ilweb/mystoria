@@ -962,10 +962,10 @@ footer div img
 		height:auto;
 		position:relative;
 	}
-	footer div div.inner_set
+	/*footer div div.inner_set
 	{
 		display:none;
-	}
+	}*/
 	.inner_set:first-of-type
 	{
 		display:block;
@@ -1183,6 +1183,16 @@ div:hover svg line {
 	}
 	.cont_e > div:first-of-type {
      float: none !important;
+}
+footer div.inner_set:nth-of-type(2) {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+}
+footer div.inner_set:nth-of-type(3) {
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
 }
 	
 
