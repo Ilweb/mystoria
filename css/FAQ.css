@@ -2,7 +2,7 @@
 {
 	background-color:#03061b;
 	background-image:none;
-	min-height: 890px;
+	height: auto;
 }
 h4
 {
@@ -55,6 +55,9 @@ h4
 {
 	text-align:right;
 }
+a.loadMore{
+	padding:10px;
+}
 
 
 .book
@@ -64,7 +67,7 @@ h4
 .add_explanation
 {
 	margin-top:70px;
-    margin-bottom: 100px;
+    padding-bottom:  100px;
 }	
 .add_explanation h5
 {

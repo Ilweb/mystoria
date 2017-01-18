@@ -51,10 +51,11 @@ $this->showView('sticky_header');
 	if (count($questions) > 8)
 	{
 		?>
-		<div class="choose second">
+	
+		<div class="choose second out">
 			<div><a href="#" id="loadMore">Load More</a></div>
 		</div>
-		
+
 		<?php
 	}
 	?>
@@ -64,13 +65,14 @@ $(function () {
 $(".add_explanation > div").slice(0, 4).show();
 	$("#loadMore").on('click', function (e) {
   	  e.preventDefault();
-   		 $(".add_explanation > div:hidden").slice(0, 100).slideDown();
+   		 $(".add_explanation > div:hidden").slice(0, 1000).slideDown();
 			if ($(".add_explanation > div:hidden").length == 0) {
-       			 $("#load").fadeOut('slow');
+       			 $(".out").fadeOut('slow');
    				}
 	        $('html,body').animate({
 	            scrollTop: $(this).offset().top
 	        }, 1500);
+	      
     });
 });
 
