@@ -32,7 +32,7 @@ if (isset($styles))
 ?>
 
 <script type="text/javascript" SRC="<?php echo ROOT_URL; ?>js/main.js?v=1"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgRfpfzYdPBGQDWPAU7DPlLxVCuJfkKQY&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNWDnOWGBiEQdnaIPVgFF5zJxHcn2oCFE "></script>
 
 <script src="<?php echo ROOT_URL; ?>js/mystoria.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
