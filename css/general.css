@@ -149,7 +149,7 @@ h2,h4
 	 letter-spacing: 1px;
 }
 .buttons .choose a{
-	line-height: 30px;
+	line-height: 30px;	
 }
 .choose a, 
 .under_info a {
@@ -1064,9 +1064,12 @@ footer div img
 	.dates ul li.hour,
 	.choose_people ul
 	{
-		display: inline-block;
-		width: 20%;
-		margin: 10px 2.5%;
+	    display: block;
+	    width: 50%;
+	    margin: 10px 24.5%;
+	    
+
+
 	}
 	
 	.choose_people ul li

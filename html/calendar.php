@@ -35,3 +35,22 @@ for ($i = 0; $i < 7; $i++)
 	<?php
 }
 ?>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    if ( $(window).width() > 480) {
+    	$('.dates1 >li').click(function(){
+        	$(this).children('hour').stop(true).show().css('display:block');
+};
+
+};
+});
+</script>
+<script type="text/javascript">	
+jQuery(".dates1  ").click(function()
+
+	{
+		jQuery(" li.hour ").toggle('slow').css("position","absolute").css('cursor','pointer' )
+	});
+
+</script>
