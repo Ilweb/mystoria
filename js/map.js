@@ -38,7 +38,7 @@
             }
         ]
     }
-]
+];
     
   var markerLatLng = {lat: 42.694, lng: 23.334850};
   var styledMap = new google.maps.StyledMapType(styles,
@@ -60,7 +60,7 @@
 
   var infowindow = new google.maps.InfoWindow({
           content: contentString,
-		  position: markerLatLng,
+		  position: markerLatLng
 
 		  
   });
