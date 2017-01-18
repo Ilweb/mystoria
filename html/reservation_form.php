@@ -7,7 +7,6 @@
 		</div>
 
 		<div class="dates"><?php $this->showView('calendar'); ?></div>
-
 		<div id="media">
 			<div class="prev_next">
 				<div class="next noselect " style="margin-bottom: 10px"><?php echo $lang['Next week']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
