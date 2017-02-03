@@ -352,7 +352,6 @@ h2,h4
 	display:inline-block;
 	width:510px;
 	position: relative;
-	bottom: 90px
 }
 .two_sides
 {
@@ -480,10 +479,11 @@ a.control_next {
 {
 	margin-top:2px;
 }
-.times
+.times, .timess
 {
     display: inline-block;
     position: relative;
+
 }
 .times div
 {
@@ -496,7 +496,20 @@ a.control_next {
 	letter-spacing:0.5px;
 	margin-right:8px;
 }
-.times div div
+.timess div
+{
+	display:inline-block;
+	color:white;
+	font-weight:bold;
+	vertical-align: middle;
+	font-family:Monserrat,Roboto;
+	font-size:11.5px;
+	letter-spacing:0.5px;
+	margin-left: -8px;
+}
+
+.times div div,
+.timess div div
 {
 	display: block;
     left: 35px;
@@ -508,22 +521,27 @@ a.control_next {
 	height:59px;
 	background-repeat:no-repeat;
 }
-.times div div span
+.times div div span,
+.timess div div span
 {
     top: 20px;
     left: 35px;
     position: relative;
     color: black;
 }
-.times div div span.other
+
+.times div div span.other,
+.timess div div span.other
+
 {
 	left:28px;
 }
-.times div img
+.times div img,
+.timess div img
 {
 	vertical-align:middle;
 }
-.times  img:nth-of-typ(4) {
+.timess  img:nth-of-typ(4) {
     visibility:hidden!important;
 }
 .calendar
@@ -888,6 +906,8 @@ footer div img
 .form-control::-moz-placeholder { color: #838596; }
 .form-control:-ms-input-placeholder { color: #838596; }
 
+
+
 /*Mobile*/
 @media only screen and (max-width: 1210px)
 {	
@@ -1209,11 +1229,10 @@ footer div.inner_set:nth-of-type(3) {
 	{
 		top:5px;
 	}
-	.choose.second
-	{
-		
+	.choose.second {
     float: left;
-    width: 24%;
+    width: 31%;
+    height: 47px;
 }
 .menu div.mobile_button {
     width: 18%;
@@ -1237,7 +1256,6 @@ footer div.inner_set:nth-of-type(3) {
     left: 0;
     top: 0;
     width: 100%;
-     height: 56px;
     background: white;
 }
 
@@ -1250,13 +1268,40 @@ footer div.inner_set:nth-of-type(3) {
 .room {
     height: auto;
 }
-.times div {
+.times div img,
+.timess div img {
+    display: block;
+    vertical-align: middle;
+    margin-left: 12px;
+}
+.times div,
+.timess div
+ {
   
-    margin-right: 4px;
+    margin-right: 0px;
 }
 .left_part {
    
     bottom: 0;
 }
-
+.times div div,
+.timess div div {
+    display: block;
+    left: -11px;
+    top: 0px;
+    width: 100px;
+    position: relative;
+    background-image: url(../images/window_count.png);
+    background-size: contain;
+    height: 59px;
+    background-repeat: no-repeat;
+}
+.timess{
+	left: 11px;
+}
+.menu div {
+ 
+    margin-top: 29px;
+    text-align: center;
+}
 }

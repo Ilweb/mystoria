@@ -121,7 +121,7 @@ $(window).bind('mousewheel DOMMouseScroll', function(event)  {
 	scrollTimer = setTimeout(function()
 	{ 
 		
-		slideWheel();
+		//slideWheel();
 	}, 150);
 });
 $(window).on('scroll', function (e) {
