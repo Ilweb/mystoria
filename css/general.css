@@ -351,10 +351,12 @@ h2,h4
 {
 	display:inline-block;
 	width:510px;
+	position: relative;
+	bottom: 90px
 }
 .two_sides
 {
-	padding-top:100px;
+	padding-top:50px;
 }
 #circle
 {
@@ -492,7 +494,7 @@ a.control_next {
 	font-family:Monserrat,Roboto;
 	font-size:11.5px;
 	letter-spacing:0.5px;
-	margin-right:5px;
+	margin-right:8px;
 }
 .times div div
 {
@@ -520,6 +522,9 @@ a.control_next {
 .times div img
 {
 	vertical-align:middle;
+}
+.times  img:nth-of-typ(4) {
+    visibility:hidden!important;
 }
 .calendar
 {
@@ -916,7 +921,7 @@ footer div img
 {
 	.room
 	{
-		height:830px;
+		height:auto;
 	}
 }
 @media only screen and (max-width: 980px)
@@ -1199,28 +1204,23 @@ footer div.inner_set:nth-of-type(3) {
 }
 @media only screen and (max-width: 460px)
 {
-	.outer, .menu.fixed
-	{
-		height:130px;
-	}
-	.menu div.mobile_button
-	{
-		
-		width:100%;
-		text-align:center;
-		display:block;
-		margin-top:10px;
-		border-top:1px solid black;
-		padding-top:5px;
-	}
+	
 	.menu div.mobile_button img
 	{
 		top:5px;
 	}
 	.choose.second
 	{
-		float:right;
-	}
+		
+    float: left;
+    width: 24%;
+}
+.menu div.mobile_button {
+    width: 18%;
+    display: inline;
+ 
+}
+	
 	#people_num
 	{
 		width:auto !important;
@@ -1229,4 +1229,34 @@ footer div.inner_set:nth-of-type(3) {
 	{
 		margin:0;
 	}
+	.logo_small img {
+    width: 64%;
+}
+.menu.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+     height: 56px;
+    background: white;
+}
+
+.outer {
+    height: 57px;
+}
+#wall_3, #wall_4 {
+    min-height: calc(100vh - 50px);
+}
+.room {
+    height: auto;
+}
+.times div {
+  
+    margin-right: 4px;
+}
+.left_part {
+   
+    bottom: 0;
+}
+
 }

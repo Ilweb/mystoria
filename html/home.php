@@ -44,6 +44,17 @@ $this->showView('sticky_header');
 					<div><img src="<?php echo ROOT_URL; ?>images/success.png"><span><?php echo $lang['Success rate']; ?></span><div><span><?php echo $records->rate; ?>%</span></div></div>
 					<div><img src="<?php echo ROOT_URL; ?>images/record.png"><span><?php echo $lang['Record time']; ?></span><div><span class="other"><?php echo $records->record; ?> min</span></div></div>
 					<div><img src="<?php echo ROOT_URL; ?>images/3d.png"><span><?php echo $lang['Average time']; ?></span><div><span class="other"><?php echo $records->average; ?> min</span></div></div>
+
+		<div><img src="<?php echo ROOT_URL; ?>images/3d.png" style="visibility: hidden;"><span><i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i></span><div><span class="other"><?php echo $settings['Price 2 players']; ?> BGN</span></div></div>	
+
+		<div><img src="<?php echo ROOT_URL; ?>images/3d.png" style="visibility: hidden;"><span><i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i></span><div><span class="other"><?php echo $settings['Price 3 players']; ?> BGN</span></div></div>	
+		<div><img src="<?php echo ROOT_URL; ?>images/3d.png" style="visibility: hidden;"><span><i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i></span><div><span class="other"><?php echo $settings['Price 4 players']; ?> BGN</span></div></div>	
+
+		<div><img src="<?php echo ROOT_URL; ?>images/3d.png" style="visibility: hidden;"><span><i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i &nbsp;class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i></span><div><span class="other"><?php echo $settings['Price 5 players']; ?> BGN</span></div></div>	
+
+		<div><img src="<?php echo ROOT_URL; ?>images/3d.png" style="visibility: hidden;"><span><i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i>&nbsp;<i class="fa fa-child" aria-hidden="true"></i></span><div><span class="other"><?php echo $settings['Price 6 players']; ?> BGN</span></div></div>	
+
+				
 				</div>
 			</div>
 		</div>
